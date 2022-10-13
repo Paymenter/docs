@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Paymenter - Documentation',
   tagline: 'Welcome to the Paymenter documentation',
-  url: 'https://paymenter.org',
+  url: 'https://docs.paymenter.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
