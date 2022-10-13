@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Install & Setup DataBase
+# Install & Setup DataBases
 
 For this project you would need to setup a database.
 
