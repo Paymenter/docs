@@ -1,10 +1,9 @@
 ---
 sidebar_position: 2
+description: Instructions on how to configure databases for Paymenter.
 ---
 
 # Install & Setup DataBases
-
-For this project you would need to setup a database.
 
 :::info Database Configuration
 
