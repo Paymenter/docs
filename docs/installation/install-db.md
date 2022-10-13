@@ -12,9 +12,9 @@ You will need a database setup and a user with the correct permissions created f
 mysql -u root -p
 
 # Remember to change 'yourPassword' below to be a unique password
-CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
-CREATE DATABASE panel;
-GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
+CREATE USER 'paymenter'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
+CREATE DATABASE paymenter;
+GRANT ALL PRIVILEGES ON paymenter.* TO 'paymenter'@'127.0.0.1' WITH GRANT OPTION;
 exit
 ```
 :::
