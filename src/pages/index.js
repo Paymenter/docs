@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Paymenter, open-source hosting payment gateway!">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

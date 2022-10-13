@@ -28,7 +28,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        they are gay and gay and like poephoofds and yes very goot
+        They&apos;re a bunch of Dutchies who love to code and make things
       </>
     ),
   },
