@@ -32,20 +32,18 @@ php artisan key:generate --force
 ```
 
 :::danger 
-Back up your encryption key (APP_KEY in the .env file). It is used as an encryption key for all data that needs to be stored securely (e.g. api keys). Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable -- even if you have database backups.
+Back up your encryption key (APP_KEY in the .env file). It is used as an encryption key for all data that needs to be stored securely (e.g. user passwords). Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable -- even if you have database backups.
 :::
 
 ## Environment Configuration
-
-Paymenter's core environment is easily configured using a few different CLI commands built into the app. This step will cover setting up things such as sessions, caching, database credentials, and email sending.
+Change the database connection information in the `.env` file to match the credentials you created in the previous step.
 
 ```
-php artisan p:environment:setup
-php artisan p:environment:database
-
-# To use PHP's internal mail sending (not recommended), select "mail". To use a
-# custom SMTP server, select "smtp".
-php artisan p:environment:mail
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
 ```
 
 ## Database Setup
@@ -57,7 +55,7 @@ php artisan migrate --seed --force
 
 
 ## Add The First User
-You'll then need to create an administrative user so that you can log into the panel. To do so, run the command below. At this time passwords **must** meet the following requirements: 8 characters, mixed case, at least one number.
+You'll then need to create an administrative user so that you can log into the admin side. To do so, run the command below.
 ```
-php artisan p:user:make
+php artisan user:create
 ```

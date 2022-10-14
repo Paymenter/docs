@@ -3,15 +3,12 @@ sidebar_position: 1
 ---
 
 # Download the code
-Clone our repo from Github to your PC (`.\Paymenter`):
+Clone our repo from Github to your server:
 
-```jsx title="Windows"
-git clone https://github.com/Paymenter/Paymenter
-cd Paymenter
-```
 ```jsx title="Linux"
-$ git clone https://github.com/Paymenter/Paymenter
-$ cd Paymenter
+mkdir /var/www/paymenter
+cd /var/www/paymenter
+curl -Lo paymenter.tar.gz https://github.com/paymenter/paymenter/releases/latest/download/paymenter.tar.gz
+tar -xzvf paymenter.tar.gz
+chmod -R 755 storage/* bootstrap/cache/
 ```
-
-<!-- A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page). -->

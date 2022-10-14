@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+:::caution 
+**Warning**: This is a beta version of Paymenter. It is not ready for production use. And may contain bugs or incorrect information.
+:::
 # Paymenter - Documentation
 Paymenter is an open source gateway for hosting companies. Paymenter is developed to provide an more easy way to manage your hosting company with many advanced features and addons. The project will include an official marketplace to sell or give away your modifications to the community.
 
@@ -11,6 +14,3 @@ Paymenter is an open source gateway for hosting companies. Paymenter is develope
 * [Website](https://paymenter.org/)
 * [E-mail us](mailto:hello@paymenter.org)
 :::
-
-# Fun fact:
-we drank more than 5000 cups of coffee ☕
