@@ -1,5 +1,5 @@
 --- 
-sidebar_position: 4
+sidebar_position: 5
 description: How to setup the webserver for Paymenter.
 ---
 
@@ -43,6 +43,13 @@ server {
     }
 }
 ```
+Be sure to replace `paymenter.org` with your domain name.
+
+Fix the permmisions of paymenter with the following command:
+```bash
+chown -R www-data:www-data /var/www/paymenter
+```
+
 
 ## Problems? {#problems}
 

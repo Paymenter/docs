@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 description: How to setup the config locally, and start a Paymenter site in no time.
 ---
 # Setting up the config
