@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Paymenter - Documentation',
+  title: 'Paymenter',
   tagline: 'Welcome to the Paymenter documentation',
   url: 'https://paymenter.org',
   baseUrl: '/',
@@ -26,7 +26,20 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
+  
   presets: [
     [
       'classic',
@@ -56,6 +69,26 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          name: 'theme-color',
+          content: '#5270FD',
+        },
+        {
+          name: 'og:title',
+          content: 'Paymenter',
+        },
+        {
+          name: 'og:description',
+          content: 'All-in-one payment gateway for hosting\nStop paying for payed solutions use paymenter instead!',
+        },
+      ],
+      image: 'https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png',
+      title: 'Paymenter',
       navbar: {
         title: 'Paymenter - Docs',
         logo: {
@@ -74,6 +107,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            href: 'https://demo.paymenter.org',
+            label: 'Demo',
+            position: 'right',
+          }
         ],
       },
       footer: {
@@ -83,7 +121,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial (Installation)',
+                label: 'Installation',
                 to: '/docs/category/installation',
               },
             ],
@@ -93,7 +131,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/MTPEdVTzB9',
+                href: 'https://discord.gg/xB4UUT3XQg',
               },
             ],
           },
