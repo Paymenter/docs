@@ -50,12 +50,12 @@ DB_PASSWORD=
 
 Now we need to setup all of the base data for the Panel in the database you created earlier. **The command below may take some time to run depending on your machine. Please DO NOT exit the process until it is completed!** This command will setup the database tables that power Paymenter.
 ```
-php artisan migrate --seed --force
+php artisan migrate
 ```
 
 
 ## Add The First User
 You'll then need to create an administrative user so that you can log into the admin side. To do so, run the command below.
 ```
-php artisan user:create
+php artisan p:user:create
 ```
