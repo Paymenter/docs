@@ -5,7 +5,7 @@ description: How to setup the webserver for Paymenter.
 
 # Webserver configuration
 
-## Apache
+## **Apache**
 
 ### .htaccess
 
@@ -21,9 +21,9 @@ description: How to setup the webserver for Paymenter.
 </VirtualHost>
 ```
 
-## Nginx
+## **Nginx**
 
-### For nginx you can create a file in /etc/sites-available/ called paymenter.conf and add the following:
+### For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
 
 Replace paymenter.org with your domain name.
 

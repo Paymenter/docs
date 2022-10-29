@@ -50,7 +50,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/paymenter/docs/',
+            'https://github.com/Paymenter/docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
