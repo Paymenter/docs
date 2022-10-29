@@ -23,7 +23,9 @@ description: How to setup the webserver for Paymenter.
 
 ## Nginx
 
-### nginx.conf
+### For nginx you can create a file in /etc/sites-available/ called paymenter.conf and add the following:
+
+Replace paymenter.org with your domain name.
 
 ```nginx
 server {
@@ -43,6 +45,14 @@ server {
     }
 }
 ```
+Then run the following commands to enable the site and restart nginx:
+
+```bash
+sudo ln -s /etc/nginx/sites-available/paymenter.conf /etc/nginx/sites-enabled/
+sudo systemctl restart nginx
+```
+
+
 Be sure to replace `paymenter.org` with your domain name.
 
 Fix the permmisions of paymenter with the following command:
