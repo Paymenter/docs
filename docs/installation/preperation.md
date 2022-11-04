@@ -5,6 +5,18 @@ description: Preperation for the installation of Paymenter.
 
 # Preperation
 
+## Supported operating systems
+| Operating System | Version |     Supported      |
+|------------------|---------|:------------------:|
+| **Ubuntu**       | 18.04   | :white_check_mark: |
+|                  | 20.04   | :white_check_mark: |
+|                  | 22.04   | :white_check_mark: |
+| **CentOS**       | 7       | :white_check_mark: |
+|                  | 8       | :white_check_mark: |
+| **Debian**       | 10      | :white_check_mark: |
+|                  | 11      | :white_check_mark: |
+| **Windows**      | Any     | :x:                |
+
 ## Install Dependencies
 
 ```bash
