@@ -90,6 +90,11 @@ const config = {
             label: 'Installation',
           },
           {
+            href: '/credits',
+            position: 'right',
+            label: 'Credits',
+          },
+          {
             href: 'https://github.com/paymenter',
             label: 'GitHub',
             position: 'right',
