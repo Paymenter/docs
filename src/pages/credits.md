@@ -1,5 +1,5 @@
 ---
-title: FUNDING
+title: Funding
 description: Funding for the project
 hide_table_of_contents: true
 ---
@@ -18,18 +18,19 @@ Do you want to sponsor this project? Reach out and support us on [GitHub](https:
 
 ### Silver Sponsors
 -->
-### Bronze Sponsors
+### Bronze Sponsors (monthly)
 | Name | Link  |
-| --- | --- | --- |
-| Oliver | [Github](https://github.com/Oliverdotdotdot) |
+| --- | --- | 
 | 0xkarma | [Github](https://github.com/0xkarma) | 
-
+| Tempus Thales | [Github](https://github.com/tempusthales) |
 
 
 ### One Time Sponsors
 | Name | Link | Amount | Website |
 | --- | --- | --- |
-| ZDcloud | [Github](https://github.com/zdcloudx) |  $50 | [ZDcloud](https://zdcloud.com) |
+| ZDcloud | [Github](https://github.com/zdcloudx) |  $50 |
+| Tempus Thales | [Github](https://github.com/tempusthales) | $50 |
+| Oliver | [Github](https://github.com/Oliverdotdotdot) | $10 |
 
 ## Contributors
 ### Code Contributors
@@ -53,3 +54,4 @@ Thanks to:
 - [JHosting](https://www.jhosting.be) for providing a DirectAdmin panel for testing.
 - [ScalaBlade](https://scalablade.com) for providing a WHMCS module for testing.
 - [HostValues]( https://hostvalues.net) for providing a VPS for testing.
+- [VirtFusion](https://virtfusion.com) for providing a developer license for it.
