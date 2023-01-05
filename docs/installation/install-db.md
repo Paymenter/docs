@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Instructions on how to configure databases for Paymenter.
 ---
 
-# Install & Setup DataBases
+# Install & Setup Database
 
 :::info Database Configuration
 
