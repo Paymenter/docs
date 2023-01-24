@@ -65,7 +65,8 @@ export default function Home() {
                             We allow our users to modify the panel. This is also backed through our Marketplace where users are allowed to buy products which are easily importable.
                         </p>
                         <div className>
-                            <img className="scale-150 pb-20 pt-28" src="/img/settings.png" alt="Here you can see the settings tab on the finished installation" />
+                            <img className="scale-150 pb-20 pt-28 dark:!hidden !block" src="/img/slick/light/settings.png" alt="Here you can see the settings tab on the finished installation" />
+                            <img className="scale-150 pb-20 pt-28 dark:!block !hidden" src="/img/slick/dark/settings.png" alt="Here you can see the settings tab on the finished installation" />
                         </div>
                     </div>
                 </div>
