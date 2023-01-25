@@ -42,7 +42,7 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
-html[data-theme='dark'] main {
+html[data-theme='dark'] .mainclass {
     padding-top: calc(150px + 2vh);
     background-image: linear-gradient(180deg, #1B1B1D, rgba(10, 10, 10, 0) 35%);
     /* Make the background-image animated */
@@ -62,7 +62,7 @@ html[data-theme='dark'] main {
     }
 }
 
-html[data-theme='light'] main {
+html[data-theme='light'] .mainclass {
     padding-top: calc(150px + 2vh);
     background-image: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0) 35%);
 }
