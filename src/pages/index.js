@@ -46,10 +46,11 @@ export default function Home() {
                     <div className="header text-center mt-4">
                         <h1 className="text-4xl">Next-gen Gateway for hostings that boosts your workflow</h1>
                         <p>Paymenter is an open source gateway for hosting companies. It's developed to provide an more easy way to manage your hosting company.</p>
+                        <a href='/docs/intro' class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Get started</a>
                     </div>
                 </div>
                 <div className="image-container px-5 pb-20 pt-10 max-w-[1100px] sm:m-auto mt-24 mb-24">
-                    <img src="https://paymenter.org//img/laptop.svg" width="100%" />
+                    <img src="https://paymenter.org/img/laptop.svg" width="100%" />
                 </div>
                 <div className="w-full h-screen absolute left-0 right-0 top-0 bg-gradient-to-b blur-wrapper border-accent border-b dark:from-black from-white hero-background to-transparent" style={{ zIndex: -1 }}>
                     <div className='test h-full w-full blur-1'>
@@ -79,7 +80,7 @@ export default function Home() {
                             <br /> where users are allowed to buy products which are easily importable.
                         </p>
                         <p className='text-sm max-h-1'>
-                            ProTip: switch to <span className='dark:hidden inline'> darkmode</span><span className='hidden dark:inline'> lightmode</span> to see the <span className='dark:hidden inline'> darkmode</span><span className='hidden dark:inline'> lightmode</span> version of the panel.
+                            Protip: switch to <span className='dark:hidden inline'> darkmode</span><span className='hidden dark:inline'> lightmode</span> to see the <span className='dark:hidden inline'> darkmode</span><span className='hidden dark:inline'> lightmode</span> version of the panel.
                         </p>
                         <div className="pb-12">
                         </div>

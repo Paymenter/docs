@@ -100,5 +100,30 @@ themes
                   ├── forgot.blade.php
                   └── reset.blade.php
 
-``` 
+```
 
+## API endpoints (usable for react)
+
+**Client**
+
+`GET` - `/v1/users` Get user info
+
+`GET` - `/v1/tickets` get all tickets
+
+`POST` - `/v1/tickets` create ticket
+
+`GET` - `/v1/tickets/{ticketId}` get ticket by id
+
+`DELETE` - `/v1/tickets/{ticketId}` close ticket
+
+`PUT` - `/v1/tickets/{ticketId}/reply` reply to ticket
+
+`GET` - `/v1/invoices` get all invoices
+
+`GET` - `/v1/invoices/{invoiceId}` get invoice by id
+
+`GET` - `/v1/invoices/{invoiceId}/pay` pay invoice
+
+**Website**
+
+`GET` - `/v1/products` get all products

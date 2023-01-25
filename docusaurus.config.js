@@ -26,7 +26,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  
+
   presets: [
     [
       'classic',
@@ -144,7 +144,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-  plugins:[
+  plugins: [
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
@@ -156,6 +156,34 @@ const config = {
         },
       };
     },
+    async function googleAnalytics(context, options){
+        return {
+          name: 'google-analytics',
+          injectHtmlTags() {
+            return {
+              headTags: [
+                {
+                  tagName: 'script',
+                  attributes: {
+                    async: true,
+                    src: 'https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG',
+                  }
+                },
+                {
+                  tagName: 'script',
+                  innerHTML: `                  
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                  
+                    gtag('config', 'G-0994GMPHVG');
+                  `,
+                },
+              ],
+            };
+          }
+        }
+    }
   ]
 };
 

@@ -12,11 +12,13 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "watch-tw": "tailwindcss -i src/css/tailwind.css -o src/css/index.css --watch"
+    "watch-tw": "tailwindcss -i src/css/tailwind.css -o src/css/index.css --watch",
+    "build-tw": "tailwindcss -i src/css/tailwind.css -o src/css/index.css"
   },
   "dependencies": {
-    "@docusaurus/core": "2.1.0",
-    "@docusaurus/preset-classic": "2.1.0",
+    "@docusaurus/core": "^2.2.0",
+    "@docusaurus/plugin-google-analytics": "^2.2.0",
+    "@docusaurus/preset-classic": "^2.2.0",
     "@mdx-js/react": "^1.6.22",
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
@@ -28,7 +30,7 @@
     "tailwindcss": "^3.2.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.1.0"
+    "@docusaurus/module-type-aliases": "^2.2.0"
   },
   "browserslist": {
     "production": [
