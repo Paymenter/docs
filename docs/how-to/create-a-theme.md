@@ -1,4 +1,4 @@
-# A theme
+# Theme
 
 Creating a theme is really easy. We will show you how to create a theme in this guide.
 
@@ -12,17 +12,6 @@ Create a new folder in the `themes` folder. The name of the folder will be the n
 
 ### Step 2: Edit the files you want to edit
 Check below for the folder structure of a theme.
-
-
-
-
-
-
-
-
-
-
-
 
 ## Folder structure
 ```

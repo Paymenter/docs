@@ -39,13 +39,6 @@ const config = {
           editUrl:
             'https://github.com/Paymenter/docs/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/paymenter/docs/',
-        },
         theme: {
           customCss: require.resolve('./src/css/index.css'),
         },
@@ -156,34 +149,34 @@ const config = {
         },
       };
     },
-    async function googleAnalytics(context, options){
-        return {
-          name: 'google-analytics',
-          injectHtmlTags() {
-            return {
-              headTags: [
-                {
-                  tagName: 'script',
-                  attributes: {
-                    async: true,
-                    src: 'https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG',
-                  }
-                },
-                {
-                  tagName: 'script',
-                  innerHTML: `                  
+    async function googleAnalytics(context, options) {
+      return {
+        name: 'google-analytics',
+        injectHtmlTags() {
+          return {
+            headTags: [
+              {
+                tagName: 'script',
+                attributes: {
+                  async: true,
+                  src: 'https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG',
+                }
+              },
+              {
+                tagName: 'script',
+                innerHTML: `                  
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                   
                     gtag('config', 'G-0994GMPHVG');
                   `,
-                },
-              ],
-            };
-          }
+              },
+            ],
+          };
         }
-    }
+      }
+    },
   ]
 };
 

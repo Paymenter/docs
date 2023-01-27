@@ -1,6 +1,6 @@
 {
-    "label": "Create",
-    "position": 4,
+    "label": "How to setup",
+    "position": 3,
     "link": {
         "type": "generated-index",
         "description": "How to setup different things"

@@ -10,15 +10,16 @@ Paymenter is an open source gateway for hosting companies. Paymenter is develope
 
 
 ## Included extensions
-* DirectAdmin
-* VirtFusion
-* Virtualizor
-* Pterodactyl
+* [DirectAdmin](https://www.directadmin.com/)
+* [VirtFusion](https://virtfusion.com/)
+* [Virtualizor](https://www.virtualizor.com/)
+* [Pterodactyl](https://pterodactyl.io/)
 
 ## Included Payment methods
-* Stripe
-* PayPal
-* Mollie
+* [Stripe](https://stripe.com/)
+* [PayPal](https://www.paypal.com/)
+* [Mollie](https://www.mollie.com/)
+* [Xendit](https://www.xendit.co/)
 
 
 :::tip Usefull information
