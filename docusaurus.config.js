@@ -64,7 +64,7 @@ const config = {
         },
         {
           name: 'og:description',
-          content: 'All-in-one payment gateway for hosting\nStop paying for payed solutions use paymenter instead!',
+          content: 'Open-Source webshop solution for hosting companys',
         },
       ],
       image: 'https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png',

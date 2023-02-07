@@ -44,8 +44,8 @@ export default function Home() {
             <main className='flex flex-col justify-between overflow-hidden relative mainclass'>
                 <div className="container mx-auto md:px-0 px-5">
                     <div className="header text-center mt-4">
-                        <h1 className="text-4xl">Next-gen Gateway for hostings that boosts your workflow</h1>
-                        <p>Paymenter is an open source gateway for hosting companies. It's developed to provide an more easy way to manage your hosting company.</p>
+                        <h1 className="text-4xl">Open-Source webshop alternative for hostings</h1>
+                        <p>Paymenter is an open source webshop solution for hosting companies. It's developed to provide an more easy way to manage your hosting company.</p>
                         <a href='/docs/intro' class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Get started</a>
                     </div>
                 </div>
