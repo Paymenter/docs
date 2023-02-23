@@ -80,7 +80,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Installation',
+            label: 'Docs',
           },
           {
             href: '/credits',
@@ -106,7 +106,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Installation',
+                label: 'Docs',
                 to: '/docs/category/installation',
               },
             ],
