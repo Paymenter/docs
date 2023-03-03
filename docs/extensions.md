@@ -3,6 +3,7 @@ sidebar_position: 10
 ---
 
 # Extensions 
+Most of the documentation about extensions can be found in the [GitHub repository](https://github.com/Paymenter/Extensions)
 
 ## Default included
 
