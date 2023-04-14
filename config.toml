@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://paymenter.org/'
 languageCode = 'en-us'
 title = 'Paymenter'
 [menu]
