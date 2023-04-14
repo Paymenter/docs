@@ -15,6 +15,13 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG"></script>
+    <script>
+        function gtag() {
+            dataLayer.push(arguments)
+        }
+        window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-0994GMPHVG")
+    </script>
 </head>
 
 <body class="dark:bg-gray-900">
@@ -142,7 +149,7 @@
                         <div class="flex overflow-y-auto sticky top-28 flex-col justify-between pt-10 pb-6 h-[calc(100vh-5rem)]">
                             <div class="mb-8">
                                 <h4 class="pl-2.5 mb-2 text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-white lg:text-xs">On this page</h4>
-                               {{ .TableOfContents | replaceRE "<a" "<a class=\"dark:text-white\"" | replaceRE "<li" "<li class=\"mb-2\"" | safeHTML }}
+                                {{ .TableOfContents | replaceRE "<a " "<a class=\ "dark:text-white\" " | replaceRE "<li " "<li class=\ "mb-2\" " | safeHTML }}
 
                             </div>
                         </div>
@@ -152,7 +159,7 @@
             </main>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js "></script>
 </body>
 
 </html>
