@@ -1,0 +1,12 @@
+- title: Getting started
+  slug: getting-started
+  pages:
+    - title: Introduction
+    - title: Installation
+    - title: Extensions
+    - title: How to update
+- title: Customization
+  slug: customization
+  pages:
+    - title: Create a theme
+    - title: Create a extension

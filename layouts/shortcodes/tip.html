@@ -1,0 +1,11 @@
+<div class="rounded-md bg-blue-50 p-4 mb-4">
+    <!-- Svg lightbulb -->
+    <div class="flex items-center p-1 rounded-md">
+        <strong>
+            <!-- Get title or default to "Tip" -->
+            {{- .Get "title" | default "Tip" -}}
+        </strong>
+    </div>
+    <!-- Tip template -->
+    {{- .Inner | markdownify -}}
+</div>
