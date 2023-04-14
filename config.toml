@@ -1,16 +1,3 @@
 baseURL = 'https://paymenter.org/'
 languageCode = 'en-us'
 title = 'Paymenter'
-[menu]
-[[menu.main]]
-  name = 'Home'
-  pageRef = '/'
-  weight = 10
-[[menu.main]]
-  name = 'Products'
-  pageRef = '/products'
-  weight = 20
-[[menu.main]]
-  name = 'Services'
-  pageRef = '/services'
-  weight = 30
