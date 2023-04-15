@@ -145,7 +145,7 @@
         // If window location is /docs/how-to-upgrade then redirect to /docs/get-started/how-to-upgrade-to
         if (window.location.pathname === '/docs/how-to-upgrade') {
             window.location.pathname = '/docs/get-started/how-to-upgrade-to';
-        } else if (window.location.pathname === '/docs') {
+        } else if (window.location.pathname === '/docs' || window.location.pathname === '/docs/') {
             window.location.pathname = '/docs/get-started';
         }
     </script>
