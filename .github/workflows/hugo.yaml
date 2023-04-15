@@ -61,7 +61,8 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://paymenter.org/"          
+            --baseURL "https://paymenter.org/" \
+            --disableKinds=RSS      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
