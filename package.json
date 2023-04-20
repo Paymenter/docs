@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "hugo server -D",
-    "build-tw": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css",
-    "watch-tw": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css -w"
+    "start": "npm run start:hugo & npm run start:css",
+    "start:hugo": "hugo server -D",
+    "start:css": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css -w",
+    "build": "npm run build:hugo & npm run build:css",
+    "build:hugo": "hugo -D",
+    "build:css": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css"
   },
   "keywords": [],
   "author": "",

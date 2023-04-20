@@ -5,6 +5,7 @@ toc: true
 
 next: Installation
 nextLink: /docs/getting-started/installation
+aliases: ['/docs/']
 ---
 # Paymenter - Documentation
 Paymenter is an open source gateway for hosting companies. Paymenter is developed to provide an more easy way to manage your hosting company with many advanced features and addons. The project is still in development and we are working hard to make it better every day.

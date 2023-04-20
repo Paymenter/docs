@@ -15,13 +15,7 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG"></script>
-    <script>
-        function gtag() {
-            dataLayer.push(arguments)
-        }
-        window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-0994GMPHVG")
-    </script>
+
     <link type="application/json+oembed" href="https://paymenter.org/home.json" />
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
@@ -98,7 +92,7 @@
             </div>
         </div>
     </nav>
-    <div class="w-full px-4 mx-auto max-w-8xl">
+    <div class="w-full px-4 mx-auto max-w-[90rem]">
         <div class="lg:flex">
             <aside id="sidebar" class="fixed inset-0 z-20 flex-none hidden h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-48 lg:block" aria-labelledby="sidebar-label">
                 <h4 id="sidebar-label" class="sr-only">Browse docs</h4>
@@ -161,7 +155,7 @@
                 <div class="flex w-full">
                     <!-- Main content -->
                     <div class="flex-auto min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16 min-h-screen">
-                        <div class="mt-20 sm:ml-72">
+                        <div class="mt-20">
                             {{ block "page" . }}{{ end }}
                             <aside class="flex mt-6 mb-8 font-medium leading-6" aria-label="Previous and next page navigation">
                                 {{ if isset .Page.Params "previous" }}

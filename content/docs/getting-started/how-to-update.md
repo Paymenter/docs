@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+aliases: ['/docs/how-to-update']
 ---
 
 # How to update
