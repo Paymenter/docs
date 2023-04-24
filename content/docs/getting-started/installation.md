@@ -120,7 +120,7 @@ php artisan p:user:create
 
 For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
 
-```nginx
+```conf
 server {
     listen 80;
     server_name paymenter.org;
@@ -151,7 +151,7 @@ sudo systemctl restart nginx
 
 For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
 
-```nginx
+```conf
 server {
     listen 80;
     server_name paymenter.org;

@@ -1,3 +1,6 @@
+---
+toc: true
+---
 # Theme
 
 Creating a theme is really easy. We will show you how to create a theme in this guide.

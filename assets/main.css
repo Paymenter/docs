@@ -88,3 +88,8 @@
 .test {
     background: radial-gradient(ellipse at center, rgba(0, 94, 245, .5)0, transparent 100%);
 }
+
+#TableOfContents>ul>li {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}

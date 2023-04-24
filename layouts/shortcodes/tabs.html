@@ -1,37 +1,12 @@
 <nav class="flex flex-wrap">
-    <div class="flex flex-wrap" id="nav-tab" role="tablist">
+    <div class="flex flex-wrap" id="nav-tab" role="tablist" data-tabs-toggle="#myTabContent">
         {{ $tabTotal := .Get "tabTotal" }} {{ $tabRightAlign := .Get "tabRightAlign" }} {{ $tabName := .Scratch.Get "tabName" }} {{ $tabID := .Scratch.Get "tabID" }} {{ range $i, $sequence := (seq $tabTotal) }}
 
         <a class="flex items-center justify-center px-4 py-2 text-sm font-medium leading-5 text-gray-700 bg-white m-1 rounded-lg focus:outline-none focus:shadow-outline-blue focus:text-blue-500 hover:text-gray-800 {{ if eq $i 0 }} active {{ end }}{{ if in $tabRightAlign (add 1 $i) }} ml-auto {{ end }}"
-            id="nav-{{ (index $tabID $i) }}" data-toggle="tab" href="#{{ (index $tabID $i) }}" role="tab" aria-controls="nav-home" aria-selected="true">{{ (replaceRE "(\\s)" " " (index $tabName $i)) }}</a> {{ end }}
+            id="nav-{{ (index $tabID $i) }}" data-tabs-target="#{{ (index $tabID $i) }}" data-toggle="tab" href="#{{ (index $tabID $i) }}" role="tab" aria-controls="nav-home" aria-selected="true">{{ (replaceRE "(\\s)" " " (index $tabName $i)) }}</a> {{ end }}
     </div>
 </nav>
-<div class="tab-content" id="nav-tab-content">
+<div class="tab-content" id="myTabContent">
     {{ .Inner }}
 
 </div>
-<!-- Generate javascript for tab -->
-<script>
-    var tab = document.querySelectorAll('[data-toggle="tab"]');
-    for (var i = 0; i < tab.length; i++) {
-        tab[i].addEventListener('click', function(e) {
-            e.preventDefault();
-            var tabName = this.getAttribute('href');
-            var tab = document.querySelectorAll('[data-toggle="tab"]');
-            for (var i = 0; i < tab.length; i++) {
-                tab[i].classList.remove('active');
-            }
-            this.classList.add('active');
-            var tabContent = document.querySelectorAll('.tab-pane');
-            for (var i = 0; i < tabContent.length; i++) {
-                tabContent[i].classList.remove('block');
-                tabContent[i].classList.add('hidden');
-            }
-            var tabContent = document.querySelectorAll(tabName);
-            for (var i = 0; i < tabContent.length; i++) {
-                tabContent[i].classList.remove('hidden');
-                tabContent[i].classList.add('block');
-            }
-        })
-    }
-</script>
