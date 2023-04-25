@@ -255,3 +255,44 @@ Fix the permmisions of paymenter with the following command:
 ```bash
 chown -R www-data:www-data /var/www/paymenter
 ```
+
+
+## Cronjob
+
+Crontab Configuration
+The first thing we need to do is create a new cronjob that runs every minute to process specific Paymenter tasks. You'll want to open your crontab using `sudo crontab -e` and then paste the line below.
+
+```bash
+* * * * * php /var/www/paymenter/artisan schedule:run >> /dev/null 2>&1
+```
+
+## Create Queue Worker
+
+Paymenter uses Laravel's built in queue system to handle tasks that are able to be run in the background.
+
+Create a new file in `/etc/systemd/system/` called `paymenter.service` and add the following:
+
+```conf
+[Unit]
+Description=Paymenter Queue Worker
+
+[Service]
+# On some systems the user and group might be different.
+# Some systems use `apache` or `nginx` as the user and group.
+User=www-data
+Group=www-data
+Restart=always
+ExecStart=/usr/bin/php /var/www/paymenter/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
+StartLimitInterval=180
+StartLimitBurst=30
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Then run the following commands to enable the service and start it:
+
+```bash
+sudo systemctl enable --now paymenter.service
+```
