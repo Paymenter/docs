@@ -1,0 +1,225 @@
+openapi: 3.1.0
+info:
+  title: Paymenter Client API
+  version: '1.0'
+  description: Paymenter supports a way for users to connect via our api and build their own stuff on it
+  summary: Paymenter
+  license:
+    identifier: MIT
+    name: MIT
+servers: []
+paths:
+  /api/clients/v1/tickets:
+    get:
+      summary: Get all tickets
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+        '400':
+          description: Bad Request
+      operationId: get-v1-tickets
+      description: Get all tickets from the logged in user
+      requestBody:
+        content: {}
+      tags:
+        - Tickets
+    parameters: []
+    post:
+      summary: Make new ticket
+      operationId: api-v1-clients-tickets-create
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  ticket:
+                    $ref: '#/components/schemas/Ticket'
+      description: ''
+      tags:
+        - Tickets
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                message:
+                  type: string
+                priority:
+                  type: string
+                  description: 'Priority, must be one of: `low`, `medium`, `high`'
+  '/api/clients/v1/tickets/{ticketId}':
+    parameters:
+      - schema:
+          type: string
+        name: ticketId
+        in: path
+        required: true
+    get:
+      summary: Get ticket by id
+      tags:
+        - Tickets
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: api-v1-clients-ticket-get
+      requestBody:
+        content: {}
+      description: ''
+  '/api/clients/v1/tickets/{ticketId}/reply':
+    parameters:
+      - schema:
+          type: string
+        name: ticketId
+        in: path
+        required: true
+    put:
+      summary: Reply to ticket
+      operationId: api-v1-clients-ticket-reply
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+      description: ''
+      tags:
+        - Tickets
+  '/api/clients/v1/tickets/{ticketId}/close':
+    parameters:
+      - schema:
+          type: string
+        name: ticketId
+        in: path
+        required: true
+    delete:
+      summary: Delete ticket by id
+      operationId: api-v1-clients-ticket-delete
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+      description: ''
+      tags:
+        - Tickets
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        email_verified_at:
+          type:
+            - string
+            - 'null'
+        address:
+          type:
+            - string
+            - 'null'
+        city:
+          type:
+            - string
+            - 'null'
+        state:
+          type:
+            - string
+            - 'null'
+        zip:
+          type:
+            - string
+            - 'null'
+        country:
+          type:
+            - string
+            - 'null'
+        phone:
+          type:
+            - string
+            - 'null'
+        companyname:
+          type:
+            - string
+            - 'null'
+        created_at:
+          type: string
+        updated_at:
+          type: string
+        credits:
+          type: integer
+          minimum: 0
+      description: User model
+    Ticket:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        status:
+          type: string
+        priority:
+          type: string
+        order_id:
+          type:
+            - integer
+            - 'null'
+        assigned_to:
+          type:
+            - integer
+            - 'null'
+        created_at:
+          type: string
+        updated_at:
+          type: string
+      examples:
+        - id: 2
+          title: New ticket
+          status: open
+          priority: high
+          order_id: null
+          assigned_to: null
+          created_at: '2023-04-15T12:35:21.000000Z'
+          updated_at: '2023-04-15T12:35:21.000000Z'
+      description: Ticket model
+      title: Ticket
+  securitySchemes:
+    Authorization:
+      name: Authorization Bearer
+      type: apiKey
+      in: header
+  responses: {}
+security:
+  - Authorization: []
