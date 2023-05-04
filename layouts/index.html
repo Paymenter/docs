@@ -2,248 +2,265 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | {{ .CurrentSection.Title }}{{ end }}</title>
-    {{ $style := resources.Get "style.css" }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
-    <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {{ or .Title .Site.Title }}
+    {{ if ne .Kind "home" }} |
+    {{ .CurrentSection.Title }}
+    {{ end }}
+  </title>
+  {{ $style := resources.Get "style.css" }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  {{/* <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG"></script>
     <script>
         function gtag() {
             dataLayer.push(arguments)
         }
         window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-0994GMPHVG")
-    </script>
-    <link type="application/json+oembed" href="https://paymenter.org/home.json" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://paymenter.org/" />
-    <meta property="og:title" content="Paymenter" />
-    <meta property="og:description" content="Paymenter is an open source payment gateway for your hosting." />
-    <meta property="og:image" content="https://paymenter.org/img/og-image.png" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://paymenter.org/" />
-    <meta property="twitter:title" content="Paymenter" />
-    <meta property="twitter:description" content="Paymenter is an open source payment gateway for your hosting." />
-    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png" data-rh="true">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png" data-rh="true">
+    </script>  */}}
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link type="application/json+oembed" href="https://paymenter.org/home.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://paymenter.org/" />
+  <meta property="og:title" content="Paymenter" />
+  <meta property="og:description" content="Paymenter is an open source payment gateway for your hosting." />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://paymenter.org/" />
+  <meta property="twitter:title" content="Paymenter" />
+  <meta property="twitter:description" content="Paymenter is an open source payment gateway for your hosting." />
+  <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png" data-rh="true">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png" data-rh="true">
 </head>
 
 <body>
-    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="/" class="flex items-center">
-                {{ $logo := resources.Get "image/textlogo.png" }}
-                <img src="{{ $logo.Permalink }}" alt="Logo" class="h-8 mr-2">
-            </a>
-            <div class="flex md:order-2">
-                <a type="button" href="/docs" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
-                    started</a>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 xl:ml-1">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                            fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="/docs/getting-started/introduction/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Docs</a>
-                    </li>
-                    <!--
-                    <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PaaS</a>
-                    </li>
-                -->
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('nav');
-            if (window.scrollY > 0) {
-                navbar.classList.add('shadow');
-            } else {
-                navbar.classList.remove('shadow');
-            }
-        });
-        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('nav');
+      if (window.scrollY > 0) {
+        navbar.classList.add('shadow');
+      } else {
+        navbar.classList.remove('shadow');
+      }
+    });
+    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-        // Change the icons inside the button based on previous settings
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            themeToggleLightIcon.classList.remove('hidden');
+    // Change the icons inside the button based on previous settings
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+        '(prefers-color-scheme: dark)').matches)) {
+      themeToggleLightIcon.classList.remove('hidden');
+    } else {
+      themeToggleDarkIcon.classList.remove('hidden');
+    }
+
+    var themeToggleBtn = document.getElementById('theme-toggle');
+
+    themeToggleBtn.addEventListener('click', function() {
+
+      // toggle icons inside button
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+
+      // if set via local storage previously
+      if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
         } else {
-            themeToggleDarkIcon.classList.remove('hidden');
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
         }
 
-        var themeToggleBtn = document.getElementById('theme-toggle');
+        // if NOT set via local storage previously
+      } else {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        }
+      }
 
-        themeToggleBtn.addEventListener('click', function() {
+    });
+  </script>
 
-            // toggle icons inside button
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
+  <body class="bg-secondary-50 text-secondary-700">
 
-            // if set via local storage previously
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                }
-
-                // if NOT set via local storage previously
-            } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            }
-
-        });
-    </script>
-    <main class="flex flex-col justify-between overflow-hidden relative mainclass dark:bg-gray-900">
-        <div class="container mx-auto md:px-0 px-5">
-            <div class="header text-center mt-4">
-                <h1 class="text-5xl mt-20 dark:text-white font-bold">Open-Source webshop alternative for hostings</h1>
-                <p class="text-sm my-2 dark:text-gray-400">Paymenter is an open source webshop solution for hosting companies. It's developed to provide an more easy way to manage your hosting company.</p>
-                <a href="/docs/intro" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4">Get
-                    started</a>
-            </div>
+    <div class="bg-primary-50 dark:bg-secondary-100 border-b dark:border-secondary-300 border-secondary-300 py-2">
+      <div class="content flex items-center justify-between">
+        {{ $logo := resources.Get "image/textlogo.png" }}
+        <img src="{{ $logo }}" alt="Paymenter Logo" class="h-8">
+        <div class="flex items-center gap-x-8">
+          <a href="/">
+            Home
+          </a>
+          <a href="/docs/getting-started/introduction/">
+            Documentation
+          </a>
+          <a href="https://discord.gg/paymenter" target="_blank">
+            Get Help
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+          <a href="https://github.com/Paymenter" target="_blank">
+            Github
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+          <a href="https://demo.paymenter.org" class="button button-primary">
+            Try Demo Version
+          </a>
         </div>
-        {{ $intro := resources.Get "image/laptop.svg" }}
-        <div class="image-container px-5 pb-20 pt-10 max-w-[1100px] sm:m-auto mt-24 mb-24"><img src="{{ $intro.Permalink }}" width="100%"></div>
-        <div class="w-full h-screen absolute left-0 right-0 top-0 bg-gradient-to-b blur-wrapper border-accent border-b dark:from-black from-white hero-background to-transparent" style="z-index:-1">
-            <div class="test h-full min-w-min w-full blur-1"></div>
-        </div><br><br>
-        <div class="pt-10">
-            <div class="max-w-xl mx-auto text-center">
-                <h1 class="text-4xl dark:text-gray-200">Fully Customizable</h1>
-                <p class="dark:text-gray-200">We allow our users to modify the panel. This is also backed through our Marketplace where users are allowed to buy products which are easily importable.</p>
-                {{ $settingsd := resources.Get "image/dark/settings.png" }} {{ $settingsl := resources.Get "image/light/settings.png" }}
-                <div><img class="scale-150 pb-20 pt-28 dark:!hidden !block" src="{{ $settingsl.Permalink }}" alt="Here you can see the settings tab on the finished installation"><img class="scale-150 pb-20 pt-28 dark:!block !hidden" src="{{ $settingsd.Permalink }}"
-                        alt="Here you can see the settings tab on the finished installation"></div>
-            </div>
+      </div>
+    </div>
+
+    <div class="min-h-[calc(100vh-60px)] flex flex-col justify-between items-center overflow-hidden bg-primary-50 dark:bg-secondary-100">
+      <div class="pt-32 pb-16 content text-center">
+        <h1 class="text-5xl text-secondary-900 font-medium max-w-2xl mx-auto mb-2">Open-Source Gateway System Alternative for Hostings</h1>
+        <p class="max-w-2xl mx-auto">Paymenter is an open source webshop solution for hosting companies. It's developed to provide an more easy way to manage your hosting company.</p>
+        <div class="flex justify-center gap-x-2 mt-4">
+          <a href="#" class="button button-primary">Get Started <i class="ri-arrow-right-up-line"></i></a>
+          <a href="#" class="button button-primary-outline"><i class="ri-discord-fill"></i> Discord</a>
         </div>
-        <div class="pt-20">
-            <div class="max-w-xl mx-auto text-center dark:text-gray-200">
-                <h1 class="text-4xl dark:text-gray-200">Easy Interface</h1>
-                <p class="dark:text-gray-200">Access everything you need from billing to support.<br> We provide a easy to use interface.<br> where users are allowed to buy products which are easily importable.</p>
-                <p class="text-sm max-h-1 dark:text-gray-200">Protip: switch to <span class="dark:hidden inline"> darkmode</span><span class="hidden dark:inline"> lightmode</span> to see the <span class="dark:hidden inline">
-                        darkmode</span><span class="hidden dark:inline"> lightmode</span> version of the panel.</p>
-                <div class="pb-12"></div>
-            </div>
+      </div>
+      {{ $laptop := resources.Get "image/laptop.svg"}}
+      <img src="{{ $laptop.RelPermalink }}" alt="Paymenter Laptop" class="w-full max-w-5xl mx-3">
+
+      <div class="my-16 flex gap-x-16 items-center">
+        <span class="text-sm text-secondary-600">Intergrated With:</span>
+        {{ $pterodactyl := resources.Get "image/pterodactyl.svg" }}
+        <img src="{{ $pterodactyl.RelPermalink }}" alt="Pterodactyl" class="h-7 grayscale dark:grayscale-0 hover:grayscale-0 duration-300">
+        {{ $stripe := resources.Get "image/stripe.svg" }}
+        <img src="{{ $stripe.RelPermalink }}" alt="stripe" class="h-8 grayscale dark:grayscale-0 hover:grayscale-0 duration-300">
+        {{ $paypal := resources.Get "image/paypal.svg" }}
+        <img src="{{ $paypal.RelPermalink }}" alt="paypal" class="h-8 grayscale dark:grayscale-0 hover:grayscale-0 duration-300">
+        <a href="/docs/getting-started/extensions/" class="text-secondary-600 underline">more <i class="ri-add-line"></i></a>
+      </div>
+    </div>
+
+    <div class="content py-16">
+      <h3 class="text-3xl font-semibold text-secondary-800 mb-2">Hosting Billing of the Future</h3>
+      <p class="mb-7 max-w-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus. Doloremque quaerat nobis atque magnam.</p>
+      <div class="grid grid-cols-12 gap-4">
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-sparkling-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Time Saving</h3>
+          <p>Save time with automated billing and service activation and suspession.</p>
         </div>
-        <div id="slick" class="px-4 sm:px-6 lg:px-8">
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-flashlight-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Fast Loading</h3>
+          <p>Programmed with the latest technologies for the fastest loading speed.</p>
+        </div>
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-folder-shield-2-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Highly Secure</h3>
+          <p>With advanced protection systems, your data is safe with Paymenter.</p>
+        </div>
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-brush-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Fully Customizable</h3>
+          <p>Without programming skills, you can make Paymenter completely match to your branding.</p>
+        </div>
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-compasses-2-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">User Friendly</h3>
+          <p>With a dedicated team for making the user experience useable for anyone.</p>
+        </div>
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-open-source-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Free & Open Source</h3>
+          <p>Open source and free to use, so you can invest your budget in the things that really matter.</p>
+        </div>
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-crop-2-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Scalable</h3>
+          <p>Paymenter is made for large and small scale, and is made so it can handle any amount of users.</p>
+        </div>
+        <div class="md:col-span-4 col-span-12 content-box">
+          <div class="w-14 h-14 bg-primary-100 text-primary-400 text-3xl flex items-center justify-center rounded-lg mb-3">
+            <i class="ri-crop-2-line"></i>
+          </div>
+          <h3 class="text-lg font-semibold">SEO Optimised</h3>
+          <p>Easily improve your search result with the advanced SEO options.</p>
+        </div>
+        <div class="md:col-span-4 col-span-12 content-box !bg-secondary-100 dark:!bg-secondary-50 flex flex-col">
+          <h3 class="text-lg font-semibold">And so much more!</h3>
+          <p>Start using Paymenter for free today and experience all the advantages.</p>
+          <div class="mt-auto pt-3">
+            <a href="/docs/getting-started/introduction/" class="button button-primary mt-auto">Get Started <i class="ri-arrow-right-up-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="bg-white dark:bg-secondary-100">
+      <div class="content p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="/" class="flex items-center">
+              <img src="{{ $logo }}" class="h-8 mr-3" alt="Paymenter Logo" />
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8">
             <div>
-                {{ $invoiced := resources.Get "image/dark/invoice.png" }} {{ $invoicel := resources.Get "image/light/invoice.png" }}
-                <img class="rounded-md dark:!hidden !block" src="{{ $invoicel.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-                <img class="rounded-md !hidden dark:!block" src="{{ $invoiced.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
+              <h2 class="mb-6 text-sm font-semibold text-secondary-900 uppercase">Resources</h2>
+              <ul class="text-secondary-600 font-medium">
+                <li class="mb-4">
+                  <a href="/docs/getting-started/introduction/" class="hover:underline">Documentation</a>
+                </li>
+                <li>
+                  <a href="https://github.com/orgs/Paymenter/people" class="hover:underline">Team</a>
+                </li>
+              </ul>
             </div>
-            <div class="h-full min-w-min">
-                {{ $settingsd := resources.Get "image/dark/settings.png" }} {{ $settingsl := resources.Get "image/light/settings.png" }}
-                <img class="rounded-md dark:!hidden !block" src="{{ $settingsl.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-                <img class="rounded-md !hidden dark:!block" src="{{ $settingsd.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-secondary-900 uppercase">Follow Us</h2>
+              <ul class="text-secondary-600 font-medium">
+                <li class="mb-4">
+                  <a href="https://github.com/Paymenter" class="hover:underline">Github</a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/paymenter" class="hover:underline">Discord</a>
+                </li>
+              </ul>
             </div>
-            <div class="h-full min-w-min">
-                {{ $admind := resources.Get "image/dark/admin.png" }} {{ $adminl := resources.Get "image/light/admin.png" }}
-                <img class="rounded-md dark:!hidden !block" src="{{ $adminl.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-                <img class="rounded-md !hidden dark:!block" src="{{ $admind.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-            </div>
-            <div class="h-full min-w-min">
-                {{ $clientsd := resources.Get "image/dark/clients.png" }} {{ $clientsl := resources.Get "image/light/clients.png" }}
-                <img class="rounded-md dark:!hidden !block" src="{{ $clientsl.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-                <img class="rounded-md !hidden dark:!block" src="{{ $clientsd.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-            </div>
-            <div class="h-full min-w-min">
-                {{ $homepaged := resources.Get "image/dark/homepage.png" }} {{ $homepagel := resources.Get "image/light/homepage.png" }}
-                <img class="rounded-md dark:!hidden !block" src="{{ $homepagel.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-                <img class="rounded-md !hidden dark:!block" src="{{ $homepaged.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-            </div>
-            <div class="h-full min-w-min">
-                {{ $productsd := resources.Get "image/dark/products.png" }} {{ $productsl := resources.Get "image/light/products.png" }}
-                <img class="rounded-md dark:!hidden !block" src="{{ $productsl.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-                <img class="rounded-md !hidden dark:!block" src="{{ $productsd.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-            </div>
-            <div class="h-full min-w-min">
-                {{ $pricingd := resources.Get "image/dark/pricing.png" }} {{ $pricingl := resources.Get "image/light/pricing.png" }}
-                <img class="rounded-md dark:!hidden !block" src="{{ $pricingl.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-                <img class="rounded-md !hidden dark:!block" src="{{ $pricingd.Permalink }}" loading="lazy" alt="Here you can see the settings tab on the finished installation">
-            </div>
+          </div>
         </div>
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <style>
-        .slick-slide {
-            position: relative;
-            transform: scale(.7);
-            transition: all .5s ease-in-out;
-            min-width: 200px;
-        }
-        
-        .slick-slide.slick-current {
-            transform: scale(1)
-        }
-    </style>
-    <script>
-        $(document).ready(function() {
-            $('#slick').slick({
-                infinite: true,
-                centerMode: true,
-                slidesToShow: 3,
-                arrows: false,
-                responsive: [{
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }]
-            });
-        });
-    </script>
+        <hr class="my-6 border-secondary-200 sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-secondary-500 sm:text-center">© 2023 <a href="https://paymenter.org/" class="hover:underline">Paymenter</a>. All Rights Reserved.
+          </span>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
-</body>
+  </body>

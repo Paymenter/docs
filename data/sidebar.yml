@@ -10,7 +10,7 @@
   pages:
     - title: Create a theme
     - title: Create a extension
-- title: Features
+- title: Extensions
   slug: ../features
   pages: 
     - title: Pterodactyl

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run start:hugo & npm run start:css",
-    "start:hugo": "hugo server -D",
+    "start:hugo": "hugo server -D --disableFastRender",
     "start:css": "npx tailwindcss -i ./assets/main.css -o ./assets/style.css -w",
     "build": "npm run build:hugo & npm run build:css",
     "build:hugo": "hugo -D",
