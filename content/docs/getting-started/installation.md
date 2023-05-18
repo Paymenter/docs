@@ -90,11 +90,11 @@ Back up your encryption key (APP_KEY in the .env file). It is used as an encrypt
 Change the database connection information in the `.env` file to match the credentials you created in the previous step.
 
 ```bash
-DB_HOST=
-DB_PORT=
-DB_DATABASE=
-DB_USERNAME=
-DB_PASSWORD=
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=paymenter
+DB_USERNAME=paymenter
+DB_PASSWORD=yourPassword
 ```
 
 ## Database Setup
@@ -253,7 +253,7 @@ Be sure to replace `paymenter.org` with your domain name.
 Fix the permmisions of paymenter with the following command:
 
 ```bash
-chown -R www-data:www-data /var/www/paymenter
+chown -R www-data:www-data /var/www/paymenter/*
 ```
 
 

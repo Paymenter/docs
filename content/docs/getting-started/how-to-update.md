@@ -47,7 +47,7 @@ php artisan view:clear
 
 ### Set webserver permissions
 ```bash
-chown -R www-data:www-data /var/www/paymenter
+chown -R www-data:www-data /var/www/paymenter/*
 ```
 
 ### Remove the maintenance mode
