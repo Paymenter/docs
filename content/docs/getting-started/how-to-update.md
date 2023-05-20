@@ -34,7 +34,7 @@ composer install --no-dev --optimize-autoloader
 
 ### Set the correct permissions
 ```bash
-chmod -R 755 storage bootstrap/cache
+chmod -R 755 storage/* bootstrap/cache/
 ```
 
 ### Migrate the database

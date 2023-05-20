@@ -25,3 +25,10 @@
 * ##### Below you will see a fully functional Example of Product
 
 ![image](productsettingsexample.png)
+
+* #### Configurable Options (> 0.7)
+
+Pterodactyl supports some configurable options. You can use them to create different products with different settings. Here are the names of the configurable options:
+`nest`, `egg_id`, `location`, `node`, `allocation`(ports), `location`, `databases`, `backups`, `startup`, `cpu`, `io`, `disk`, `memory`, `swap`.
+
+All environment from eggs are also supported. Example:`MC_VERSION`, `SERVER_JAR`
