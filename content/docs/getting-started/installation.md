@@ -90,8 +90,6 @@ Back up your encryption key (APP_KEY in the .env file). It is used as an encrypt
 Change the database connection information in the `.env` file to match the credentials you created in the previous step.
 
 ```bash
-DB_HOST=127.0.0.1
-DB_PORT=3306
 DB_DATABASE=paymenter
 DB_USERNAME=paymenter
 DB_PASSWORD=yourPassword
@@ -102,7 +100,7 @@ DB_PASSWORD=yourPassword
 Now we need to setup all of the base data for the Panel in the database you created earlier. **The command below may take some time to run depending on your machine. Please DO NOT exit the process until it is completed!** This command will setup the database tables that power Paymenter.
 
 ```bash
-php artisan migrate
+php artisan migrate --seed --force
 ```
 
 ## Add The First User
