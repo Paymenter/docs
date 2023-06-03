@@ -153,6 +153,7 @@ For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.
 ```conf
 server {
     listen 80;
+    listen [::]:80;
     server_name paymenter.org;
     return 301 https://$host$request_uri;
 }
