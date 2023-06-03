@@ -121,6 +121,7 @@ For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.
 ```conf
 server {
     listen 80;
+    listen [::]:80;
     server_name paymenter.org;
     root /var/www/paymenter/public;
 
@@ -158,6 +159,7 @@ server {
 
 server {
     listen 443 ssl http2;
+    listen [::]:443 ssl http2;
     server_name paymenter.org;
     root /var/www/paymenter/public;
 
