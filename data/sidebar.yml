@@ -15,4 +15,8 @@
   pages: 
     - title: Pterodactyl
     - title: Virtualizor
+- title: Guides
+  slug: guides
+  pages:
+    - title: DiscordOAuth
     
