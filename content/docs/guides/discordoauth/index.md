@@ -1,9 +1,11 @@
 ---
-title: DiscordOAuth
+title: OAuth
 description: A simple tutorial on how to add Discord oAuth authorization to your Paymenter
 toc: true
 ---
-A simple tutorial on how to add Discord oAuth authorization to your Paymenter
+A simple tutorial on how to add oAuth authorization to your Paymenter
+
+# Discord OAuth
 
 First locate to [Discord Developer Page](https://discord.dev) and click on New application.
 
