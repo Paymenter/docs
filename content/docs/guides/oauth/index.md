@@ -117,4 +117,4 @@ Should look something like this.
 
 Congratulations, Google's OAuth should be now available for your users.
 
-![google_13](google_12.png)
+![google_13](google_13.png)
