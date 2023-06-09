@@ -5,7 +5,7 @@ toc: true
 ---
 A simple tutorial on how to add oAuth authorization to your Paymenter
 
-# Discord OAuth
+## Discord OAuth
 
 First locate to [Discord Developer Page](https://discord.dev) and click on New application.
 
@@ -31,7 +31,7 @@ Hit submit to save all changes and Discord OAuth should be working and visible i
 
 ![discord_finalpage](discord_finalpage.png)
 
-# Github OAuth
+## Github OAuth
 
 Locate to [Github Account Settings](https://github.com/settings/profile) scroll down and click on Developer Settings
 as showed in the image.
@@ -61,7 +61,7 @@ You can verify this by going to the login page and clicking on Sign in with GitH
 
 ![github_6](github_6.png)
 
-# Google OAuth
+## Google OAuth
 
 Locate to [Google API & Services Dashboard](https://console.cloud.google.com/apis/dashboard) and click on New application.
 Create a new project if you don't have it, after that go to OAuth consent screen, select external and click create
