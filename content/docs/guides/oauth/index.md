@@ -99,7 +99,7 @@ Now lets push our OAuth application to production
 
 After that go back to Credentials and click on Create credentials --> OAuth client ID.
 
-![google_9](google_9.png)
+![google_9](google_3.png)
 
 Select Web application and for Authorized redirect URIs put (https://yourdomain.here/login/google/callback)
 Should look like this.
