@@ -63,31 +63,58 @@ You can verify this by going to the login page and clicking on Sign in with GitH
 
 ## Google OAuth
 
-Locate to [Google API & Services Dashboard](https://console.cloud.google.com/apis/dashboard) and click on New application.
-Create a new project if you don't have it, after that go to OAuth consent screen, select external and click create
+Locate to [Google API & Services Dashboard](https://console.cloud.google.com/apis/dashboard)
+Click on create a new project
 
-![google_page1](google_page1.png)
+![google_1](google_1.png)
 
-After that fill in your Application name, support email, logo etc.
-Should look simillar to this
+Name your project and click create
 
-![google_page2](google_page2.png)
+![google_2](google_2.png)
 
-Click on Save and Continue, after that navigate to Credentials and Create Credentials
+After that click on Create Credentials and OAuth client ID
 
-![google_page3](google_page3.png)
+![google_3](google_3.png)
 
-Select Web application the application name doesn't matter, for Authorized redirect URIs put (https://yourdomain.here/login/google/callback)
-and click save. After that you should see your Client ID and Client Secret, copy both of these and go to your Paymenter admin area
-and navigate to settings (... (Three dots) -> Settings --> Login) Paste the Client ID and Client Secret and click submit to save changes. 
+If this is your first application, you will need to configure your consent screen, to continue click on Configure Consent Screen
+
+![google_4](google_4.png)
+
+Click on External user type and click continue
+
+![google_5](google_5.png)
+
+Configure your application and click save and continue
+
+![google_6](google_6.png)
+
+Ignore scopes and click continue
+
+![google_7](google_7.png)
+
+Same for test users, after that scroll down and click on Back to dashboard.
+Now lets push our OAuth application to production
+
+![google_8](google_8.png)
+
+After that go back to Credentials and click on Create credentials --> OAuth client ID.
+
+![google_9](google_9.png)
+
+Select Web application and for Authorized redirect URIs put (https://yourdomain.here/login/google/callback)
+Should look like this.
+
+![google_10](google_10.png)
+
+Click on create and you should be showed your Client ID and Client Secret
+
+![google_11](google_11.png)
+
+Copy both of these and go to your Paymenter admin area, navigate to settings (... (three dots) -> Settings --> Login) Paste the Client ID and Client Secret and click submit to save changes. 
 Should look something like this.
 
-![google_lastpage](google_lastpage.png)
+![google_12](google_12.png)
 
-Keep in mind that you will need to publish your OAuth application via OAuth consent screen, This required
-you to have 
+Congratulations, Google's OAuth should be now available for your users.
 
-* An official link to your app's Privacy Policy
-* A YouTube video showing how you plan to use the Google user data you get from scopes
-* A written explanation telling Google why you need access to sensitive and/or restricted user data
-* All your domains verified in Google Search Console
+![google_13](google_12.png)
