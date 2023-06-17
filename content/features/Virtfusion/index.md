@@ -1,3 +1,7 @@
+---
+toc: true
+---
+
 ## Overview
 
  Virtfusion is a VPS Control panel. With modern UI and state of the art features.
@@ -51,4 +55,4 @@ Create the Product
 
 ![](step8.png)
 
-## Thats it
+Thats it! Now your clients can order VPS's from your site!

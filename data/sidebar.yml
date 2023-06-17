@@ -15,6 +15,7 @@
   pages: 
     - title: Pterodactyl
     - title: Virtualizor
+    - title: Virtfusion
 - title: Guides
   slug: guides
   pages:
