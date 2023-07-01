@@ -39,7 +39,7 @@ chmod -R 755 storage/* bootstrap/cache/
 
 ### Migrate the database
 ```bash
-php artisan migrate
+php artisan migrate --force --seed
 ```
 
 ### Clear config and view

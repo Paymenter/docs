@@ -99,9 +99,8 @@ DB_PASSWORD=yourPassword
 
 Now we need to setup all of the base data for the Panel in the database you created earlier. **The command below may take some time to run depending on your machine. Please DO NOT exit the process until it is completed!** This command will setup the database tables that power Paymenter.
 
-<!-- Replace at 0.7 with --seed -->
 ```bash
-php artisan migrate --force
+php artisan migrate --force --seed
 ```
 
 ## Add The First User
