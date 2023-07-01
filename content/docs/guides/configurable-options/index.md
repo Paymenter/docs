@@ -16,7 +16,7 @@ Now we need to create the options for the configurable option. Click on `Create 
 
 It is important to set the name to `EGG| <Your Display Name>` this is important for pterodactyl to know what variable to use. 
 
-For a full list of names checkout the [pterodactyl guide](http://localhost:1313/features/pterodactyl/#configuring-the-product)
+For a full list of names checkout the [pterodactyl guide](/features/pterodactyl/#configuring-the-product)
 
 Example
 ![image](configurable-option-create.png)
