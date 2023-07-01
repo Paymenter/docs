@@ -27,9 +27,10 @@ To do this, click on "API Tokens" then "Add". You will see this page:
 ![image](apikey.png)
 
 Fill up the name and token ID with your desired information.
+! Disable the " privilege separation " option, otherwise Paymenter cannot find disk and so on !
 Example:
 ![image](example.png)
-! Disable the " privilege separation " option, otherwise Paymenter cannot find disk and so on !
+
 
 Click on " Add " .
 A new window will appear.
