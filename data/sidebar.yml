@@ -5,19 +5,19 @@
     - title: Installation
     - title: Extensions
     - title: How to update
+- title: Extensions
+  slug: ../features
+  pages:
+    - title: Pterodactyl
+    - title: Virtualizor
+    - title: Virtfusion
+    - title: Proxmox
 - title: Customization
   slug: customization
   pages:
     - title: Create a theme
     - title: Create a extension
-- title: Extensions
-  slug: ../features
-  pages: 
-    - title: Pterodactyl
-    - title: Virtualizor
-    - title: Virtfusion
 - title: Guides
   slug: guides
   pages:
     - title: OAuth
-    
