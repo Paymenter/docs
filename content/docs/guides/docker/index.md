@@ -23,12 +23,12 @@ domain.tld -> Your domain (with subdomain if applicable)
 Starting Everything:
 ```bash
 docker compose up -d --force-recreate
-docker compose run --rm payment php artisan migrate --force
+docker compose run --rm paymenter php artisan migrate --force
 ```
 
 Creating Users:
 ```bash
-docker compose run --rm payment php artisan p:user:create
+docker compose run --rm paymenter php artisan p:user:create
 ```
 
 ## Nginx
@@ -48,12 +48,12 @@ server {
     location ~ / {
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
-        proxy_pass http://payment:8080;
+        proxy_pass http://paymenter:8080;
     }
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
     access_log off;
-    error_log  /var/log/nginx/payment.app-error.log error;
+    error_log  /var/log/nginx/paymenter.app-error.log error;
     # allow larger file uploads and longer script runtimes
     client_max_body_size 100m;
     client_body_timeout 120s;
