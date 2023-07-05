@@ -6,11 +6,8 @@ toc: true
 
 ## Setup
 
-{{< tabs tabTotal="6">}}
-{{< tab tabName="Alpine" >}}
-For an Alpine host server run the following:
-```bash
-apk update && apk add docker docker-cli-compose curl
+Getting Resources:
+```
 mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
 curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
 ```
@@ -20,185 +17,19 @@ Replace the following in `docker-compose.yml`:
 YOUR_DB_PASSWORD -> Your desired database password.
 YOUR_ROOT_PASSWORD -> Your desired MySQL root password.
 YOUR_APP_KEY -> Your app key (used for encryption)
-https://domain.tld -> Your domain
+domain.tld -> Your domain (with subdomain if applicable)
 ```
 
-Run:
+Starting Everything:
 ```bash
 docker compose up -d --force-recreate
 docker compose run --rm payment php artisan migrate --force
 ```
 
-To create a new user run the following:
+Creating Users:
 ```bash
 docker compose run --rm payment php artisan p:user:create
 ```
-{{< /tab >}}
-{{< tab tabName="Ubuntu" >}}
-For an Ubuntu host server run the following:
-```bash
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
-curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
-```
-
-Replace the following in `docker-compose.yml`:
-```
-YOUR_DB_PASSWORD -> Your desired database password.
-YOUR_ROOT_PASSWORD -> Your desired MySQL root password.
-YOUR_APP_KEY -> Your app key (used for encryption)
-https://domain.tld -> Your domain
-```
-
-Run:
-```bash
-docker compose up -d --force-recreate
-docker compose run --rm payment php artisan migrate --force
-```
-
-To create a new user run the following:
-```bash
-docker compose run --rm payment php artisan p:user:create
-```
-{{< /tab >}}
-{{< tab tabName="Debian" >}}
-For an Debian host server run the following:
-```bash
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
-curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
-```
-
-Replace the following in `docker-compose.yml`:
-```
-YOUR_DB_PASSWORD -> Your desired database password.
-YOUR_ROOT_PASSWORD -> Your desired MySQL root password.
-YOUR_APP_KEY -> Your app key (used for encryption)
-https://domain.tld -> Your domain
-```
-
-Run:
-```bash
-docker compose up -d --force-recreate
-docker compose run --rm payment php artisan migrate --force
-```
-
-To create a new user run the following:
-```bash
-docker compose run --rm payment php artisan p:user:create
-```
-{{< /tab >}}
-{{< tab tabName="CentOS" >}}
-For an CentOS host server run the following:
-```bash
-sudo yum install -y yum-utils curl
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl start docker
-mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
-curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
-```
-
-Replace the following in `docker-compose.yml`:
-```
-YOUR_DB_PASSWORD -> Your desired database password.
-YOUR_ROOT_PASSWORD -> Your desired MySQL root password.
-YOUR_APP_KEY -> Your app key (used for encryption)
-https://domain.tld -> Your domain
-```
-
-Run:
-```bash
-docker compose up -d --force-recreate
-docker compose run --rm payment php artisan migrate --force
-```
-
-To create a new user run the following:
-```bash
-docker compose run --rm payment php artisan p:user:create
-```
-{{< /tab >}}
-{{< tab tabName="RHEL" >}}
-For an RHEL host server run the following:
-```bash
-sudo yum install -y yum-utils curl
-sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl start docker
-mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
-curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
-```
-
-Replace the following in `docker-compose.yml`:
-```
-YOUR_DB_PASSWORD -> Your desired database password.
-YOUR_ROOT_PASSWORD -> Your desired MySQL root password.
-YOUR_APP_KEY -> Your app key (used for encryption)
-https://domain.tld -> Your domain
-```
-
-Run:
-```bash
-docker compose up -d --force-recreate
-docker compose run --rm payment php artisan migrate --force
-```
-
-To create a new user run the following:
-```bash
-docker compose run --rm payment php artisan p:user:create
-```
-{{< /tab >}}
-{{< tab tabName="Fedora" >}}
-For an Fedora host server run the following:
-```bash
-sudo dnf -y install dnf-plugins-core curl
-sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl start docker
-mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
-curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
-```
-
-Replace the following in `docker-compose.yml`:
-```
-YOUR_DB_PASSWORD -> Your desired database password.
-YOUR_ROOT_PASSWORD -> Your desired MySQL root password.
-YOUR_APP_KEY -> Your app key (used for encryption)
-https://domain.tld -> Your domain
-```
-
-Run:
-```bash
-docker compose up -d --force-recreate
-docker compose run --rm payment php artisan migrate --force
-```
-
-To create a new user run the following:
-```bash
-docker compose run --rm payment php artisan p:user:create
-```
-{{< /tab >}}
-{{< /tabs >}}
 
 ## Nginx
 
@@ -244,5 +75,4 @@ server {
     }
 }
 ```
-
 Make sure to replace `DOMAIN` with your domain and enter your SSL certificates as `cert.pem` and `cert.key` in /opt/paymenter/certs.
