@@ -6,14 +6,12 @@ toc: true
 # How to update
 
 ## Automatic update
-DOES NOT WORK, WILL BE FIXED SOON! 
-<!--
 Run the following command in your terminal:
 ```bash
 cd /var/www/paymenter
 php artisan p:upgrade
 ```
--->
+
 
 ## Manual update
 Cd to your paymenter directory and run the following commands:
@@ -39,7 +37,7 @@ chmod -R 755 storage/* bootstrap/cache/
 
 ### Migrate the database
 ```bash
-php artisan migrate
+php artisan migrate --force --seed
 ```
 
 ### Clear config and view
