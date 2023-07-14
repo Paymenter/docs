@@ -1,52 +1,62 @@
 openapi: 3.1.0
 info:
+  version: ''
   title: Paymenter Client API
-  version: '1.0'
-  description: Paymenter supports a way for users to connect via our api and build their own stuff on it
   summary: Paymenter
+  description: |-
+    Paymenter supports a way for users to connect via our api and build their own stuff on it.
+
+
+    Please use the header `Accept`: `application/json` for the best results
   license:
-    identifier: MIT
     name: MIT
-servers: []
+    identifier: MIT
 paths:
   /api/clients/v1/tickets:
     get:
+      tags:
+        - Tickets
       summary: Get all tickets
+      description: Get all tickets from the logged in user
+      operationId: get-v1-tickets
+      requestBody:
+        content: {}
       responses:
         '200':
           description: OK
-          headers: {}
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Ticket'
-        '400':
-          description: Bad Request
-      operationId: get-v1-tickets
-      description: Get all tickets from the logged in user
-      requestBody:
-        content: {}
-      tags:
-        - Tickets
-    parameters: []
-    post:
-      summary: Make new ticket
-      operationId: api-v1-clients-tickets-create
-      responses:
-        '201':
-          description: Created
           content:
             application/json:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
+                    default: true
                   message:
                     type: string
-                  ticket:
-                    $ref: '#/components/schemas/Ticket'
-      description: ''
+                    default: Ticket successfully retrieved.
+                  data:
+                    type: object
+                    properties:
+                      ticket:
+                        $ref: '#/components/schemas/Ticket'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                Example 1:
+                  value: {}
+      security:
+        - Authorization: []
+    post:
       tags:
         - Tickets
+      summary: Make new ticket
+      description: Create a new ticket
+      operationId: api-v1-clients-tickets-create
       requestBody:
         content:
           application/json:
@@ -60,42 +70,61 @@ paths:
                 priority:
                   type: string
                   description: 'Priority, must be one of: `low`, `medium`, `high`'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    default: true
+                  message:
+                    type: string
+                    default: Ticket successfully created.
+                  data:
+                    type: object
+                    properties:
+                      ticket:
+                        $ref: '#/components/schemas/Ticket'
+      security:
+        - Authorization: []
   '/api/clients/v1/tickets/{ticketId}':
-    parameters:
-      - schema:
-          type: string
-        name: ticketId
-        in: path
-        required: true
     get:
-      summary: Get ticket by id
       tags:
         - Tickets
+      summary: Get ticket by id
+      description: ''
+      operationId: api-v1-clients-ticket-get
+      parameters:
+        - name: ticketId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
-      operationId: api-v1-clients-ticket-get
-      requestBody:
-        content: {}
-      description: ''
+                $ref: '#/components/schemas/Ticket'
+      security:
+        - Authorization: []
   '/api/clients/v1/tickets/{ticketId}/reply':
-    parameters:
-      - schema:
-          type: string
-        name: ticketId
-        in: path
-        required: true
-    put:
+    post:
       summary: Reply to ticket
       operationId: api-v1-clients-ticket-reply
-      responses:
-        '200':
-          description: OK
+      parameters:
+        - name: ticketId
+          in: path
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -104,19 +133,97 @@ paths:
               properties:
                 message:
                   type: string
-      description: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    default: true
+                  message:
+                    type: string
+                    default: Message successfully sent.
+        '422':
+          description: Unprocessable Entity (WebDAV)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    readOnly: true
+                    default: The message field is required.
+                  errors:
+                    type: object
+                    properties:
+                      message:
+                        type: array
+                        items:
+                          type: string
+                          default: The message field is required.
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    default: false
+                  message:
+                    type: string
+                    default: You are sending too many messages. Please wait a few minutes and try again.
+      security:
+        - Authorization: []
+  '/api/clients/v1/tickets/{ticketId}/messages':
+    get:
+      summary: Get all messages from a ticket
+      description: Get all messages from a ticket
+      operationId: get-api-clients-v1-tickets-ticketId-messages
+      parameters:
+        - name: ticketId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    default: true
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TicketMessage'
+      security:
+        - Authorization: []
+  '/api/clients/v1/tickets/{ticketId}/close':
+    delete:
       tags:
         - Tickets
-  '/api/clients/v1/tickets/{ticketId}/close':
-    parameters:
-      - schema:
-          type: string
-        name: ticketId
-        in: path
-        required: true
-    delete:
       summary: Delete ticket by id
+      description: Close a ticket
       operationId: api-v1-clients-ticket-delete
+      parameters:
+        - name: ticketId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: ''
@@ -125,18 +232,91 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
                   message:
                     type: string
-      description: ''
-      tags:
-        - Tickets
+      security:
+        - Authorization: []
 components:
+  securitySchemes:
+    Authorization:
+      type: apiKey
+      name: Authorization Bearer
+      in: header
   schemas:
-    User:
+    Ticket:
+      type: object
+      title: Ticket
+      description: Ticket model
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+        status:
+          enum:
+            - open
+            - closed
+            - replied
+        priority:
+          enum:
+            - low
+            - medium
+            - high
+        order_id:
+          type:
+            - integer
+            - 'null'
+        assigned_to:
+          type:
+            - integer
+            - 'null'
+        created_at:
+          type: string
+          readOnly: true
+        updated_at:
+          type: string
+          readOnly: true
+      examples:
+        - id: 2
+          title: New ticket
+          status: open
+          priority: high
+          order_id: null
+          assigned_to: null
+          created_at: '2023-04-15T12:35:21.000000Z'
+          updated_at: '2023-04-15T12:35:21.000000Z'
+    TicketMessage:
       type: object
       properties:
         id:
           type: integer
+          readOnly: true
+        ticket_id:
+          type: integer
+          readOnly: true
+        user_id:
+          type: integer
+          readOnly: true
+        message:
+          type: string
+        created_at:
+          type: string
+          readOnly: true
+        updated_at:
+          type: string
+          readOnly: true
+        user:
+          $ref: '#/components/schemas/User'
+    User:
+      type: object
+      description: User model
+      properties:
+        id:
+          type: integer
+          readOnly: true
         name:
           type: string
         email:
@@ -145,6 +325,7 @@ components:
           type:
             - string
             - 'null'
+          readOnly: true
         address:
           type:
             - string
@@ -175,51 +356,9 @@ components:
             - 'null'
         created_at:
           type: string
+          readOnly: true
         updated_at:
           type: string
-        credits:
-          type: integer
-          minimum: 0
-      description: User model
-    Ticket:
-      type: object
-      properties:
-        id:
-          type: integer
-        title:
-          type: string
-        status:
-          type: string
-        priority:
-          type: string
-        order_id:
-          type:
-            - integer
-            - 'null'
-        assigned_to:
-          type:
-            - integer
-            - 'null'
-        created_at:
-          type: string
-        updated_at:
-          type: string
-      examples:
-        - id: 2
-          title: New ticket
-          status: open
-          priority: high
-          order_id: null
-          assigned_to: null
-          created_at: '2023-04-15T12:35:21.000000Z'
-          updated_at: '2023-04-15T12:35:21.000000Z'
-      description: Ticket model
-      title: Ticket
-  securitySchemes:
-    Authorization:
-      name: Authorization Bearer
-      type: apiKey
-      in: header
-  responses: {}
+          readOnly: true
 security:
   - Authorization: []
