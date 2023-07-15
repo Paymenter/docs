@@ -117,6 +117,8 @@ paths:
         - Authorization: []
   '/api/clients/v1/tickets/{ticketId}/reply':
     post:
+      tags:
+        - Tickets
       summary: Reply to ticket
       operationId: api-v1-clients-ticket-reply
       parameters:
@@ -183,6 +185,8 @@ paths:
         - Authorization: []
   '/api/clients/v1/tickets/{ticketId}/messages':
     get:
+      tags:
+        - Tickets
       summary: Get all messages from a ticket
       description: Get all messages from a ticket
       operationId: get-api-clients-v1-tickets-ticketId-messages
@@ -238,6 +242,129 @@ paths:
                     type: string
       security:
         - Authorization: []
+  /api/clients/v1/invoices:
+    get:
+      summary: Get all invoices
+      operationId: get-api-clients-v1-invoices
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    default: true
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Invoice'
+                  metadata:
+                    type: object
+                    properties:
+                      total_items:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      max_per_page:
+                        type: integer
+                      item_count:
+                        type: integer
+      security:
+        - Authorization: []
+  '/api/clients/v1/invoices/{invoiceId}':
+    get:
+      summary: Get all invoice by id
+      operationId: get-api-clients-v1-invoices-get-invoices-by-id
+      parameters:
+        - name: invoiceId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    default: true
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Invoice'
+                  metadata:
+                    type: object
+                    properties:
+                      total_items:
+                        type: integer
+                      total_pages:
+                        type: integer
+                      max_per_page:
+                        type: integer
+                      item_count:
+                        type: integer
+        '':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      invoice:
+                        $ref: '#/components/schemas/Invoice'
+      security:
+        - Authorization: []
+  '/api/clients/v1/invoices/{invoiceId}/pay':
+    post:
+      summary: Pay invoice by ID
+      operationId: post-api-clients-v1-invoices-invoiceId-pay
+      parameters:
+        - name: invoiceId
+          in: path
+          description: invoice
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payment_method:
+                  type: string
+                  description: 'Payment method eg: PayPal, Stripe'
+      responses:
+        '302':
+          description: Found
+          headers:
+            Location:
+              schema:
+                type: string
+      security:
+        - Authorization: []
 components:
   securitySchemes:
     Authorization:
@@ -248,7 +375,6 @@ components:
     Ticket:
       type: object
       title: Ticket
-      description: Ticket model
       properties:
         id:
           type: integer
@@ -290,6 +416,7 @@ components:
           updated_at: '2023-04-15T12:35:21.000000Z'
     TicketMessage:
       type: object
+      title: TicketMessage
       properties:
         id:
           type: integer
@@ -312,7 +439,7 @@ components:
           $ref: '#/components/schemas/User'
     User:
       type: object
-      description: User model
+      title: User
       properties:
         id:
           type: integer
@@ -354,6 +481,35 @@ components:
           type:
             - string
             - 'null'
+        created_at:
+          type: string
+          readOnly: true
+        updated_at:
+          type: string
+          readOnly: true
+    Invoice:
+      type: object
+      title: Invoice
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user_id:
+          type: integer
+        order_id:
+          type: integer
+        status:
+          type: string
+        paid_at:
+          type:
+            - string
+            - 'null'
+          format: date
+        due_date:
+          type:
+            - string
+            - 'null'
+          format: date
         created_at:
           type: string
           readOnly: true
