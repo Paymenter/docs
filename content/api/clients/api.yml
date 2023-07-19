@@ -244,6 +244,8 @@ paths:
         - Authorization: []
   /api/clients/v1/invoices:
     get:
+      tags:
+        - Invoices
       summary: Get all invoices
       operationId: get-api-clients-v1-invoices
       requestBody:
@@ -280,6 +282,8 @@ paths:
         - Authorization: []
   '/api/clients/v1/invoices/{invoiceId}':
     get:
+      tags:
+        - Invoices
       summary: Get all invoice by id
       operationId: get-api-clients-v1-invoices-get-invoices-by-id
       parameters:
@@ -338,6 +342,8 @@ paths:
         - Authorization: []
   '/api/clients/v1/invoices/{invoiceId}/pay':
     post:
+      tags:
+        - Invoices
       summary: Pay invoice by ID
       operationId: post-api-clients-v1-invoices-invoiceId-pay
       parameters:
