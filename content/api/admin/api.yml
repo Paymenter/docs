@@ -1,8 +1,8 @@
 openapi: 3.1.0
 x-stoplight:
-  id: yxaczooobbwp2
+  id: 5i2rok74bqo98
 info:
-  title: Paymenter Client API
+  title: Paymenter Admin API
   version: ''
   description: |-
     Paymenter supports a way for users to connect via our api and build their own stuff on it.
@@ -15,7 +15,7 @@ info:
     name: MIT
 servers: []
 paths:
-  /api/clients/v1/tickets:
+  /api/admin/v1/tickets:
     get:
       summary: Get all tickets
       responses:
@@ -64,17 +64,19 @@ paths:
               examples:
                 Example 1:
                   value: {}
-      operationId: get-v1-tickets
-      description: Get all tickets from the logged in user
+      operationId: v1-admin-get-tickets
+      description: ''
       requestBody:
         content: {}
       tags:
         - Tickets
       parameters: []
+      x-stoplight:
+        id: xdpmij1ayoupu
     parameters: []
     post:
       summary: Make new ticket
-      operationId: api-v1-clients-tickets-create
+      operationId: api-v1-admin-tickets-create
       responses:
         '201':
           description: Created
@@ -119,17 +121,23 @@ paths:
                 title:
                   type: string
                   x-stoplight:
-                    id: qvpf292xy9flu
+                    id: mq4fezz3q6mct
                 message:
                   type: string
                   x-stoplight:
-                    id: mftr2d965u3v6
+                    id: f8837ic3tygkk
                 priority:
                   type: string
                   x-stoplight:
-                    id: 0nu46ip1vs1j0
+                    id: cum7i13lo7zd1
                   description: 'Priority, must be one of: `low`, `medium`, `high`'
-  '/api/clients/v1/tickets/{ticketId}':
+                user_id:
+                  type: integer
+                  x-stoplight:
+                    id: 7lrxdqqzxk2kh
+      x-stoplight:
+        id: mikqusqtennnw
+  '/api/admin/v1/tickets/{ticketId}':
     parameters:
       - schema:
           type: string
@@ -147,11 +155,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Ticket'
-      operationId: api-v1-clients-ticket-get
+      operationId: api-v1-admin-ticket-get
       requestBody:
         content: {}
       description: ''
-  '/api/clients/v1/tickets/{ticketId}/reply':
+      x-stoplight:
+        id: a2jmonpgx7ho1
+  '/api/admin/v1/tickets/{ticketId}/reply':
     parameters:
       - schema:
           type: string
@@ -160,7 +170,7 @@ paths:
         required: true
     post:
       summary: Reply to ticket
-      operationId: api-v1-clients-ticket-reply
+      operationId: api-v1-admin-ticket-reply
       responses:
         '200':
           description: OK
@@ -172,12 +182,12 @@ paths:
                   success:
                     type: boolean
                     x-stoplight:
-                      id: ds5c6697rk4y9
+                      id: s2gckazayz0sc
                     default: true
                   message:
                     type: string
                     x-stoplight:
-                      id: p5utmepy6459t
+                      id: uk2lp2nep2ow8
                     default: Message successfully sent.
         '422':
           description: Unprocessable Entity (WebDAV)
@@ -231,10 +241,12 @@ paths:
                 message:
                   type: string
                   x-stoplight:
-                    id: xudbvvo5mu57v
+                    id: 6zy8x0fvq97vx
       tags:
         - Tickets
-  '/api/clients/v1/tickets/{ticketId}/messages':
+      x-stoplight:
+        id: tdgkwwkwv6xh2
+  '/api/admin/v1/tickets/{ticketId}/messages':
     parameters:
       - schema:
           type: string
@@ -256,50 +268,52 @@ paths:
                   success:
                     type: boolean
                     x-stoplight:
-                      id: 1b00fnrvya6ld
+                      id: d7u86ccvvxnf8
                     default: true
                   data:
                     type: array
                     x-stoplight:
-                      id: 8ssvp6ysje4eq
+                      id: 5158ivys2b8bw
                     items:
                       $ref: '#/components/schemas/TicketMessage'
                       x-stoplight:
-                        id: yxy5cmykzfyi6
-      operationId: get-api-clients-v1-tickets-ticketId-messages
+                        id: mjkqtf5zdxqnm
+      operationId: get-api-admin-v1-tickets-ticketId-messages
       description: Get all messages from a ticket
       requestBody:
         content: {}
-  '/api/clients/v1/tickets/{ticketId}/close':
+      x-stoplight:
+        id: rim59k70w3j2z
+  '/api/admin/v1/tickets/{ticketId}/status':
     parameters:
       - schema:
           type: string
         name: ticketId
         in: path
         required: true
-    delete:
-      summary: Delete ticket by id
-      operationId: api-v1-clients-ticket-delete
+    put:
+      summary: ''
+      operationId: put-api-admin-v1-tickets-ticketId-status
       responses:
         '200':
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  success:
-                    type: boolean
-                    x-stoplight:
-                      id: nfsah5cp963sx
-                  message:
-                    type: string
-                    x-stoplight:
-                      id: lm073xy0be5xl
-      description: Close a ticket
+          description: OK
+      x-stoplight:
+        id: 98t699g3to51o
       tags:
         - Tickets
-  /api/clients/v1/invoices:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  x-stoplight:
+                    id: sp2qp6yt32sk5
+                  enum:
+                    - open
+                    - closed
+  /api/admin/v1/invoices:
     get:
       summary: Get all invoices
       tags:
@@ -542,10 +556,13 @@ paths:
                         type: integer
                       item_count:
                         type: integer
-      operationId: get-api-clients-v1-invoices
+      operationId: get-api-admin-v1-invoices
       requestBody:
         content: {}
-  '/api/clients/v1/invoices/{invoiceId}':
+      x-stoplight:
+        id: rpgujpxk2loyh
+    parameters: []
+  '/api/admin/v1/admin/{invoiceId}':
     get:
       summary: Get all invoice by id
       tags:
@@ -817,16 +834,18 @@ paths:
                     properties:
                       invoice:
                         $ref: '#/components/schemas/Invoice'
-      operationId: get-api-clients-v1-invoices-get-invoices-by-id
+      operationId: get-api-admin-v1-invoices-get-invoices-by-id
       requestBody:
         content: {}
+      x-stoplight:
+        id: q6g7kyl1s6won
     parameters:
       - schema:
           type: string
         name: invoiceId
         in: path
         required: true
-  '/api/clients/v1/invoices/{invoiceId}/pay':
+  '/api/admin/v1/admin/{invoiceId}/pay':
     parameters:
       - schema:
           type: string
@@ -836,7 +855,7 @@ paths:
         description: invoice
     post:
       summary: Pay invoice by ID
-      operationId: post-api-clients-v1-invoices-invoiceId-pay
+      operationId: post-api-admin-v1-invoices-invoiceId-pay
       responses:
         '302':
           description: Found
@@ -853,10 +872,12 @@ paths:
                 payment_method:
                   type: string
                   x-stoplight:
-                    id: 9zs8xo7jjurnk
+                    id: 7k609q882qlm3
                   description: 'Payment method eg: PayPal, Stripe'
       tags:
         - Invoices
+      x-stoplight:
+        id: 4mwmnt4ehwesv
 components:
   schemas:
     User:
@@ -879,7 +900,7 @@ components:
           credits: 0
       description: ''
       x-stoplight:
-        id: kum0tnp3ljvub
+        id: jskss42du17sa
       properties:
         id:
           type: integer
@@ -952,7 +973,7 @@ components:
       description: ''
       title: Ticket
       x-stoplight:
-        id: lfkol04hv50jh
+        id: t3jifcvs1vc5s
       properties:
         id:
           type: integer
@@ -1014,7 +1035,7 @@ components:
         user:
           $ref: '#/components/schemas/User'
           x-stoplight:
-            id: 72g5msnumydrz
+            id: 8e13ip034ep5d
       title: TicketMessage
     Invoice:
       type: object
