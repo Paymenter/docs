@@ -21,12 +21,12 @@
     }
   </script>
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG"></script>
-    <script>
-        function gtag() {
-            dataLayer.push(arguments)
-        }
-        window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-0994GMPHVG")
-    </script>
+  <script>
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-0994GMPHVG")
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -107,7 +107,37 @@
       <div class="content flex items-center justify-between">
         {{ $logo := resources.Get "image/textlogo.png" }}
         <img src="{{ $logo }}" alt="Paymenter Logo" class="h-8">
-        <div class="flex items-center gap-x-8">
+        <!-- Mobile button -->
+        <button class="md:hidden" id="mobile-menu-button">
+          <i class="ri-menu-line"></i>
+        </button>
+        <script>
+          document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+          });
+        </script>
+        <div class="items-center gap-x-8 hidden md:flex">
+          <a href="/">
+            Home
+          </a>
+          <a href="/docs/getting-started/introduction/">
+            Documentation
+          </a>
+          <a href="https://discord.gg/xB4UUT3XQg" target="_blank">
+            Get Help
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+          <a href="https://github.com/Paymenter" target="_blank">
+            Github
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+          <a href="https://demo.paymenter.org" class="button button-primary">
+            Try Demo Version
+          </a>
+        </div>
+      </div>
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="flex flex-col items-center gap-y-4">
           <a href="/">
             Home
           </a>
