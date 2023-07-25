@@ -12,6 +12,7 @@
     - title: Virtualizor
     - title: Virtfusion
     - title: Proxmox
+    - title: Stripe
 - title: Customization
   slug: customization
   pages:
@@ -22,3 +23,4 @@
   pages:
     - title: OAuth
     - title: Docker
+    - title: Configurable Options

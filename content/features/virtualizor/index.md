@@ -23,5 +23,3 @@ Insert your API key and your Virtualizor IP in the Paymenter admin panel. Here i
 
 ![image](product.png)
 
-
-Ps: thanks to [Xeroz](https://xeroz.tech/) for the Virtualizor test server
