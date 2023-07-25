@@ -19,39 +19,39 @@ Learn More [here](https://virtfusion.com/)
 
 ## Navigate to vps.yoursite.org/admin/dashboard
 
-## Click API
+### Click API
 
 ![](step1.png)
 
-## Create a Token
+### Create a Token
 
 ![](step2.png)
 
-## Name your token and add access settings
+### Name your token and add access settings
 
  ![](step3.png)
 
-## Copy your token (This is important it only appears one time!)
+### Copy your token (This is important it only appears one time!)
 
  ![](step4.png)
 
-## Go to paymenter Extensions Virtfusion Edit
+### Go to paymenter Extensions Virtfusion Edit
 
-## Enter an identifiable name & copy the API Key into the API Key field
+### Enter an hostname(eg. https://vps.yoursite.org) and your token (from the previous step)
 
  ![](step5.png)
 
-## Enable the module
+### Enable the module
 
 ![](step6.png)
 
-## Creating a product with Virtfusion
+### Creating a product with Virtfusion
 
 Create the Product
 
 ![](step7.png)
 
-## Add the Package ID You created when seting up virtfusion, and other details
+### Add the Package ID You created when seting up virtfusion, and other details
 
 ![](step8.png)
 
