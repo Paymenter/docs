@@ -283,7 +283,7 @@ Description=Paymenter Queue Worker
 User=www-data
 Group=www-data
 Restart=always
-ExecStart=/usr/bin/php /var/www/paymenter/artisan queue:work --queue=high,standard,low --sleep=3 --tries=3
+ExecStart=/usr/bin/php /var/www/paymenter/artisan queue:work
 StartLimitInterval=180
 StartLimitBurst=30
 RestartSec=5s
