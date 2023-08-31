@@ -27,4 +27,4 @@ You can download these extensions from the [GitHub repository](https://github.co
 
 ### Payment methods
 * [PayPal IPN](https://www.paypal.com/) (PayPal is a easier way to setup PayPal be only giving your email address)
-* [Stripe Sofort](https://stripe.com/) (Stripe gayeway which directly redirects to the bank instead of using stripe's checkout)
+* [Stripe Sofort](https://stripe.com/) (Stripe gateway which directly redirects to the bank instead of using stripe's checkout)
