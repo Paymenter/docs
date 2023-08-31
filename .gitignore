@@ -1,3 +1,4 @@
 node_modules
 assets/style.css
 /public/*
+/.idea*
