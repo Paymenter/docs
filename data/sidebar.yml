@@ -5,6 +5,7 @@
     - title: Installation
     - title: Extensions
     - title: How to update
+    - title: How to use Beta
 - title: Extensions
   slug: ../features
   pages:
@@ -17,7 +18,9 @@
   slug: customization
   pages:
     - title: Create a theme
-    - title: Create a extension
+    - title: Create a gateway extension
+    - title: Create a server extension
+    #- title: Create a notification extension
 - title: Guides
   slug: guides
   pages:
