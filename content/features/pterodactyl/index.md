@@ -30,7 +30,7 @@ Insert your API key and your Pterodactyl URL in the Paymenter admin panel. Here 
 
 * Below you will see a fully functional example of Product
 
-![image](productsettingsexample.png)
+![image](productsettingsexample2.png)
 
 * #### Configurable Options
 

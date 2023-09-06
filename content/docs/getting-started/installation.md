@@ -79,6 +79,7 @@ composer install --no-dev --optimize-autoloader
 # Only run the command below if you are installing this Panel for
 # the first time and do not have any Paymenter Panel data in the database.
 php artisan key:generate --force
+php artisan storage:link
 ```
 
 {{< warning title="Warning" >}}
