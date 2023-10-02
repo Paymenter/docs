@@ -12,23 +12,21 @@ Paymenter is an open source gateway for hosting companies. Paymenter is develope
 
 Paymenter aims to be a complete solution for hosting companies. We are working on a lot of features and we are always open for suggestions.
 
-## Extensions
 {{< specialcss >}}
 
-|                 **Servers**                 |                                          |             **Gateways**              |                                         |           **Notifications**            |                                       | **Other**              |     |
-|:-------------------------------------------:|:----------------------------------------:|:-------------------------------------:|:---------------------------------------:|:--------------------------------------:|:-------------------------------------:|:------------------------:|-----|
-|   [Pterodactyl](https://pterodactyl.io/)    | **[✅](a "Included in Paymenter core")**  |     [Stripe](https://stripe.com/)     | **[✅](a "Included in Paymenter core")** | [Discord Webhook](https://discord.com) |**[✅](a "Included in Paymenter core")**| [Discord Roles Link](https://discord.com) | **[✅](a "Included in Paymenter core")**     |
-|     [Proxmox](https://www.proxmox.com/)     | **[✅](a "Included in Paymenter core")**  |   [Mollie](https://www.mollie.com/)   | **[✅](a "Included in Paymenter core")** |    [Telegram](https://telegram.org)    |      **[🕒](## "Coming soon")**       |                        |     |
-| [DirectAdmin](https://www.directadmin.com/) | **[✅](a "Included in Paymenter core")**  |   [PayPal](https://www.paypal.com/)   | **[✅](a "Included in Paymenter core")** |     [Signal](https://signal.org/)      |      **[🕒](## "Coming soon")**       |                        |     |
-|    [VirtFusion](https://virtfusion.com/)    | **[✅](a "Included in Paymenter core")**  |   [Xendit](https://www.xendit.co/)    | **[✅](a "Included in Paymenter core")** |   [Discord Bot](https://discord.com)   |      **[🕒](## "Coming soon")**       |                        |     |
-| [Virtualizor](https://www.virtualizor.com/) | **[✅](a "Included in Paymenter core")**  |    [LitePay](https://litepay.ch/)     |   **[📦](## "Installation required")**   |                                        |                                       |                        |     |
-|    [CyberPanel](https://cyberpanel.net/)    | **[✅](a "Included in Paymenter core")**  | [PayPal IPN](https://www.paypal.com/) |   **[📦](## "Installation required")**   |                                        |                                       |                        |     |
-|   [ISPConfig](https://www.ispconfig.org/)   |   **[📦](## "Installation required")**    |       [PayU](https://payu.com)        |   **[📦](## "Installation required")**   |                                        |                                       |                        |     |
-|       [Plesk](https://www.plesk.com/)       |   **[📦](## "Installation required")**    |  [Stripe Sofort](https://stripe.com)  |   **[📦](## "Installation required")**   |                                        |                                       |                        |     |
-
+|                 **Servers**                 |            **Gateways**              |
+|:-------------------------------------------:|:----------------------------------------:|
+|   [Pterodactyl](https://pterodactyl.io/)    | [Stripe](https://stripe.com/)     | 
+|     [Proxmox](https://www.proxmox.com/)     |    [Mollie](https://www.mollie.com/)   | 
+| [DirectAdmin](https://www.directadmin.com/) |    [PayPal](https://www.paypal.com/)   | 
+|    [VirtFusion](https://virtfusion.com/)    |    [Xendit](https://www.xendit.co/)    | 
+| [Virtualizor](https://www.virtualizor.com/) |  
+|    [CyberPanel](https://cyberpanel.net/)    | 
 {{< /specialcss >}}
 
-Extensions next to which there is ✅ are included in the Paymenter core. Items marked with 📦 require manual installation, which can be downloaded from GitHub repository ([0.8 and later](https://github.com/Paymenter/Extensions/tree/v0.8/) [0.7.1 and earlier](https://github.com/Paymenter/Extensions/tree/main)) or install using the included [Extension Manager](../extensions). Elements represented by 🕒 will be available soon.
+And many more, browse our [marketplace](https://market.paymenter.org/extensions) for more extensions. Or use the in-app extension manager to install extensions.
+
+
 
 {{< tip title="Handy links" >}}
 * [Github](https://github.com/Paymenter) Leave a star if you like the project!
@@ -36,6 +34,11 @@ Extensions next to which there is ✅ are included in the Paymenter core. Items 
 * [Website](https://paymenter.org/)
 * [E-mail us](mailto:hello@paymenter.org)
 {{< /tip >}}
+
+## Sponsors
+We would like to thank our sponsors for supporting us. If you want to sponsor us, please go to our [Github Sponsors](https://github.com/CorwinDev) page.
+
+[![image](../sponsors/nordblade.png)](https://nordblade.com)
 
 
 ### Get Paymenter as PaaS
