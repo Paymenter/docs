@@ -3,28 +3,16 @@ toc: true
 ---
 
 # Extensions 
-Most of the documentation about extensions can be found in the [GitHub repository](https://github.com/Paymenter/Extensions#extensions)
+{{< specialcss >}}
 
-## Default included
+|                 **Servers**                 |            **Gateways**              |
+|:-------------------------------------------:|:----------------------------------------:|
+|   [Pterodactyl](https://pterodactyl.io/)    | [Stripe](https://stripe.com/)     |
+|     [Proxmox](https://www.proxmox.com/)     |    [Mollie](https://www.mollie.com/)   |
+| [DirectAdmin](https://www.directadmin.com/) |    [PayPal](https://www.paypal.com/)   |
+|    [VirtFusion](https://virtfusion.com/)    |    [Xendit](https://www.xendit.co/)    |
+| [Virtualizor](https://www.virtualizor.com/) |  
+|    [CyberPanel](https://cyberpanel.net/)    |
+{{< /specialcss >}}
 
-### Server backends
-* [DirectAdmin](https://www.directadmin.com/)
-* [VirtFusion](https://virtfusion.com/)
-* [Virtualizor](https://www.virtualizor.com/)
-* [Pterodactyl](https://pterodactyl.io/)
-
-### Payment methods
-* [Stripe](https://stripe.com/)
-* [PayPal](https://www.paypal.com/)
-* [Mollie](https://www.mollie.com/)
-* [Xendit](https://www.xendit.co/)
-
-## Optional downloadable 
-You can download these extensions from the [GitHub repository](https://github.com/Paymenter/Extensions).
-### Server backends
-* [ISPConfig](https://www.ispconfig.org/)
-* [CyberPanel](https://cyberpanel.net/)
-
-### Payment methods
-* [PayPal IPN](https://www.paypal.com/) (PayPal is a easier way to setup PayPal be only giving your email address)
-* [Stripe Sofort](https://stripe.com/) (Stripe gateway which directly redirects to the bank instead of using stripe's checkout)
+And many more, browse our [marketplace](https://market.paymenter.org/extensions) for more extensions. Or use the in-app extension manager to install extensions.
