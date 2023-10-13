@@ -43,7 +43,7 @@ Pterodactyl supports some configurable options. You can use them to create diffe
 
 All environment from eggs are also supported. Example:`MC_VERSION`, `SERVER_JAR`
 
-#### Port Array
+### Port Array
 
 You want to automatticly assign ports to egg variables? We got you!
 

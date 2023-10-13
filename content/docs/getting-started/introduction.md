@@ -39,9 +39,9 @@ And many more, browse our [marketplace](https://market.paymenter.org/extensions)
 We would like to thank our sponsors for supporting us. If you want to sponsor us, please go to our [Github Sponsors](https://github.com/CorwinDev) page.
 
 [![image](../sponsors/nordblade.png)](https://nordblade.net)
-
+[![UniqueHosting](../sponsors/somethingunique.png)](https://suhosting.net/)
 
 ### Get Paymenter as PaaS
 You can get Paymenter as a PaaS (Paymenter as a Service) from [Paymenter.org](https://paymenter.org/). We provide one package for now which has a monthly price of $5.00. This package includes unlimited resources needed for Paymenter
 
-Contact us at [Email](mailto:corwin@paymenter.org?subject=Paymenter%20PaaS&body=Hello%20Corwin%2C%0A%0AI%20would%20like%20to%20get%20Paymenter%20as%20a%20PaaS.%0A%0AMy%20URL%20is%3A%20https%3A%2F%2Fexample.com%0A%0ARegards%2C)
+Go to https://paas.paymenter.org
