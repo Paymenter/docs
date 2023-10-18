@@ -114,7 +114,7 @@ php artisan p:user:create
 
 # Webserver configuration
 
-{{< tabs tabTotal="4">}}
+{{< tabs tabTotal="5">}}
 {{< tab tabName="Nginx" >}}
 
 For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
@@ -246,6 +246,37 @@ sudo ln -s /etc/apache2/sites-available/paymenter.conf /etc/apache2/sites-enable
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
+
+{{< /tab >}}
+{{< tab tabName="SSL With Cloudflare" >}}
+
+**Please Note You HAVE to setup ether Nginx or Apache for this method to work.**
+
+1. Simply head on over to Cloudflare once your DNS is pointed to your A record of your `server IP` you are installing Paymenter on please make sure to enable cache which means the little orange cloud showing that the domain is ![image](https://github.com/cloudrack-ca/docs/assets/145787423/21501fa8-fb0f-42aa-9074-c70afb0e482d)
+2. Once you have performed the above, make sure to head on over to your domains configuration rules
+
+   ![image](https://github.com/cloudrack-ca/docs/assets/145787423/f4227e7c-8381-4b28-8358-2507be01cc8d)
+   
+As you can see this is found on the left-hand side of your [https://dash.cloudflare.com](https://dash.cloudflare.com) where you would be accessing your domain.
+
+3. Once you have done this and are inside the chosen domains `Configuration Rules` you will want to add a new rule.+
+
+- ![image](https://github.com/cloudrack-ca/docs/assets/145787423/a0758cd7-c9d3-4428-a9d5-f780527139b4)
+  Name it something rememberable 🧠
+
+- ![image](https://github.com/cloudrack-ca/docs/assets/145787423/99092055-2261-4e5f-819d-c35c044bac0a)
+ 
+  From here we will add a configuration name
+
+- ![image](https://github.com/cloudrack-ca/docs/assets/145787423/c6686e0a-b300-4e93-a8ce-555c71abc10d)
+ 
+  Make sure that your fields are as follows and remember to replace paymenter.org with your own domain that is hosting Paymenter on.
+
+- Scroll all the way down to the bottom of the page until you see the following in the next step
+
+- ![image](https://github.com/cloudrack-ca/docs/assets/145787423/8ab26f2c-968e-4bc2-811d-70a79e27f0f4)
+  Make Sure this is set to Flexible And Click Deploy - You may need to close all active browsers and re-open them to obtain a valid SSL connection between your browser and Paymenter
+
 
 {{< /tab >}}
 {{< /tabs >}}
