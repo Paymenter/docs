@@ -49,7 +49,7 @@ You want to automatticly assign ports to egg variables? We got you!
 
 In the Paymenter extension for pterodactyl there is a field called Port Array this array supports the following value:
 
-* {"SERVER_PORT": 7777, "NONE": [7778, 7779] "QUERY_PORT": 2701, "RCON_PORT": 27020}
+* `{"SERVER_PORT": 7777, "NONE": [7778, 7779] "QUERY_PORT": 2701, "RCON_PORT": 27020}`
 
 This will try to assign 7777 as default port, 7778 and 7779 as additional ports, 2701 as query port and 27020 as rcon port.
 
@@ -57,10 +57,10 @@ If it can't find the port it will try to +1 the port until it finds a free port.
 
 Egg specific examples:
 
-* Ark - {"SERVER_PORT": 7777, "NONE": 7778, "QUERY_PORT": 27015, "RCON_PORT": 27020}
-* CS:GO - {"SERVER_PORT": 27015}
-* Arma 3 - {"SERVER_PORT": 2302, "NONE": [2303, 2304, 2306]}
-* 7D2D - {"SERVER_PORT": 26900, "NONE": [26901, 26902]}
-* Rust - {"SERVER_PORT": 27015, "RCON_PORT": 27016}
-* Mordhau - {"SERVER_PORT": 15000, "QUERY_PORT": "15001", "BEACON_PORT": "15002"}
-* GTA: MTA - {"SERVER_PORT": 22003, "SERVER_WEBPORT": 22005, "NONE": 22126}
+* Ark - `{"SERVER_PORT": 7777, "NONE": 7778, "QUERY_PORT": 27015, "RCON_PORT": 27020}`
+* CS:GO - `{"SERVER_PORT": 27015}`
+* Arma 3 - `{"SERVER_PORT": 2302, "NONE": [2303, 2304, 2306]}`
+* 7D2D - `{"SERVER_PORT": 26900, "NONE": [26901, 26902]}`
+* Rust - `{"SERVER_PORT": 27015, "RCON_PORT": 27016}`
+* Mordhau - `{"SERVER_PORT": 15000, "QUERY_PORT": "15001", "BEACON_PORT": "15002"}`
+* GTA: MTA - `{"SERVER_PORT": 22003, "SERVER_WEBPORT": 22005, "NONE": 22126}`
