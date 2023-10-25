@@ -50,6 +50,15 @@ module.exports = {
                     400: 'var(--success-400)',
                 },
             },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        "code::before": { content: '""' },
+                        "code::after": { content: '""' },
+                        "code": { backgroundColor: 'var(--secondary-100)', color: 'var(--gray-800)', padding: '0.25rem 0.5rem', borderRadius: '0.25rem'  },
+                    },
+                },
+            },
         },
     },
     plugins: [require('@tailwindcss/typography'), require('flowbite/plugin'), require('autoprefixer')],

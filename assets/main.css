@@ -187,7 +187,3 @@ html {
     padding-top: 0.5rem;
 }
 
-
-.prose {
-    @apply prose-code:before:hidden prose-code:after:hidden prose-code:bg-secondary-100 prose-code:p-0.5 prose-code:rounded-lg;
-}
