@@ -3,6 +3,4 @@ This documentation will cover the whole process configuring Proxmox to talk to C
 
 In order to acomplish this we would need to do the following steps, let's get started:
 
-1. Login into your proxmox web portal and go to
-
-![alt text](https://geekhost.ro/img/datacenter.png)
+1. Login into your proxmox web portal and click on 'Datacenter
