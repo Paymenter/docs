@@ -5,7 +5,7 @@ In order to acomplish this we would need to do the following steps, let's get st
 
 Proxmox settings:
 
-***Notice: For ease of use please also use the binary which downloads an creates the templates inside proxmox, for you:
+***Notice: For ease of use please use the binary which downloads an creates the templates inside proxmox, for you:
 
 https://github.com/ConvoyPanel/downloader/releases/download/v1.0.1/downloader
 
