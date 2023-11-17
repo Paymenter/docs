@@ -1,41 +1,8 @@
-This documentation will cover the whole process of configuring Proxmox to talk to Convoy and finally interact with Paymenter.
-
-
-In order to accomplish this we would need to do the following steps, let's get started:
-
-Proxmox settings:
-
-***Notice: For ease of use please use the binary which downloads and creates the templates inside proxmox, for you:
-
-https://github.com/ConvoyPanel/downloader/releases/download/v1.0.1/downloader
-
-Download it to the node that you will use in this process.
-
-Now using your terminal just do 'chmod +x Downloader' (assuming you are in the same directory with the script) and then do './Downloader', after that wait for it to finish.
-
-
-1.  Login into your proxmox web portal and click on 'Datacenter'
-
-![Alt text](datacenter.png)
-
-2.  On the menu immediately to the left of that you will find a menu item called 'API Tokens', click on it
-
-![Alt text](APITokens.png)
-
-3.  Click on 'Add', and fill in the information like in the image below, also, please make sure to uncheck 'Privilege separation'
-
-![Alt text](CreateToken.png)
-
-4.  Just above that click on 'Permissions' and inside that menu and click on 'Add' -> 'API Token Permissions'
-
-![Alt text](APITokenPermissions.png)
-
-5.  Select the same user with whom we created the token before and add to it the permissions shown in the picture below
-
-![Alt text](tokenpermissions.png)
-
+This documentation will cover the connection between Convoy and Paymenter.
 
 Convoy settings:
+
+***Notice: Please visit Convoy's own docs to find out how to create the necessary token that we will use below - https://docs.convoypanel.com/guide/deployment/adding-nodes.html
 
 1.  Login into your Convoy web portal
 
@@ -43,7 +10,7 @@ Convoy settings:
 
 3.  Click on 'Nodes' then 'Create Node'
 
-4.  Fill out the information as requested, these are where we're going to use the very same credentials that we created in order to communicate with Proxmox
+4.  Fill out the information as requested, these are where we're going to use the very same credentials that we created in order to communicate with Proxmox.
 
 ![Alt text](convoy-node-token.png)
 
