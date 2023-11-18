@@ -54,5 +54,3 @@ Paymenter settings:
 15. This should be it, now you can order this package from the front page of Paymenter and see your VM being deployed without any issues.
 
 ***Notice: I have not put anything in the 'Bandwidth' section, because I don't usually limit the bandwidth used, but you can do that there. Also make sure you have added some IPV4 ip addresses to your Convoy node that you just added earlier in this documentation.
-
-***Notice: This documentation will be updated as necessary.
