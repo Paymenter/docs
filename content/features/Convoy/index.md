@@ -1,6 +1,8 @@
 This documentation will cover the connection between Convoy and Paymenter.
 
+
 Convoy settings:
+
 
 1.  Login into your Convoy web portal
 
@@ -14,7 +16,9 @@ Convoy settings:
 
 5.  Click on 'Tokens' and then 'New Token', name it, and save it for later.
 
+
 Paymenter settings:
+
 
 1.  Login into your Paymenter web portal
 
