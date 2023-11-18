@@ -1,7 +1,15 @@
+---
+toc: true
+---
+
+## Overview
+
+Convoy is a client panel for Proxmox, with a really cool UX
+
 This documentation will cover the connection between Convoy and Paymenter.
 
 
-Convoy settings:
+### Convoy settings:
 
 1. Login into convoy web portal.
 
@@ -10,7 +18,7 @@ Convoy settings:
 3. Click on 'Token', create a 'New Token' and save it for later.
 
 
-Paymenter settings:
+### Paymenter settings:
 
 
 1.  Login into your Paymenter web portal
@@ -29,9 +37,9 @@ Paymenter settings:
 
 8.  Inside this extension things should look like this:
 
-![Alt text](PaymenterExtensionSettings.png)
+![Alt text](PaymenterExtension.png)
 
-  Let's make our first package with this extension and see our first VM deployed
+#### Let's make our first package with this extension and see our first VM deployed
 
 9.  Go to 'Products' and then 'Categories' and create a category for your product
 
@@ -39,7 +47,7 @@ Paymenter settings:
 
 11. Your new product should look like this:
 
-![Alt text](VMProducts1.png)
+![Alt text](VMProducts.png)
 
 ***Notice: The fact that we put in '0' for the price is because we want to test first, that it creates the VM without any manual intervention.
 
@@ -49,7 +57,7 @@ Paymenter settings:
 
 14. In the fields that just appeared below fill out your desired values for this product, here is an example below:
 
-![Alt text](ConvoyProductSettings.png)
+![Alt text](ConvoyProduct.png)
 
 15. This should be it, now you can order this package from the front page of Paymenter and see your VM being deployed without any issues.
 
