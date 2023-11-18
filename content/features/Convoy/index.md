@@ -14,8 +14,6 @@ Convoy settings:
 
 5.  Click on 'Tokens' and then 'New Token', name it, and save it for later.
 
-   Be sure to configure your templates which will correspond to your 'VMID' from the list of templates inside proxmox, just below the datacenter, in the node where you used the 'Downloader' script, described at the top of this page.
-
 Paymenter settings:
 
 1.  Login into your Paymenter web portal
