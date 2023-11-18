@@ -2,8 +2,6 @@ This documentation will cover the connection between Convoy and Paymenter.
 
 Convoy settings:
 
-***Notice: Please visit Convoy's own docs to find out how to create the necessary token that we will use below - https://docs.convoypanel.com/guide/deployment/adding-nodes.html
-
 1.  Login into your Convoy web portal
 
 2.  Click on your username in the top right corner of the page and click on 'Admin Control Panel'
