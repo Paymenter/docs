@@ -3,18 +3,11 @@ This documentation will cover the connection between Convoy and Paymenter.
 
 Convoy settings:
 
+1. Login into convoy web portal.
 
-1.  Login into your Convoy web portal
+2. Click on your username on the top right and select 'Admin Control Panel'
 
-2.  Click on your username in the top right corner of the page and click on 'Admin Control Panel'
-
-3.  Click on 'Nodes' then 'Create Node'
-
-4.  Fill out the information as requested, these are where we're going to use the very same credentials that we created in order to communicate with Proxmox.
-
-![Alt text](convoy-node-token.png)
-
-5.  Click on 'Tokens' and then 'New Token', name it, and save it for later.
+3. Click on 'Token', create a 'New Token' and save it for later.
 
 
 Paymenter settings:
