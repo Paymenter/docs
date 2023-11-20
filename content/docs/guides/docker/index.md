@@ -23,7 +23,7 @@ domain.tld -> Your domain (with subdomain if applicable)
 Starting Everything:
 ```bash
 docker compose up -d --force-recreate
-docker compose run --rm paymenter php artisan migrate --force
+docker compose run --rm paymenter php artisan migrate --force --seed
 ```
 
 Creating Users:
