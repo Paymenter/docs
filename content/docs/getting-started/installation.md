@@ -5,7 +5,7 @@ toc: true
 
 ---
 
-# Preperation
+# Preparation
 
 ## Supported operating systems
 
