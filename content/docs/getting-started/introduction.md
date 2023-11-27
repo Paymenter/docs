@@ -38,7 +38,6 @@ And many more, browse our [marketplace](https://market.paymenter.org/extensions)
 ## Sponsors
 We would like to thank our sponsors for supporting us. If you want to sponsor us, please go to our [Github Sponsors](https://github.com/CorwinDev) page.
 
-[![image](../sponsors/nordblade.png)](https://nordblade.net)
 [![UniqueHosting](../sponsors/somethingunique.png)](https://suhosting.net/)
 
 ### Get Paymenter as PaaS
