@@ -9,16 +9,17 @@ toc: true
 
 ## Supported operating systems
 
-| Operating System | Version |     Supported      |
-|------------------|---------|:------------------:|
-| **Ubuntu**       | 18.04   |  ✅    |
-|                  | 20.04   |  ✅    |
-|                  | 22.04   |  ✅    |
-| **CentOS**       | 7       |  ✅    |
-|                  | 8       |  ✅    |
-| **Debian**       | 10      |  ✅    |
-|                  | 11      |  ✅    |
-| **Windows**      | Any     |  ❌    |
+| Operating System | Version |    Supported     |   Documentaion Supported   |
+|------------------|---------|------------------|:------------------:|
+| **Ubuntu**       | 18.04   |  ✅    |  ✅    |
+|                  | 20.04   |  ✅    |  ✅    |
+|                  | 22.04   |  ✅    |  ✅    |
+| **CentOS**       | 7       |  ✅    |  ❌    |
+|                  | 8       |  ✅    |  ❌    |
+| **Debian**       | 10      |  ✅    |  ❌    |
+|                  | 11      |  ✅    | Discord |
+|                  | 12      |  ✅    | Discord |
+| **Windows**      | Any     |  ❌    |  ❌    |
 
 ## Install Dependencies
 
