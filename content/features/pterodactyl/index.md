@@ -39,7 +39,7 @@ Insert your API key and your Pterodactyl URL in the Paymenter admin panel. Here 
 * #### Configurable Options
 
 Pterodactyl supports some configurable options. You can use them to create different products with different settings. Here are the names of the configurable options:
-`nest_id`, `egg`, `location`, `node`, `allocation`(ports), `databases`, `backups`, `startup`, `cpu`, `io`, `disk`, `memory`, `swap`.
+`nest_id`, `egg`, `location`, `node`, `allocation`(ports), `databases`, `backups`, `startup`, `cpu`, `io`, `disk`, `memory`, `swap`, `servername`.
 
 All environment from eggs are also supported. Example:`MC_VERSION`, `SERVER_JAR`
 
