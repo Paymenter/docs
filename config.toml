@@ -1,3 +1,6 @@
 baseURL = 'https://paymenter.org/'
 languageCode = 'en-us'
 title = 'Paymenter'
+
+[params]
+description = 'Paymenter is an open source payment gateway for your hosting.'

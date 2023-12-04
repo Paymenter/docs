@@ -1,5 +1,5 @@
 {{ $tabName := .Get "tabName" }}
-{{ $tabID := delimit (shuffle (slice "a" "b" "c" "d" "e" "f")) "" }}
+{{ $tabID := .Get "tabID" }}
 {{ .Parent.Scratch.Add "tabName" (slice $tabName) }}
 {{ .Parent.Scratch.Add "tabID" (slice $tabID) }}
 

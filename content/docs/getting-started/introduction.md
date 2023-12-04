@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Use the accordion component to show hidden information based on the collapse and expand state of the child elements using data attribute options
+description: Introduction to Paymenter
 toc: true
 
 next: Installation

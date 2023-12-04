@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | {{ .CurrentSection.Title }}{{ end }}</title>
+    <title>{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | Paymenter Docs{{ end }}</title>
     {{ $style := resources.Get "style.css" }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     <script>
@@ -15,25 +15,25 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG"></script>
+    {{/*  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0994GMPHVG"></script>
     <script>
       function gtag() {
         dataLayer.push(arguments)
       }
       window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-0994GMPHVG")
-    </script>
+    </script>  */}}
     <link type="application/json+oembed" href="https://paymenter.org/home.json" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://paymenter.org/" />
-    <meta property="og:title" content="Paymenter Docs" />
-    <meta property="og:description" content="Paymenter is an open source payment gateway for your hosting." />
+    <meta property="og:title" content="{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | Paymenter Docs{{ end }}" />
+    <meta property="og:description" content="{{ or .Description }}{{ if ne .Kind "home" }}{{ end }}" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://paymenter.org/" />
-    <meta property="twitter:title" content="Paymenter Docs" />
-    <meta property="twitter:description" content="Paymenter is an open source payment gateway for your hosting." />
+    <meta property="twitter:title" content="{{ or .Title .Site.Title }}{{ if ne .Kind "home" }} | Paymenter Docs{{ end }}" />
+    <meta property="twitter:description" content="{{ or .Description }}{{ if ne .Kind "home" }}{{ end }}" />
     <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png" data-rh="true">
     <meta property="og:image" content="https://cdn.discordapp.com/attachments/935234707015229511/1028031007573680318/unknown.png" data-rh="true">
     <link rel="manifest" href="/manifest.json">
@@ -229,7 +229,7 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js "></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 ---
 title: Installation
+description: How to install Paymenter
 type: docs
 toc: true
 
@@ -112,10 +113,10 @@ You'll then need to create an administrative user so that you can log into the a
 php artisan p:user:create
 ```
 
-# Webserver configuration
+## Webserver configuration
 
 {{< tabs tabTotal="4">}}
-{{< tab tabName="Nginx" >}}
+{{< tab tabName="Nginx" tabID="nginx" >}}
 
 For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
 
@@ -147,7 +148,7 @@ sudo systemctl restart nginx
 ```
 
 {{< /tab >}}
-{{< tab tabName="Nginx with SSL" >}}
+{{< tab tabName="Nginx with SSL" tabID="nginx-ssl" >}}
 
 For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
 
@@ -189,7 +190,7 @@ sudo systemctl restart nginx
 ```
 
 {{< /tab >}}
-{{< tab tabName="Apache" >}}
+{{< tab tabName="Apache" tabID="apache" >}}
 
 For apache you can create a file in /etc/apache2/sites-available/ called paymenter.conf and add the following:
 
@@ -214,7 +215,7 @@ sudo systemctl restart apache2
 ```
 
 {{< /tab >}}
-{{< tab tabName="Apache with SSL" >}}
+{{< tab tabName="Apache with SSL" tabID="apache-ssl" >}}
 
 For apache you can create a file in /etc/apache2/sites-available/ called paymenter.conf and add the following:
 
