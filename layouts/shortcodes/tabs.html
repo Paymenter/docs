@@ -39,8 +39,6 @@
             el.target.classList.remove('!text-gray-400');
             el.target.classList.add('!text-white');
 
-            console.log(el)
-
             var hash = el.target.dataset.tabsTarget;
 
             if (history.pushState) {
@@ -66,7 +64,6 @@
         if (tab && hashExistsInTabContents) {
             tab.click();
         } else {
-            console.log(tabContents[0])
             tabContents[0].click();
         }
 
