@@ -3,7 +3,7 @@
 {{ .Parent.Scratch.Add "tabName" (slice $tabName) }}
 {{ .Parent.Scratch.Add "tabID" (slice $tabID) }}
 
-<div class="tab-pane {{ if eq .Ordinal 0 }} block {{ else }} hidden {{ end}}" id="{{ $tabID }}" role="tabpanel" aria-labelledby="nav-1">
+<div class="scroll-p-20 tab-pane {{ if eq .Ordinal 0 }} block {{ else }} hidden {{ end }}" id="{{ $tabID }}" role="tabpanel" aria-labelledby="nav-1">
 
 	{{ $.Inner | markdownify }}
 

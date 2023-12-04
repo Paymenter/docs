@@ -12,8 +12,7 @@ toc: true
 
 | Operating System | Version |     Supported      |
 |------------------|---------|:------------------:|
-| **Ubuntu**       | 18.04   |  ✅    |
-|                  | 20.04   |  ✅    |
+| **Ubuntu**       | 20.04   |  ✅    |
 |                  | 22.04   |  ✅    |
 | **CentOS**       | 7       |  ✅    |
 |                  | 8       |  ✅    |
@@ -23,21 +22,56 @@ toc: true
 
 ## Install Dependencies
 
+{{< tabs tabTotal="3" >}}
+{{< tab tabName="General" tabID="general" >}}
+
 ```bash
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 
-# If you are on Ubuntu 22.04, you can skip this step
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 
 apt update
 
-# Add universe repository if you are on Ubuntu 18.04
-apt-add-repository universe
+apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+```
+
+{{</ tab >}}
+{{< tab tabName="Ubuntu 22.04" tabID="ubuntu-22" >}}
+
+```bash
+apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
+
+LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+
+apt update
 
 apt -y install php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
+{{< /tab >}}
+{{< tab tabName="Debian" tabID="debian" >}}
+
+```bash
+apt update -y
+
+apt -y install software-properties-common curl ca-certificates gnupg2 sudo lsb-release
+
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury-php.list
+
+curl -fsSL  https://packages.sury.org/php/apt.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/sury-keyring.gpg
+
+apt update -y
+
+apt install -y php8.1 php8.1-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip}
+
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+
+apt install -y mariadb-server nginx tar unzip git redis-server
+```
+
+{{</ tab >}}
+{{< /tabs >}}
 
 ## Install Composer
 
