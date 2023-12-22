@@ -309,7 +309,7 @@ Paymenter uses Laravel's built in queue system to handle tasks that are able to 
 
 Create a new file in `/etc/systemd/system/` called `paymenter.service` and add the following:
 
-```conf
+```
 [Unit]
 Description=Paymenter Queue Worker
 
