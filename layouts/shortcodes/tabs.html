@@ -23,24 +23,25 @@
         tabToggle.addEventListener('click', function (el) {
             var target = document.querySelector(tabToggle.dataset.tabsTarget);
             var children = Array.from(document.getElementById('{{ $tabToggle }}').children);
+
             children.forEach(function (child) {
                 child.classList.remove('block');
                 child.classList.add('hidden');
             });
             target.classList.remove('hidden');
             target.classList.add('block');
-
+    
             var active = document.querySelectorAll('[data-tabs-toggle="#{{ $tabToggle }}"] button');
             active.forEach(function (active) {
                 active.classList.remove('!text-white');
                 active.classList.add('!text-gray-400');
             });
-
+    
             el.target.classList.remove('!text-gray-400');
             el.target.classList.add('!text-white');
-
+    
             var hash = el.target.dataset.tabsTarget;
-
+    
             if (history.pushState) {
                 if (!dontAddToHash) history.pushState(null, null, hash);
             } else {
@@ -57,7 +58,6 @@
         var tabContents = Array.from(document.querySelectorAll('[data-tabs-toggle="#{{ $tabToggle }}"] button'));
 
         var hashExistsInTabContents = tabContents.some(function (tabContent) {
-            console.log(tabContent.id, hash)
             return '#nav-' + tabContent.id === hash;
         });
 
@@ -66,8 +66,9 @@
         } else {
             tabContents[0].click();
         }
-
-        dontAddToHash = false;
+        setTimeout(function () {
+            dontAddToHash = false;
+        }, 500);
     });
 
 
