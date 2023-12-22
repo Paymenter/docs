@@ -154,7 +154,7 @@ php artisan p:user:create
 
 For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
 
-```conf
+```
 server {
     listen 80;
     listen [::]:80;
@@ -186,7 +186,7 @@ sudo systemctl restart nginx
 
 For nginx you can create a file in /etc/nginx/sites-available/ called paymenter.conf and add the following:
 
-```conf
+```
 server {
     listen 80;
     listen [::]:80;
@@ -228,7 +228,7 @@ sudo systemctl restart nginx
 
 For apache you can create a file in /etc/apache2/sites-available/ called paymenter.conf and add the following:
 
-```conf
+```
 <VirtualHost *:80>
     ServerName paymenter.org
     ServerAlias www.paymenter.org
@@ -253,7 +253,7 @@ sudo systemctl restart apache2
 
 For apache you can create a file in /etc/apache2/sites-available/ called paymenter.conf and add the following:
 
-```conf
+```
 <VirtualHost *:80>
     ServerName paymenter.org
     ServerAlias www.paymenter.org
