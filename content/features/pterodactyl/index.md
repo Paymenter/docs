@@ -24,7 +24,7 @@ Insert your API key and your Pterodactyl URL in the Paymenter admin panel. Here 
 
 * Example: <https://panel.paymenter.org>
 
-* Please note that you dont need a "/" at the end.
+* Please note that you can NOT have a "/" at the end.
 
 ### Configuring the product
 
