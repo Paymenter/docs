@@ -25,12 +25,12 @@ toc: true
 {{< tabs tabTotal="3" >}}
 {{< tab tabName="General" tabID="general" >}}
 
-```bash
+```
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo 
 
 apt update
 
@@ -40,7 +40,7 @@ apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 {{</ tab >}}
 {{< tab tabName="Ubuntu 22.04" tabID="ubuntu-22" >}}
 
-```bash
+```
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
@@ -52,7 +52,7 @@ apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,z
 {{< /tab >}}
 {{< tab tabName="Debian" tabID="debian" >}}
 
-```bash
+```
 apt update -y
 
 apt -y install software-properties-common curl ca-certificates gnupg2 sudo lsb-release
@@ -65,7 +65,7 @@ apt update -y
 
 apt install -y php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip}
 
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo 
 
 apt install -y mariadb-server nginx tar unzip git redis-server
 ```
@@ -75,7 +75,7 @@ apt install -y mariadb-server nginx tar unzip git redis-server
 
 ## Install Composer
 
-```bash
+```
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
 
@@ -83,7 +83,7 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 
 Clone our repo from Github to your server:
 
-```bash
+```
 mkdir /var/www/paymenter
 cd /var/www/paymenter
 curl -Lo paymenter.tar.gz https://github.com/paymenter/paymenter/releases/latest/download/paymenter.tar.gz
@@ -95,7 +95,7 @@ chmod -R 755 storage/* bootstrap/cache/
 
 You will need a database setup and a user with the correct permissions created for that database before continuing any further. See below to create a user and database for your Paymenter panel quickly. To find more detailed information please have a look at Setting up MySQL.
 
-```bash
+```
 mysql -u root -p
 
 # Remember to change 'yourPassword' below to be a unique password
@@ -107,7 +107,7 @@ exit
 
 First we will copy over our default environment settings file, install core dependencies, and then generate a new application encryption key.
 
-```bash
+```
 cp .env.example .env
 composer install --no-dev --optimize-autoloader
 
@@ -125,7 +125,7 @@ Back up your encryption key (APP_KEY in the .env file). It is used as an encrypt
 
 Change the database connection information in the `.env` file to match the credentials you created in the previous step.
 
-```bash
+```
 DB_DATABASE=paymenter
 DB_USERNAME=paymenter
 DB_PASSWORD=yourPassword
@@ -135,7 +135,7 @@ DB_PASSWORD=yourPassword
 
 Now we need to setup all of the base data for the Panel in the database you created earlier. **The command below may take some time to run depending on your machine. Please DO NOT exit the process until it is completed!** This command will setup the database tables that power Paymenter.
 
-```bash
+```
 php artisan migrate --force --seed
 ```
 
@@ -143,7 +143,7 @@ php artisan migrate --force --seed
 
 You'll then need to create an administrative user so that you can log into the admin side. To do so, run the command below.
 
-```bash
+```
 php artisan p:user:create
 ```
 
@@ -176,7 +176,7 @@ server {
 
 Then run the following commands to enable the site and restart nginx:
 
-```bash
+```
 sudo ln -s /etc/nginx/sites-available/paymenter.conf /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 ```
@@ -218,7 +218,7 @@ server {
 
 Then run the following commands to enable the site and restart nginx:
 
-```bash
+```
 sudo ln -s /etc/nginx/sites-available/paymenter.conf /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 ```
@@ -242,7 +242,7 @@ For apache you can create a file in /etc/apache2/sites-available/ called payment
 
 Then run the following commands to enable the site and restart apache:
 
-```bash
+```
 sudo ln -s /etc/apache2/sites-available/paymenter.conf /etc/apache2/sites-enabled/paymenter.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
@@ -276,7 +276,7 @@ For apache you can create a file in /etc/apache2/sites-available/ called payment
 
 Then run the following commands to enable the site and restart apache:
 
-```bash
+```
 sudo ln -s /etc/apache2/sites-available/paymenter.conf /etc/apache2/sites-enabled/paymenter.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
@@ -289,7 +289,7 @@ Be sure to replace `paymenter.org` with your domain name.
 
 Fix the permmisions of paymenter with the following command:
 
-```bash
+```
 chown -R www-data:www-data /var/www/paymenter/*
 ```
 
@@ -299,7 +299,7 @@ chown -R www-data:www-data /var/www/paymenter/*
 Crontab Configuration
 The first thing we need to do is create a new cronjob that runs every minute to process specific Paymenter tasks. You'll want to open your crontab using `sudo crontab -e` and then paste the line below.
 
-```bash
+```
 * * * * * php /var/www/paymenter/artisan schedule:run >> /dev/null 2>&1
 ```
 
@@ -330,6 +330,6 @@ WantedBy=multi-user.target
 
 Then run the following commands to enable the service and start it:
 
-```bash
+```
 sudo systemctl enable --now paymenter.service
 ```
