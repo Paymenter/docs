@@ -3,7 +3,6 @@ title: Installation
 description: How to install Paymenter
 type: docs
 toc: true
-
 ---
 
 # Preparation

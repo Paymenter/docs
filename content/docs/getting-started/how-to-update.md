@@ -1,6 +1,7 @@
 ---
 aliases: ['/docs/how-to-update']
 toc: true
+description: How to update Paymenter
 ---
 
 # How to update
