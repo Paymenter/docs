@@ -1,67 +1,68 @@
-# v9.0 Features
+# Paymenter Version 9.0 Release Notes
 
-## Category Features:
+## Category Enhancements:
 
-- Subcategory's.
-- Images on category.
+- **Subcategories**: Now introducing the ability to create subcategories for a more organized product structure.
+- **Category Images**: Enhance your product presentation with the inclusion of images at the category level.
 
 ![Subcategory](v0.9-subcategory-imagesoncategory.png)
 
 ## [NEW FEATURE] Subscriptions
 
-- The ability for users to subscribe to your product so that it automatically charges them.
+- **Subscription Management**: Users can now subscribe to your product, enabling automatic and seamless recurring charges.
 
 ## [NEW FEATURE] Taxes:
 
-- The abillity to set a tax rate for each country and define wether it is applied inclusive or exclusive of the current price.
+- **Global Tax Settings**: Set tax rates for each country, specifying whether it is inclusive or exclusive of the current price.
+  
 ![Taxes](v0.9-taxes.png)
 
+## Ticketing System Improvements:
 
-## Ticket Changes:
+- **Dynamic Messaging**: Experience live message updates within tickets for smoother communication.
+- **Ticket Closure Fix**: Tickets can no longer be reopened once closed.
 
-- Live adding of new messages.
-- Fixed that you can nolonger reopen a ticket when it was closed.
+## Extension Updates:
 
-## Extension Changes:
+- **Checkout Gateway Configuration**: Specify the availability of your checkout gateway for the current invoice/checkout based on specific conditions.
+- **Pterodactyl Extension Enhancements**: Introduce port array support for Pterodactyl extension, especially useful for selling game servers requiring multiple ports. Also, added Single Sign-On (SSO) support for Virtualizor.
 
-- You can now define if your checkout gateway is available for this current invoice/checkout ( `canUse($total, $products)` )
-- Added port array to pterodactyl extension (Usefull if you sell a (game) server that requires multiple ports)
-- Added SSO to virtualizor
+## New Commands:
 
-## Command Adittions:
-
-- MakeTheme
+- **MakeTheme**: Easily create and customize themes with the new MakeTheme command. This command copy's the default theme.
 
 ## Register/Checkout Requirements:
 
-- The ability to require certain information before a user is able to checkout / register.
+- **User Information Requirements**: Configure mandatory information needed during user registration and/or checkout processes.
+
 ![Login](v0.9-register-requiredinfo.png)
 
-## [NEW BETA FEATURE] Upgrade / Downgrade functionality (only available for pterodactyl)
+## [NEW BETA FEATURE] Upgrade / Downgrade Functionality (Pterodactyl Only)
 
-- The abiliy for clients to upgrade / downgrade their product
+- **Client Product Adjustment**: Allow clients to upgrade or downgrade their Pterodactyl products seamlessly.
+
 ![Upgrade](v0.9-upgrade.png)
 
 ## [NEW FEATURE] Close / Cancel Button
 
-- The ability for clients to close / cancel their product/subscription
+- **Client Control**: Empower clients to close or cancel their products/subscriptions at their convenience.
+
 ![Cancel](v0.9-cancel2.png)
 
-## Frontend Changes:
+## Frontend Enhancements:
 
-- Small changes to the frontend ui of the admin panel. (overview)
-- Added breadcrumbs. (easier navigation)
-- Livewire checkout. (Live updating of price and total)
-- Tables live update.
-- Tables are now paginated in backend
+- **Admin Panel UI Tweaks**: Experience a more polished admin panel interface with small but impactful changes.
+- **Breadcrumbs for Navigation**: Improved navigation with the addition of breadcrumbs.
+- **Livewire Checkout**: Real-time updates on prices and totals during the checkout process.
+- **Pagination for Backend Tables**: Better organization and accessibility with paginated tables in the backend.
 
 ## Additional Changes
 
-- Changed languages input to select,
-- Cronjob runs once a day instead of every minute
-- Added error logging inside paymenter
-- Backend optimization
+- **Language Input Update**: Changed languages input to a more user-friendly select format.
+- **Cronjob Optimization**: Cronjob now runs once a day for efficiency.
+- **Error Logging**: Added error logging within Paymenter for better issue tracking.
+- **Backend Optimization**: General optimizations for a smoother backend experience.
 
 ## Bug Fixes:
 
-- View https://github.com/Paymenter/Paymenter/compare/v0.8.2...v0.9
+- Refer to [GitHub Release Page](https://github.com/Paymenter/Paymenter/compare/v0.8.2...v0.9) for detailed bug fixes and improvements.
