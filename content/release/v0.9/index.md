@@ -4,6 +4,7 @@
 
 - Subcategory's.
 - Images on category.
+
 ![Subcategory](v0.9-subcategory-imagesoncategory.png)
 
 ## [NEW FEATURE] Subscriptions
