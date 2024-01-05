@@ -60,6 +60,7 @@
 - Changed languages input to select,
 - Cronjob runs once a day instead of every minute
 - Added error logging inside paymenter
+- Backend optimization
 
 ## Bug Fixes:
 
