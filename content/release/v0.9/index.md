@@ -1,4 +1,4 @@
-# Paymenter Version 9.0 Release Notes
+# Paymenter Version 0.9 Release Notes
 
 ## Category Enhancements:
 
