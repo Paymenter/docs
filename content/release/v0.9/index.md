@@ -4,7 +4,7 @@
 
 - Subcategory's.
 - Images on category.
-![Subcategory](v9.0-subcategory-imagesoncategory.png)
+![Subcategory](v0.9-subcategory-imagesoncategory.png)
 
 ## [NEW FEATURE] Subscriptions
 
@@ -20,10 +20,6 @@
 
 - Live adding of new messages.
 - Fixed that you can nolonger reopen a ticket when it was closed.
-
-User information Changes:
-
-- The ability to log browser sessions and IP adresses. ![sessions](sessions.png)
 
 ## Extension Changes:
 
