@@ -15,7 +15,7 @@ info:
     name: MIT
 servers: []
 paths:
-  /api/clients/v1/tickets:
+  /api/client/v1/tickets:
     get:
       summary: Get all tickets
       responses:
@@ -74,7 +74,7 @@ paths:
     parameters: []
     post:
       summary: Make new ticket
-      operationId: api-v1-clients-tickets-create
+      operationId: api-v1-client-tickets-create
       responses:
         '201':
           description: Created
@@ -129,7 +129,7 @@ paths:
                   x-stoplight:
                     id: 0nu46ip1vs1j0
                   description: 'Priority, must be one of: `low`, `medium`, `high`'
-  '/api/clients/v1/tickets/{ticketId}':
+  '/api/client/v1/tickets/{ticketId}':
     parameters:
       - schema:
           type: string
@@ -147,11 +147,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Ticket'
-      operationId: api-v1-clients-ticket-get
+      operationId: api-v1-client-ticket-get
       requestBody:
         content: {}
       description: ''
-  '/api/clients/v1/tickets/{ticketId}/reply':
+  '/api/client/v1/tickets/{ticketId}/reply':
     parameters:
       - schema:
           type: string
@@ -160,7 +160,7 @@ paths:
         required: true
     post:
       summary: Reply to ticket
-      operationId: api-v1-clients-ticket-reply
+      operationId: api-v1-client-ticket-reply
       responses:
         '200':
           description: OK
@@ -234,7 +234,7 @@ paths:
                     id: xudbvvo5mu57v
       tags:
         - Tickets
-  '/api/clients/v1/tickets/{ticketId}/messages':
+  '/api/client/v1/tickets/{ticketId}/messages':
     parameters:
       - schema:
           type: string
@@ -266,11 +266,11 @@ paths:
                       $ref: '#/components/schemas/TicketMessage'
                       x-stoplight:
                         id: yxy5cmykzfyi6
-      operationId: get-api-clients-v1-tickets-ticketId-messages
+      operationId: get-api-client-v1-tickets-ticketId-messages
       description: Get all messages from a ticket
       requestBody:
         content: {}
-  '/api/clients/v1/tickets/{ticketId}/close':
+  '/api/client/v1/tickets/{ticketId}/close':
     parameters:
       - schema:
           type: string
@@ -279,7 +279,7 @@ paths:
         required: true
     delete:
       summary: Delete ticket by id
-      operationId: api-v1-clients-ticket-delete
+      operationId: api-v1-client-ticket-delete
       responses:
         '200':
           description: ''
@@ -299,7 +299,7 @@ paths:
       description: Close a ticket
       tags:
         - Tickets
-  /api/clients/v1/invoices:
+  /api/client/v1/invoices:
     get:
       summary: Get all invoices
       tags:
@@ -542,10 +542,10 @@ paths:
                         type: integer
                       item_count:
                         type: integer
-      operationId: get-api-clients-v1-invoices
+      operationId: get-api-client-v1-invoices
       requestBody:
         content: {}
-  '/api/clients/v1/invoices/{invoiceId}':
+  '/api/client/v1/invoices/{invoiceId}':
     get:
       summary: Get all invoice by id
       tags:
@@ -817,7 +817,7 @@ paths:
                     properties:
                       invoice:
                         $ref: '#/components/schemas/Invoice'
-      operationId: get-api-clients-v1-invoices-get-invoices-by-id
+      operationId: get-api-client-v1-invoices-get-invoices-by-id
       requestBody:
         content: {}
     parameters:
@@ -826,7 +826,7 @@ paths:
         name: invoiceId
         in: path
         required: true
-  '/api/clients/v1/invoices/{invoiceId}/pay':
+  '/api/client/v1/invoices/{invoiceId}/pay':
     parameters:
       - schema:
           type: string
@@ -836,7 +836,7 @@ paths:
         description: invoice
     post:
       summary: Pay invoice by ID
-      operationId: post-api-clients-v1-invoices-invoiceId-pay
+      operationId: post-api-client-v1-invoices-invoiceId-pay
       responses:
         '302':
           description: Found
