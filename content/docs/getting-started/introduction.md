@@ -40,6 +40,7 @@ We would like to thank our sponsors for supporting us. If you want to sponsor us
 
 [![Macarne](../sponsors/macarne.png)](https://macarne.com/)
 [![VPND](../sponsors/vpnd.png)](https://vpnd.io/)
+[![ScorpioHosting](../sponsors/scorpiohosting.png)](https://scorpiohosting.net/)
 
 ### Get Paymenter as PaaS
 You can get Paymenter as a PaaS (Paymenter as a Service) from [Paymenter.org](https://paymenter.org/). We provide one package for now which has a monthly price of $5.00. This package includes unlimited resources needed for Paymenter
