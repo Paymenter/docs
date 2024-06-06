@@ -1,28 +1,26 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Paymenter Documentation",
+  title: "Paymenter",
   description: "This is the Documention for Paymenter",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Home", link: "/" },
+      { text: "Docs", link: "/docs/home" },
     ],
+    logo: "/assets/images/paymenter.png",
 
     sidebar: [
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+        items: [{ text: "Installation", link: "/docs/installation/install" }],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/Paymenter" },
+      { icon: "discord", link: "https://github.com/Paymenter" },
+    ],
+  },
+});
