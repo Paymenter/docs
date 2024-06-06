@@ -12,6 +12,10 @@ export default defineConfig({
     ],
     logo: "/assets/images/paymenter.png",
 
+    footer: {
+      copyright: '© 2024 Paymenter. All Rights Reserved.'
+    },
+
     sidebar: [
       {
         items: [{ text: "Installation", link: "/docs/installation/install" }],
