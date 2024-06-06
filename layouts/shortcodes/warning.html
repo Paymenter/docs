@@ -1,8 +1,0 @@
-<div class="rounded-md bg-red-50 p-4 mb-4 dark:bg-red-900 dark:text-white">
-    <div class="flex items-center p-1 rounded-md">
-        <strong>
-            {{- .Get "title" | default "Warning" -}}
-        </strong>
-    </div>
-    {{- .Inner | markdownify -}}
-</div>
