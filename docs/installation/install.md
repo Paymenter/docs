@@ -1,7 +1,5 @@
 # Preparation
 
-This is the installation guide for [Paymenter](https://github.com/Paymenter/Paymenter). Should you have any question or run into some issues feel free to ask us on our [Discord](https://discord.gg/kReEAQteFy)
-
 ### Supported operating systems
 
 | Operating System | Version | Supported |
@@ -17,8 +15,11 @@ This is the installation guide for [Paymenter](https://github.com/Paymenter/Paym
 
 ## Required Dependencies
 
-### General
-```bash
+First of all check if you have all of the dependencies. If not install them with the following commands:
+
+::: code-group
+
+```bash [General]
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
@@ -30,9 +31,7 @@ apt update
 apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 
-### Ubuntu 22.04
-
-```bash
+```bash [Ubuntu 22.04]
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
@@ -42,9 +41,7 @@ apt update
 apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 
-### Debian
-
-```bash
+```bash [Debian]
 apt update -y
 
 apt -y install software-properties-common curl ca-certificates gnupg2 sudo lsb-release
@@ -62,7 +59,15 @@ curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s
 apt install -y mariadb-server nginx tar unzip git redis-server
 ```
 
-## Setting up the code
+:::
+
+#### Composer
+
+```bash
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+```
+
+## Installing
 
 Creating the directory
 
@@ -89,9 +94,10 @@ Granting the right permissions to the folder:
 chmod -R 755 storage/* bootstrap/cache/
 ```
 
-## Setting up the database
+## Creating database
 
-#### Remember to change yourPassword to a stronger password
+> [!IMPORTANT]
+> Remember to change yourPassword to a stronger password
 
 ```bash
 mysql -u root -p
@@ -106,18 +112,20 @@ quit
 
 ```
 
-## Installing composer and changing settings
+## Downloading packages
+
+Run this command to install the composer packages
+
+```bash
+composer install --no-dev --optimize-autoloader
+```
+
+## Setup .env
 
 First we are going to create the .env file
 
 ```bash
 cp .env.example .env
-```
-
-Then we are going to install the composer packages
-
-```bash
-composer install --no-dev --optimize-autoloader
 ```
 
 Now we are going to generate your encryption key.
@@ -127,19 +135,41 @@ php artisan key:generate --force
 
 php artisan storage:link
 ```
-::: danger
-Back up your encryption key (APP_KEY in the .env file). It is used as an encryption key for all data that needs to be stored securely (e.g. user passwords). Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable – even if you have database backups.
-:::
 
-The next step is easy. Just run this command and answer the questions that are asked. This command will automaticly migrate your database for you and make the first user
+> [!DANGER]
+>Back up your encryption key (APP_KEY in the .env file). It is used as an encryption key for all data that needs to be stored securely (e.g. user passwords). Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable – even if you have database backups.
+
+The next step is opening your .env file with a editor like nano and then changing these values to the database, database-user and database-password that we just created.
 
 ```bash
-php artisan p:setup
+DB_DATABASE=paymenter
+DB_USERNAME=paymenter
+DB_PASSWORD=yourPassword
 ```
 
-## Creating the cronjob and the service
+## Setting up database
 
-Now we are going to setup the cronjob
+Now that we have set the correct user and database in the .env file we can go ahead and setup the database
+Simple run this command and your database is ready to be used.
+
+```bash
+php artisan migrate --force --seed
+```
+
+> [!WARNING]
+> The command below may take some time to run depending on your machine. Please DO NOT exit the process until it is completed!
+
+Once this process is completed you can make a user for yourself by running.
+
+```bash
+php artisan p:user:create
+```
+
+## Creating cronjob and service
+
+### Creating cronjob
+
+Now we are going to setup the cronjob to run every minute. You can do this manualy by running ``crontab -e`` and entering your cronjob or just use this command to create it.
 
 ```bash
 (crontab -l ; echo "* * * * * php /var/www/paymenter/artisan schedule:run >> /dev/null 2>&1") | crontab -
@@ -147,9 +177,11 @@ Now we are going to setup the cronjob
 
 The next and final step is creating the service that will run the Queue Worker
 
-This will create the .service file neccessary for this:
+### Creating service
+
+Create a new service file in ``/etc/systemd/system`` called ``paymenter.service`` then open this file and place the following inside:
+
 ```bash
-sudo bash -c 'cat > /etc/systemd/system/paymenter.service <<EOF
 [Unit]
 Description=Paymenter Queue Worker
 
@@ -166,7 +198,6 @@ RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
-EOF'
 ```
 
 Then just enable and start the service and you are done with installing Paymenter.
@@ -174,4 +205,5 @@ Then just enable and start the service and you are done with installing Paymente
 ```bash
 sudo systemctl enable --now paymenter.service
 ```
-Now we just have to [Setup the webserver](/docs/installation/webserver) 
+
+Now we just have to [Setup the webserver](/docs/installation/webserver)

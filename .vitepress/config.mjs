@@ -10,7 +10,7 @@ export default defineConfig({
     },
     nav: [
       { text: "Home", link: "/" },
-      { text: "Docs", link: "/docs/home" },
+      { text: "Docs", link: "docs/installation/install.md" },
     ],
     logo: "/assets/images/paymenter.png",
 
