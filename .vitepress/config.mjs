@@ -1,11 +1,13 @@
 import { defineConfig } from "vitepress";
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Paymenter",
   description: "This is the Documention for Paymenter",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: "local",
+    },
     nav: [
       { text: "Home", link: "/" },
       { text: "Docs", link: "/docs/home" },
@@ -13,18 +15,55 @@ export default defineConfig({
     logo: "/assets/images/paymenter.png",
 
     footer: {
-      copyright: '© 2024 Paymenter. All Rights Reserved.'
+      copyright: "© 2024 Paymenter. All Rights Reserved.",
     },
 
-    sidebar: [
-      {
-        items: [{ text: "Installation", link: "/docs/installation/install" }],
-      },
-    ],
+    sidebar: {
+      "/docs/": [
+        {
+          text: "Documentation",
+          items: [
+            {
+              text: "Installation",
+              items: [
+                { text: "Getting Started", link: "/docs/installation/install" },
+                {
+                  text: "Webserver Setup",
+                  link: "/docs/installation/webserver",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: "Extensions",
+          items: [
+            { text: "Pterodactyl", link: "docs/extensions/pterodactyl.md" },
+          ],
+        },
+      ],
+      /*
+      '/docs/': [
+        {
+          text: 'Config',
+          items: [
+            { text: 'Installation', link: '/docs/installation/install' },
+            { text: 'Extensions', link: '/config/three' },
+            { text: 'Four', link: '/config/four' }
+          ]
+        }
+      ]
+      */
+    },
 
     socialLinks: [
       { icon: "github", link: "https://github.com/Paymenter" },
-      { icon: "discord", link: "https://github.com/Paymenter" },
+      { icon: "discord", link: "https://discord.gg/kReEAQteFy" },
     ],
+    markdown: {
+      config(md) {
+        md.use(tabsMarkdownPlugin)
+      }
+    }
   },
 });

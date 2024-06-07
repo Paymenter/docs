@@ -2,7 +2,7 @@
 
 This is the installation guide for [Paymenter](https://github.com/Paymenter/Paymenter). Should you have any question or run into some issues feel free to ask us on our [Discord](https://discord.gg/kReEAQteFy)
 
-## Supported operating systems
+### Supported operating systems
 
 | Operating System | Version | Supported |
 | ---------------- | ------- | :-------: |
@@ -17,22 +17,49 @@ This is the installation guide for [Paymenter](https://github.com/Paymenter/Paym
 
 ## Required Dependencies
 
+### General
+```bash
+apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
+
+LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
+
+apt update
+
+apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+```
+
 ### Ubuntu 22.04
 
 ```bash
-apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
+
+LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+
+apt update
+
+apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
 ```
 
 ### Debian
 
 ```bash
-apt update -y && apt -y install software-properties-common curl ca-certificates gnupg2 sudo lsb-release php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
-```
+apt update -y
 
-### Composer
+apt -y install software-properties-common curl ca-certificates gnupg2 sudo lsb-release
 
-```bash
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury-php.list
+
+curl -fsSL  https://packages.sury.org/php/apt.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/sury-keyring.gpg
+
+apt update -y
+
+apt install -y php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip}
+
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
+
+apt install -y mariadb-server nginx tar unzip git redis-server
 ```
 
 ## Setting up the code
@@ -62,7 +89,7 @@ Granting the right permissions to the folder:
 chmod -R 755 storage/* bootstrap/cache/
 ```
 
-### Setting up the database
+## Setting up the database
 
 #### Remember to change yourPassword to a stronger password
 
@@ -79,7 +106,7 @@ quit
 
 ```
 
-### Installing composer and changing settings
+## Installing composer and changing settings
 
 First we are going to create the .env file
 
@@ -93,13 +120,16 @@ Then we are going to install the composer packages
 composer install --no-dev --optimize-autoloader
 ```
 
-Now we are going to generate your encryption key. Remember to back this key up since if you lose it you will lose access to all of your encrypted data. Only run this command if you are install this Paymenter panel for the first time
+Now we are going to generate your encryption key.
 
 ```bash
 php artisan key:generate --force
 
 php artisan storage:link
 ```
+::: danger
+Back up your encryption key (APP_KEY in the .env file). It is used as an encryption key for all data that needs to be stored securely (e.g. user passwords). Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable – even if you have database backups.
+:::
 
 The next step is easy. Just run this command and answer the questions that are asked. This command will automaticly migrate your database for you and make the first user
 
@@ -107,7 +137,7 @@ The next step is easy. Just run this command and answer the questions that are a
 php artisan p:setup
 ```
 
-### Creating the cronjob and the service
+## Creating the cronjob and the service
 
 Now we are going to setup the cronjob
 
@@ -144,4 +174,4 @@ Then just enable and start the service and you are done with installing Paymente
 ```bash
 sudo systemctl enable --now paymenter.service
 ```
-Now we just have to [Setup the webserver]() 
+Now we just have to [Setup the webserver](/docs/installation/webserver) 
