@@ -22,23 +22,27 @@ export default defineConfig({
       "/docs/": [
         {
           text: "Documentation",
+          items: [],
+        },
+        {
+        text: "Installation",
+        items: [
+          { text: "Getting Started", link: "/docs/installation/install" },
+          { text: "Webserver Setup", link: "/docs/installation/webserver", },
+        ],
+        },
+        {
+          text: "Extension Guides",
           items: [
-            {
-              text: "Installation",
-              items: [
-                { text: "Getting Started", link: "/docs/installation/install" },
-                {
-                  text: "Webserver Setup",
-                  link: "/docs/installation/webserver",
-                },
-              ],
-            },
+            { text: "Pterodactyl", link: "docs/extensions/pterodactyl" },
+            { text: "Stripe", link: "/docs/extensions/stripe", },
+            { text: "PayPal", link: "/docs/extensions/paypal", },
           ],
         },
         {
-          text: "Extensions",
+          text: "Customization",
           items: [
-            { text: "Pterodactyl", link: "docs/extensions/pterodactyl.md" },
+            { text: "Create a theme", link: "docs/customization/theme.md" },
           ],
         },
       ],
