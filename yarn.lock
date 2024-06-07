@@ -761,11 +761,6 @@ vitepress-plugin-back-to-top@^1.0.1:
   dependencies:
     vue "^3.2.45"
 
-vitepress-plugin-tabs@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/vitepress-plugin-tabs/-/vitepress-plugin-tabs-0.5.0.tgz#2b193a72ed36b9fcd63e3907d3044fe7b6cf3e4e"
-  integrity sha512-SIhFWwGsUkTByfc2b279ray/E0Jt8vDTsM1LiHxmCOBAEMmvzIBZSuYYT1DpdDTiS3SuJieBheJkYnwCq/yD9A==
-
 vitepress@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.2.3.tgz#a507d2f5e86c1fbcdb5ec2212f1db4828504df34"

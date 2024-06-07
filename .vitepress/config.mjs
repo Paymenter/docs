@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
 export default defineConfig({
   title: "Paymenter",
@@ -17,7 +16,8 @@ export default defineConfig({
     footer: {
       copyright: "© 2024 Paymenter. All Rights Reserved.",
     },
-
+    cleanUrls: true, // Needs to be tested https://vitepress.dev/reference/site-config#cleanurls
+    
     sidebar: {
       "/docs/": [
         {
@@ -60,10 +60,5 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/Paymenter" },
       { icon: "discord", link: "https://discord.gg/kReEAQteFy" },
     ],
-    markdown: {
-      config(md) {
-        md.use(tabsMarkdownPlugin)
-      }
-    }
   },
 });
