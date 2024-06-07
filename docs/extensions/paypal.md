@@ -1,20 +1,18 @@
 # PayPal
 
-*You don't have a PayPal business account OR want a easier install? Use PayPal IPN, you'll only need your email*
+_You don't have a PayPal business account OR want a easier install? Use PayPal IPN, you'll only need your email_
 
-## Setup
-
-# Creating a application
+## Creating a application
 
 Head over to [PayPal developers](https://developer.paypal.com/dashboard/applications) and press "Create App"
 
-![Create App](/assets/images/paypal/create-app.png)
+![Create App](/assets/images/extensions/paypal/create-app.png)
 
 Fill in the required details and press Create App
 
-Take note of the *Client ID* and the *Secret Key*
+Take note of the _Client ID_ and the _Secret Key_
 
-# Creating the webhook
+## Creating the webhook
 
 Scroll down to Webhooks and press add Webhook
 
@@ -24,12 +22,12 @@ Be sure to replace yourDomain with your Paymenter domain (e.g. https://demo.paym
 
 Tick the all events box and continue
 
-![Create Webhook](/assets/images/paypal/create-webhook.png)
+![Create Webhook](/assets/images/extensions/paypal/create-webhook.png)
 
-Take note of the *Webhook ID* we'll need it in the next step
+Take note of the _Webhook ID_ we'll need it in the next step
 
-# Filling in the credentials on Paymenter
+## Filling in the credentials on Paymenter
 
 Fill in the details given in the previous steps
 
-![Paymenter](/assets/images/paypal/paymenter.png)
+![Paymenter](/assets/images/extensions/paypal/paymenter.png)

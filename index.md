@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Documentation
-      link: /docs/home
+      link: /docs/installation/install
     - theme: alt
       text: Discord
       link: "<https://discord.gg/xB4UUT3XQg>"
