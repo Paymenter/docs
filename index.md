@@ -13,16 +13,36 @@ hero:
       text: Discord
       link: "<https://discord.gg/xB4UUT3XQg>"
 
-# features
+features:
 
-# - title: Install
+- title: Time Saving
 
-# details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  details: Save time with automated billing and service activation and suspession.
 
-# - title: Feature B
+- title: Fast Loading 
 
-# details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  details: Programmed with the latest technologies for the fastest loading speed.
 
-# - title: Feature C
+- title: Highly Secure
 
-# details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  details: With advanced protection systems, your data is safe with Paymenter.
+
+- title: Fully Customizable
+
+  details: Without programming skills, you can make Paymenter completely match to your branding.
+
+- title: User Friendly
+
+  details: With a dedicated team for making the user experience useable for anyone.
+
+- title: Free & Open Source
+
+  details: Open source and free to use, so you can invest your budget in the things that really matter.
+
+- title: Scalable
+
+  details: Paymenter is made for large and small scale, and is made so it can handle any amount of users.
+
+- title: SEO Optimized
+
+  details: Easily improve your search result with the advanced SEO options.
