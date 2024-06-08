@@ -49,15 +49,17 @@ export default defineConfig({
         {
           text: "Customization",
           items: [
-            { text: "Create a theme", link: "docs/customization/theme.md" },
+            { text: "Create a theme", link: "/docs/customization/theme.md" },
+            { text: "Create a Server Extension", link: "/docs/customization/server-extension.md" },
+            { text: "Create a Gateway Extension", link: "/docs/customization/gateway-extension.md" },
           ],
         },
         {
           text: "Guides",
           items: [
-            { text: "OAuth", link: "docs/guides/OAuth.md" },
-            { text: "OAuth", link: "docs/guides/Docker.md" },
-            { text: "Configurable Options", link: "docs/guides/config-options.md" },
+            { text: "OAuth", link: "/docs/guides/OAuth.md" },
+            { text: "OAuth", link: "/docs/guides/Docker.md" },
+            { text: "Configurable Options", link: "/docs/guides/config-options.md" },
           ],
         },
       ],
