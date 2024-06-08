@@ -9,6 +9,7 @@ Creating a theme is really easy. We will show you how to create a theme in this 
 
 - A working Paymenter installation
 - Knowledge of HTML, CSS 
+- Node.js version 20 or above
 
 ## Create a theme
 
