@@ -21,12 +21,10 @@ export default defineConfig({
 
     cleanUrls: true, // Needs to be tested https://vitepress.dev/reference/site-config#cleanurls
 
+    //head: [['link', { rel: 'icon', href: '/assets/images/favicon.ico' }]], // Not working yet,
+
     sidebar: {
       "/docs/": [
-        {
-          text: "Documentation",
-          items: [],
-        },
         {
           text: "Installation",
           items: [
@@ -36,6 +34,7 @@ export default defineConfig({
         },
         {
           text: "Extension Guides",
+          collapsed: false,
           items: [
             { text: "Index", link: "/docs/extensions/index" },
             { text: "Enhance", link: "/docs/extensions/enhance" },
@@ -53,19 +52,15 @@ export default defineConfig({
             { text: "Create a theme", link: "docs/customization/theme.md" },
           ],
         },
-      ],
-      /*
-      '/docs/': [
         {
-          text: 'Config',
+          text: "Guides",
           items: [
-            { text: 'Installation', link: '/docs/installation/install' },
-            { text: 'Extensions', link: '/config/three' },
-            { text: 'Four', link: '/config/four' }
-          ]
-        }
-      ]
-      */
+            { text: "OAuth", link: "docs/guides/OAuth.md" },
+            { text: "OAuth", link: "docs/guides/Docker.md" },
+            { text: "Configurable Options", link: "docs/guides/config-options.md" },
+          ],
+        },
+      ],
     },
 
     socialLinks: [
