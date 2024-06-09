@@ -10,7 +10,8 @@ export default defineConfig({
 
     nav: [
       { text: "Home", link: "/" },
-      { text: "Docs", link: "docs/installation/install" },
+      { text: "Docs", link: "/docs/installation/install" },
+      { text: "Blog", link: "/blog/V1-release.md" },
     ],
 
     logo: "/assets/images/logo.png",
@@ -20,8 +21,6 @@ export default defineConfig({
     },
 
     cleanUrls: true, // Needs to be tested https://vitepress.dev/reference/site-config#cleanurls
-
-    //head: [['link', { rel: 'icon', href: '/assets/images/favicon.ico' }]], // Not working yet,
 
     sidebar: {
       "/docs/": [
@@ -60,6 +59,14 @@ export default defineConfig({
             { text: "OAuth", link: "/docs/guides/OAuth.md" },
             { text: "Docker", link: "/docs/guides/Docker.md" },
             { text: "Configurable Options", link: "/docs/guides/config-options.md" },
+          ],
+        },
+      ],
+      "/blog/": [
+        {
+          text: "Index",
+          items: [
+            { text: "Release of V1", link: "/blog/V1-release.md" },
           ],
         },
       ],
