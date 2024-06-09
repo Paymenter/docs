@@ -5,7 +5,7 @@ Creating a theme is really easy. We will show you how to create a theme in this 
 ## Prerequisites
 
 - A working Paymenter installation
-- Knowledge of HTML, CSS 
+- Knowledge of HTML, CSS
 
 ## Create a theme
 

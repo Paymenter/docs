@@ -58,7 +58,7 @@ export default defineConfig({
           text: "Guides",
           items: [
             { text: "OAuth", link: "/docs/guides/OAuth.md" },
-            { text: "OAuth", link: "/docs/guides/Docker.md" },
+            { text: "Docker", link: "/docs/guides/Docker.md" },
             { text: "Configurable Options", link: "/docs/guides/config-options.md" },
           ],
         },
