@@ -120,7 +120,7 @@ Run this command to install the composer packages
 composer install --no-dev --optimize-autoloader
 ```
 
-## Setup .env
+## Setting up .env
 
 First we are going to create the .env file
 
@@ -152,12 +152,12 @@ DB_PASSWORD=yourPassword
 Now that we have set the correct user and database in the .env file we can go ahead and setup the database
 Simple run this command and your database is ready to be used.
 
+> [!WARNING]
+> The command below may take some time to run depending on your machine. Please DO NOT exit the process until it is completed!
+
 ```bash
 php artisan migrate --force --seed
 ```
-
-> [!WARNING]
-> The command below may take some time to run depending on your machine. Please DO NOT exit the process until it is completed!
 
 Once this process is completed you can make a user for yourself by running.
 
@@ -169,7 +169,7 @@ php artisan p:user:create
 
 ### Creating cronjob
 
-Now we are going to setup the cronjob to run every minute. You can do this manualy by running ``crontab -e`` and entering your cronjob or just use this command to create it.
+Now we are going to setup the cronjob to run every minute. You can do this manualy by running ``crontab -e`` and entering your cronjob or use this command to create it.
 
 ```bash
 (crontab -l ; echo "* * * * * php /var/www/paymenter/artisan schedule:run >> /dev/null 2>&1") | crontab -
@@ -206,4 +206,4 @@ Then just enable and start the service and you are done with installing Paymente
 sudo systemctl enable --now paymenter.service
 ```
 
-Now we just have to [Setup the webserver](/docs/installation/webserver)
+Now we have to [Setup the webserver](/docs/installation/webserver)

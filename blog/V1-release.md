@@ -1,4 +1,9 @@
 # V1
 
-Authors: Senna, Corwin
-Date: 
+&NewLine;
+
+###### Authors: Senna, Corwin
+
+&NewLine;
+
+###### Release Date: 09-06-24

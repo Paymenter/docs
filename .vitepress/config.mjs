@@ -16,6 +16,12 @@ export default defineConfig({
 
     logo: "/assets/images/logo.png",
 
+    markdown: {
+      image: {
+        lazyLoading: false
+      },
+    },
+
     footer: {
       copyright: "© 2024 Paymenter. All Rights Reserved.",
     },
@@ -29,6 +35,7 @@ export default defineConfig({
           items: [
             { text: "Getting Started", link: "/docs/installation/install" },
             { text: "Webserver Setup", link: "/docs/installation/webserver" },
+            { text: "Updating", link: "/docs/installation/updating" },
           ],
         },
         {
@@ -48,7 +55,7 @@ export default defineConfig({
         {
           text: "Customization",
           items: [
-            { text: "Create a theme", link: "/docs/customization/theme.md" },
+            { text: "Create a Theme", link: "/docs/customization/theme.md" },
             { text: "Create a Server Extension", link: "/docs/customization/server-extension.md" },
             { text: "Create a Gateway Extension", link: "/docs/customization/gateway-extension.md" },
           ],
@@ -59,6 +66,7 @@ export default defineConfig({
             { text: "OAuth", link: "/docs/guides/OAuth.md" },
             { text: "Docker", link: "/docs/guides/Docker.md" },
             { text: "Configurable Options", link: "/docs/guides/config-options.md" },
+            { text: "Creating SSL Certificates", link: "/docs/guides/SSL.md" },
           ],
         },
       ],
