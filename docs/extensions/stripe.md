@@ -26,6 +26,6 @@ After doing this you will see the webhook information page, under “Signing sec
 
 ![image](/assets/images/extensions/stripe/3.png)
 
-### That's all!
+### That's all
 
 You can now use Stripe as a payment gateway for your products.

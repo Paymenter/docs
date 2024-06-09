@@ -10,7 +10,7 @@ First locate to [Discord Developer Page](https://discord.dev) and click on New a
 
 Name your application and hit create.
 After that navigate to OAuth2 and click on Add Redirect
-and add Paymenter OAuth callback URL (https://yourdomain.here/login/discord/callback).
+and add Paymenter OAuth callback URL (<https://yourdomain.here/login/discord/callback>).
 After that click on Reset Secret, The page should look like this.
 
 ![discord_discorddev2](/assets/images/guides/OAuth/discord_discorddevfull.png)
@@ -39,7 +39,7 @@ Click on OAuth Apps and click on Register a new application
 
 ![github_2](/assets/images/guides/OAuth/github_2.png)
 
-Create a new application with the callback (https://yourdomain.here/login/github/callback)
+Create a new application with the callback (<https://yourdomain.here/login/github/callback>)
 Should look something like this.
 
 ![github_3](/assets/images/guides/OAuth/github_3.png)
@@ -98,7 +98,7 @@ After that go back to Credentials and click on Create credentials --> OAuth clie
 
 ![google_9](/assets/images/guides/OAuth/google_3.png)
 
-Select Web application and for Authorized redirect URIs put (https://yourdomain.here/login/google/callback)
+Select Web application and for Authorized redirect URIs put (<https://yourdomain.here/login/google/callback>)
 Should look like this.
 
 ![google_10](/assets/images/guides/OAuth/google_10.png)
@@ -107,7 +107,7 @@ Click on create and you should be showed your Client ID and Client Secret
 
 ![google_11](/assets/images/guides/OAuth/google_11.png)
 
-Copy both of these and go to your Paymenter admin area, navigate to settings (... (three dots) -> Settings --> Login) Paste the Client ID and Client Secret and click submit to save changes. 
+Copy both of these and go to your Paymenter admin area, navigate to settings (... (three dots) -> Settings --> Login) Paste the Client ID and Client Secret and click submit to save changes.
 Should look something like this.
 
 ![google_12](/assets/images/guides/OAuth/google_12.png)

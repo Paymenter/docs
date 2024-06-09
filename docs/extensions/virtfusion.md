@@ -35,7 +35,7 @@ Copy your token (This is important it only appears one time!)
 
 Go to paymenter Extensions Virtfusion Edit
 
-Enter an hostname(eg. https://vps.yoursite.org) and your token (from the previous step)
+Enter an hostname(eg. <https://vps.yoursite.org>) and your token (from the previous step)
 
 ![](/assets/images/extensions/virtfusion/step5.png)
 

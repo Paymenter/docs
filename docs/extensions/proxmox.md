@@ -4,14 +4,14 @@
 
 ProxmoxVE is an open source enterprise ready virtualization platform based on Debian 12 (8.0) featuring
 KVM virtualization and Linux Containers (LXC) including many features out of the box.
-Download: https://proxmox.com
+Download: <https://proxmox.com>
 
 ## How to create an API key
 
 If you want to use Proxmox with Paymenter you will need to create an API key.
 This can be done step by step.
 
-Step 1: Head to your Proxmox web based interface (GUI) https://yourserver:8006/ -- change the port if you are using other than default which is 8006
+Step 1: Head to your Proxmox web based interface (GUI) <https://yourserver:8006/> -- change the port if you are using other than default which is 8006
 
 Step 2: Click on "Datacenter" then scroll down until you see "API Tokens" under "Permissions"
 
@@ -37,7 +37,7 @@ To set-up Proxmox extension in Paymenter you will need to have a Proxmox install
 Otherwise head back to "How to create an API key"
 If you already have a Proxmox installation:
 
-Step 1: Head to your Paymenter web page - http://your-paymenter-installation /// https://your-paymenter-installation
+Step 1: Head to your Paymenter web page - <http://your-paymenter-installation> /// <https://your-paymenter-installation>
 
 Step 2: Set-up Proxmox extension:
 

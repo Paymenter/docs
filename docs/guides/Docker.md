@@ -1,12 +1,14 @@
 # Docker
 
-## Getting Resources:
+## Getting Resources
+
 ```
 mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
 curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
 ```
 
 Replace the following in `docker-compose.yml`:
+
 ```
 YOUR_DB_PASSWORD -> Your desired database password.
 YOUR_ROOT_PASSWORD -> Your desired MySQL root password.
@@ -14,13 +16,15 @@ YOUR_APP_KEY -> Your app key (used for encryption)
 domain.tld -> Your domain (with subdomain if applicable)
 ```
 
-## Starting Everything:
+## Starting Everything
+
 ```bash
 docker compose up -d --force-recreate
 docker compose run --rm paymenter php artisan migrate --force --seed
 ```
 
-## Creating Users:
+## Creating Users
+
 ```bash
 docker compose run --rm paymenter php artisan p:user:create
 ```
@@ -28,6 +32,7 @@ docker compose run --rm paymenter php artisan p:user:create
 ## Nginx
 
 An example NGINX config (with SSL) can be observed below:
+
 ```conf
 server {
     listen 443 ssl http2;
@@ -69,4 +74,5 @@ server {
     }
 }
 ```
+
 Make sure to replace `DOMAIN` with your domain and enter your SSL certificates as `cert.pem` and `cert.key` in /opt/paymenter/certs.

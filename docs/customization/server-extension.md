@@ -1,12 +1,15 @@
 # How to create a server extension
 
 ## Step 1: Create a new extension
+
 Create a new extension using the CLI command `php artisan p:extension:create` and follow the instructions
 
 ## Step 2: Add the extension's information
+
 Add the first public function named `getConfig`. This function returns the possible settings for the extension when you enter them in the panel
 
-### Example:
+### Example
+
 ```php
 public function getConfig()
     {
@@ -30,9 +33,11 @@ public function getConfig()
 You can see what the settings mean [here](#configs-follow-the-following-structure).
 
 ## Step 3: Add a product configuration function
+
 This can be done by adding a public function called `getProductConfig` to the file. This function should return an array with the product configuration.
 
-### Example:
+### Example
+
 ```php
 public function getProductConfig($options)
     {
@@ -56,6 +61,7 @@ public function getProductConfig($options)
 You can see what the settings mean [here](#configs-follow-the-following-structure).
 
 ## Step 4: Add the create function
+
 This can be done by adding a public function called `createServer` to the file.
 
 $user = The user who created the server
@@ -72,6 +78,7 @@ public function createServer($user, $parmas, $order, $product, $configurableOpti
 ```
 
 ## Step 5: Add the suspend function
+
 This can be done by adding a public function called `suspendServer` to the file.
 
 $user = The user who created the server
@@ -79,7 +86,6 @@ $parmas = The parameters of the server, this also includes the configuration if 
 $order = The order of the server
 $product = The product of the server
 $configurableOptions = The configurable options of the server
-
 
 ```php
 public function suspendServer($user, $params, $order, $product, $configurableOptions)
@@ -89,6 +95,7 @@ public function suspendServer($user, $params, $order, $product, $configurableOpt
 ```
 
 ## Step 6: Add the unsuspend function
+
 This can be done by adding a public function called `unsuspendServer` to the file.
 
 $user = The user who created the server
@@ -96,7 +103,6 @@ $parmas = The parameters of the server, this also includes the configuration if 
 $order = The order of the server
 $product = The product of the server
 $configurableOptions = The configurable options of the server
-
 
 ```php
 public function unsuspendServer($user, $params, $order, $product, $configurableOptions)
@@ -106,6 +112,7 @@ public function unsuspendServer($user, $params, $order, $product, $configurableO
 ```
 
 ## Step 7: Add the terminate function
+
 This can be done by adding a public function called `terminateServer` to the file.
 
 $user = The user who created the server
@@ -140,9 +147,9 @@ public function getLink($product)
 }
 ```
 
-## Configs follow the following structure:
+## Configs follow the following structure
 
-This works for both gateways and payment methods. 
+This works for both gateways and payment methods.
 
 Functions: getConfig, getProductConfig, getUserConfig
 
@@ -170,4 +177,3 @@ Functions: getConfig, getProductConfig, getUserConfig
 - `required`: Whether the field is required or not. This can be `true` or `false`.
 
 - `options`: The options of the field. This is only required when the type is `dropdown`. This should be an array with the options. The key of the option should be the value of the option and the value of the option should be the name of the option.
-

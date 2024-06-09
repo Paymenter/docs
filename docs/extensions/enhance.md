@@ -4,7 +4,7 @@
 
 Enhance.com is a powerful webhosting software with many features.
 
-Website: https://enhance.com
+Website: <https://enhance.com>
 
 ## How to setup Enhance extension in Paymenter
 

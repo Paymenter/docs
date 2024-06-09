@@ -15,12 +15,14 @@ If you find any issues in the documentation, please report them in the [GitHub I
 
 2. **Clone Your Fork**
    - Clone your forked repository to your local machine:
+
      ```bash
      git clone https://github.com/your-username/paymenter-documentation.git
      ```
 
 3. **Create a New Branch**
    - Create a new branch for your changes:
+
      ```bash
      git checkout -b feature/your-feature
      ```
@@ -30,6 +32,7 @@ If you find any issues in the documentation, please report them in the [GitHub I
 
 5. **Commit Your Changes**
    - Commit your changes with a descriptive message:
+
      ```bash
      git add .
      git commit -m 'Add new feature to documentation'
@@ -37,6 +40,7 @@ If you find any issues in the documentation, please report them in the [GitHub I
 
 6. **Push Your Changes**
    - Push your changes to your forked repository:
+
      ```bash
      git push origin feature/your-feature
      ```

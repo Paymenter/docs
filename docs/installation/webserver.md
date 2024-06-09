@@ -1,7 +1,5 @@
 # Webserver Setup
 
-
-
 ## Nginx
 
 ### Step 1: Create .conf file
@@ -71,20 +69,25 @@ server {
     }
 }
 ```
+
 :::
 
 ### Step 2: Setting the right permissions
 
 First we need to create a symbolic link for the file that we just created to enable the site
+
 ```bash
 sudo ln -s /etc/nginx/sites-available/paymenter.conf /etc/nginx/sites-enabled/
 ```
+
 Then we need to restart the service
+
 ```bash
 sudo systemctl restart nginx
 ```
 
 And then as last we need to set the right permissions for paymenter with this command
+
 ```bash
 chown -R www-data:www-data /var/www/paymenter/*
 ```

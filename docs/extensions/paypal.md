@@ -18,7 +18,7 @@ Scroll down to Webhooks and press add Webhook
 
 Fill in yourDomain /extensions/paypal/webhook
 
-Be sure to replace yourDomain with your Paymenter domain (e.g. https://demo.paymenter.org)
+Be sure to replace yourDomain with your Paymenter domain (e.g. <https://demo.paymenter.org>)
 
 Tick the all events box and continue
 

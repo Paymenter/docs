@@ -61,11 +61,12 @@ certbot certonly --apache -d example.com
 ```bash [Other]
 certbot certonly --standalone -d example.com
 ```
+
 :::
 
 ## Renewing
 
-And now you are done. The certificates will however need to be renewed often. You can do this manualy by running ```certbot renew ``` or you can setup a cronjob to do it for you:
+And now you are done. The certificates will however need to be renewed often. You can do this manualy by running ```certbot renew``` or you can setup a cronjob to do it for you:
 
 > [!IMPORTANT]
 > Make sure to replace nginx with the webserver that you are using.
@@ -73,6 +74,3 @@ And now you are done. The certificates will however need to be renewed often. Yo
 ```bash
 (crontab -l ; echo "0 23 * * * certbot renew --quiet --deploy-hook "systemctl restart nginx") | crontab -
 ```
-
-
-
