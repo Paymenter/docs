@@ -6,7 +6,7 @@
 | ---------------- | ------- | :-------: |
 | **Ubuntu**       | 20.04   |    ✅     |
 |                  | 22.04   |    ✅     |
-|                  | 24.04   |    ❔     |
+|                  | 24.04   | Untested  |
 | **CentOS**       | 7       |    ✅     |
 |                  | 8       |    ✅     |
 | **Debian**       | 10      |    ✅     |
@@ -137,7 +137,7 @@ php artisan storage:link
 ```
 
 > [!DANGER]
->Back up your encryption key (APP_KEY in the .env file). It is used as an encryption key for all data that needs to be stored securely (e.g. user passwords). Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable – even if you have database backups.
+> Back up your encryption key (APP_KEY in the .env file). It is used as an encryption key for all data that needs to be stored securely (e.g. user passwords). Store it somewhere safe - not just on your server. If you lose it all encrypted data is irrecoverable – even if you have database backups.
 
 The next step is opening your .env file with a editor like nano and then changing these values to the database, database-user and database-password that we just created.
 
@@ -169,7 +169,7 @@ php artisan p:user:create
 
 ### Creating cronjob
 
-Now we are going to setup the cronjob to run every minute. You can do this manualy by running ``crontab -e`` and entering your cronjob or use this command to create it.
+Now we are going to setup the cronjob to run every minute. You can do this manualy by running `crontab -e` and entering your cronjob or use this command to create it.
 
 ```bash
 (crontab -l ; echo "* * * * * php /var/www/paymenter/artisan schedule:run >> /dev/null 2>&1") | crontab -
@@ -179,7 +179,7 @@ The next and final step is creating the service that will run the Queue Worker
 
 ### Creating service
 
-Create a new service file in ``/etc/systemd/system`` called ``paymenter.service`` then open this file and place the following inside:
+Create a new service file in `/etc/systemd/system` called `paymenter.service` then open this file and place the following inside:
 
 ```bash
 [Unit]

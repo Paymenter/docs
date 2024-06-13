@@ -6,7 +6,6 @@ Welcome to the official documentation repository for Paymenter! This repository 
 
 - [Introduction](#introduction)
 - [Documentation](#documentation)
-- [Translations](#translations)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -18,10 +17,6 @@ Paymenter is a powerful and flexible payment solution designed to make transacti
 ## Documentation
 
 For detailed documentation and comprehensive guides, visit our official [documentation site](https://paymenter.org). Here you will find everything you need to understand and implement Paymenter.
-
-## Translations
-
-We aim to make our documentation accessible to a global audience. You can help us by translating the documentation into different languages. Visit our [Crowdin page](https://crowdin.com/project/paymenter-documentation) to contribute to the translation effort.
 
 ## Contributing
 

@@ -48,10 +48,6 @@ If you find any issues in the documentation, please report them in the [GitHub I
 7. **Open a Pull Request**
    - Open a pull request to the `main` branch of the original repository. Provide a clear and descriptive title and description of your changes.
 
-### Translation Contributions
-
-We use Crowdin to manage translations. You can help translate the documentation by joining our Crowdin project [here](https://crowdin.com/project/paymenter-documentation).
-
 ## Style Guide
 
 - Use clear and concise language.
