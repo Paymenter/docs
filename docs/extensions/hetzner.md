@@ -4,6 +4,7 @@
 [![MIT License][license-shield]][license-url]
 
 # Hetzner Cloud Extension for [paymenter.org](https://github.com/Paymenter/Paymenter)
+>
 > Note: This extension is in its early stages and may contain bugs.
 
 The extension uses Hetzners API to create Cloud Servers automatically.  The extension shows information about your server, like IPv4, IPv6 & temporarily root password for SSH.
@@ -13,14 +14,15 @@ Power controls for Starting, Stopping and Rebooting the server. You can also For
 You can also see metrics for CPU, Disk and Network usage.
 <br/>Supports configurable options for: `location`, `image` and `hostname`.
 
-If you want to implement new features check out Hetzner Cloud Docs: https://docs.hetzner.cloud/ & make a pull request ❤️
+If you want to implement new features check out Hetzner Cloud Docs: <https://docs.hetzner.cloud/> & make a pull request ❤️
 
-Get the extension at: https://market.paymenter.org/extensions/27/HetznerCloud 🎉
+Get the extension at: <https://market.paymenter.org/extensions/27/HetznerCloud> 🎉
 <br/>For support or feature requests please message [@ha1fdan](https://discord.gg/n8hpbek59q) on discord.
 
 ---
 
 ## Features
+
 - [x] Configurable settings for location & os-image
 - [x] Shows IPv4 & IPv6
 - [x] Shows Temporarily root Password
@@ -36,6 +38,7 @@ Get the extension at: https://market.paymenter.org/extensions/27/HetznerCloud �
 ---
 
 ## Screenshots
+
 ![configurableOptions](https://ha1fdan.xyz/HetznerCloudExtension/1.png)
 <p>Support for configurable options (client side)</p>
 
@@ -53,7 +56,6 @@ Get the extension at: https://market.paymenter.org/extensions/27/HetznerCloud �
 
 ![extensionSettings](https://ha1fdan.xyz/HetznerCloudExtension/6.png)
 <p>Settings for extension (admin side)</p>
-
 
 [contributors-shield]: https://img.shields.io/github/contributors/ha1fdan/HetznerCloudExtension.svg?style=for-the-badge
 [contributors-url]: https://github.com/ha1fdan/HetznerCloudExtension/graphs/contributors
