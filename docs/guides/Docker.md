@@ -33,7 +33,7 @@ docker compose run --rm paymenter php artisan p:user:create
 
 An example NGINX config (with SSL) can be observed below:
 
-```conf
+```txt
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;

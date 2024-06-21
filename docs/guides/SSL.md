@@ -68,9 +68,13 @@ certbot certonly --standalone -d example.com
 
 And now you are done. The certificates will however need to be renewed often. You can do this manualy by running ```certbot renew``` or you can setup a cronjob to do it for you:
 
+First open your crontab: ``crontab -e``
+
+Then you set this cronjob in it to do the renewing for you every day at 23:00
+
 > [!IMPORTANT]
 > Make sure to replace nginx with the webserver that you are using.
 
 ```bash
-(crontab -l ; echo "0 23 * * * certbot renew --quiet --deploy-hook 'systemctl restart nginx'") | crontab -
+0 23 * * * certbot renew --quiet --deploy-hook 'systemctl restart nginx'
 ```
