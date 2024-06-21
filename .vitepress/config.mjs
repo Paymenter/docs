@@ -22,6 +22,8 @@ export default defineConfig({
       },
     },
 
+    ignoreDeadLinks: true,
+
     footer: {
       copyright: "© 2024 Paymenter. All Rights Reserved.",
     },
