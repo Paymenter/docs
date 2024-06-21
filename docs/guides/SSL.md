@@ -72,5 +72,5 @@ And now you are done. The certificates will however need to be renewed often. Yo
 > Make sure to replace nginx with the webserver that you are using.
 
 ```bash
-(crontab -l ; echo "0 23 * * * certbot renew --quiet --deploy-hook "systemctl restart nginx") | crontab -
+(crontab -l ; echo "0 23 * * * certbot renew --quiet --deploy-hook 'systemctl restart nginx'") | crontab -
 ```
