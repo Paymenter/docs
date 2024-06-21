@@ -44,7 +44,6 @@ export default defineConfig({
           items: [
             { text: "Index", link: "/docs/extensions/" },
             { text: "Enhance", link: "/docs/extensions/enhance" },
-            { text: "Hetzner Cloud", link: "/docs/extensions/hetzner" },
             { text: "PayPal", link: "/docs/extensions/paypal" },
             { text: "Proxmox", link: "/docs/extensions/proxmox" },
             { text: "Pterodactyl", link: "docs/extensions/pterodactyl" },

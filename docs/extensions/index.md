@@ -7,7 +7,7 @@
 | BlockPayments                     | CPanel                                      | Discord Webhook |
 | LitePay                           | DirectAdmin                                 |                 |
 | Mollie                            | [Enhance](/docs/extensions/enhance)         |                 |
-| [PayPal](/docs/extensions/paypal) | [Hetzner Cloud](/docs/extensions/hetzner)   |                 |
+| [PayPal](/docs/extensions/paypal) | Hetzner Cloud                               |                 |
 | [Stripe](/docs/extensions/stripe) | PaymenterMC                                 |                 |
 | Xendit                            | Plesk                                       |                 |
 |                                   | [Proxmox](/docs/extensions/proxmox)         |                 |
