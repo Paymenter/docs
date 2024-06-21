@@ -7,7 +7,6 @@ Welcome to the official documentation repository for Paymenter! This repository 
 - [Introduction](#introduction)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Introduction
@@ -29,10 +28,6 @@ We welcome contributions to improve our documentation. To contribute, follow the
 5. Open a pull request to discuss your changes.
 
 Please make sure to follow our [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-This documentation is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ## Contact
 
