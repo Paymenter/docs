@@ -2,8 +2,8 @@
 
 &NewLine;
 
-###### Authors: Senna, Corwin
+Authors: Senna, Corwin
 
 &NewLine;
 
-###### Release Date: 09-06-24
+Release Date:

@@ -66,6 +66,7 @@ export default defineConfig({
           items: [
             { text: "OAuth", link: "/docs/guides/OAuth.md" },
             { text: "Docker", link: "/docs/guides/Docker.md" },
+            { text: "Affiliate", link: "/docs/guides/affiliate.md" },
             { text: "Configurable Options", link: "/docs/guides/config-options.md" },
             { text: "Creating SSL Certificates", link: "/docs/guides/SSL.md" },
           ],
