@@ -9,6 +9,9 @@ hero:
     - theme: brand
       text: Documentation
       link: /docs/installation/install
+    - theme: brand
+      text: Blog
+      link: /blog/V1-release
     - theme: alt
       text: Discord
       link: "<https://discord.gg/xB4UUT3XQg>"
@@ -19,7 +22,7 @@ features:
 
   details: Save time with automated billing and service activation and suspession.
 
-- title: Fast Loading 
+- title: Fast Loading
 
   details: Programmed with the latest technologies for the fastest loading speed.
 

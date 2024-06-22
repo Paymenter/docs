@@ -206,4 +206,4 @@ Then just enable and start the service and you are done with installing Paymente
 sudo systemctl enable --now paymenter.service
 ```
 
-Now we have to [Setup the webserver](/docs/installation/webserver)
+Now we have to [Setup the webserver](./webserver.md)

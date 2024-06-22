@@ -6,7 +6,7 @@ Thank you for considering contributing to the Paymenter Documentation! Your help
 
 ### Reporting Issues
 
-If you find any issues in the documentation, please report them in the [GitHub Issues](https://github.com/Paymenter/docs/issues).
+If you find any issues in the documentation, please report them in the [GitHub Issues](https://github.com/Paymenter/docs-v1/issues).
 
 ### Making Changes
 
