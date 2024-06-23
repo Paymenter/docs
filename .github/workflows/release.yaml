@@ -47,19 +47,6 @@ jobs:
           #cp .vitepress/sidebars/versioned/default.json .vitepress/sidebars/versioned/${REF:10}.json
           #sed -i "s|/docs/|/${REF:10}/docs/|g" .vitepress/sidebars/versioned/${REF:10}.json
 
-      - name: Create release branch and bump version
-        env:
-          REF: ${{ github.ref }}
-        run: |
-          VERSION=${REF:10}
-          BRANCH=release/$VERSION
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git checkout -b $BRANCH
-          git add .
-          git commit -m "ci(release): bump version to $VERSION"
-          git push -u origin $BRANCH
-
       - name: Create release
         id: create_release
         uses: softprops/action-gh-release@v2
