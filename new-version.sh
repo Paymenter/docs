@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Please enter the version name:" 
+
 read name
 
 mkdir -p versions/$name

@@ -19,38 +19,38 @@ Navigate to vps.yoursite.org/admin/dashboard
 
 Click API
 
-![](/assets/images/extensions/virtfusion/step1.png)
+![step1.png](/assets/images/extensions/virtfusion/step1.png)
 
 Create a Token
 
-![](/assets/images/extensions/virtfusion/step2.png)
+![step2.png](/assets/images/extensions/virtfusion/step2.png)
 
 Name your token and add access settings
 
-![](/assets/images/extensions/virtfusion/step3.png)
+![step3.png](/assets/images/extensions/virtfusion/step3.png)
 
 Copy your token (This is important it only appears one time!)
 
-![](/assets/images/extensions/virtfusion/step4.png)
+![step4.png](/assets/images/extensions/virtfusion/step4.png)
 
 Go to paymenter Extensions Virtfusion Edit
 
 Enter an hostname(eg. <https://vps.yoursite.org>) and your token (from the previous step)
 
-![](/assets/images/extensions/virtfusion/step5.png)
+![step5.png](/assets/images/extensions/virtfusion/step5.png)
 
 Enable the module
 
-![](/assets/images/extensions/virtfusion/step6.png)
+![step6.png](/assets/images/extensions/virtfusion/step6.png)
 
 Creating a product with Virtfusion
 
 Create the Product
 
-![](/assets/images/extensions/virtfusion/step7.png)
+![step7.png](/assets/images/extensions/virtfusion/step7.png)
 
 Add the Package ID You created when seting up virtfusion, and other details
 
-![](/assets/images/extensions/virtfusion/step8.png)
+![step8.png](/assets/images/extensions/virtfusion/step8.png)
 
 Thats it! Now your clients can order VPS's from your site!

@@ -2,7 +2,7 @@ import defineVersionedConfig from 'vitepress-versioning-plugin';
 import fs from 'fs';
 import path from 'path';
 
-function loadSidebar(version) {
+function loadSidebar() {
   return JSON.parse(fs.readFileSync(path.resolve(__dirname, 'sidebars/versioned/default.json'), 'utf-8'));
 }
 
