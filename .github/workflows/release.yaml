@@ -32,25 +32,21 @@ jobs:
         env:
           REF: ${{ github.ref }}
         run: |
-          VERSION=${REF:10}
-          SIDEBAR_DIR=.vitepress/sidebars/versioned
-          mkdir -p $SIDEBAR_DIR
-          mkdir -p versions/$VERSION
-          mv docs versions/$VERSION/
-          mv index.md versions/$VERSION/
-          mv .vitepress versions/$VERSION/
-          sed -i "s|/docs/|/$VERSION/docs/|g" versions/$VERSION/index.md
-          sed -i "s|/docs/|/$VERSION/docs/|g" versions/$VERSION/.vitepress/config.mjs
-          find versions/$VERSION -type f -exec sed -i "s|/assets/images/|/versions/$VERSION/assets/images/|g" {} +
+          mkdir -p .vitepress/sidebars/versioned
+          mkdir -p versions/${REF:10}
+          mv docs versions/${REF:10}/
+          mv index.md versions/${REF:10}/
+          mv .vitepress versions/${REF:10}/
+          sed -i "s|/docs/|/${REF:10}/docs/|g" versions/${REF:10}/index.md
+          sed -i "s|/docs/|/${REF:10}/docs/|g" versions/${REF:10}/.vitepress/config.mjs
+          find versions/${REF:10} -type f -exec sed -i "s|/assets/images/|/versions/${REF:10}/assets/images/|g" {} +
 
       - name: Create a new sidebar
         env:
           REF: ${{ github.ref }}
         run: |
-          SIDEBAR_DIR=.vitepress/sidebars/versioned
-          VERSION=${REF:10}
-          cp $SIDEBAR_DIR/default.json $SIDEBAR_DIR/$VERSION.json
-          sed -i "s|/docs/|/$VERSION/docs/|g" $SIDEBAR_DIR/$VERSION.json
+          cp .vitepress/sidebars/versioned/default.json .vitepress/sidebars/versioned/${REF:10}.json
+          sed -i "s|/docs/|/${REF:10}/docs/|g" .vitepress/sidebars/versioned/${REF:10}.json
 
       - name: Create release branch and bump version
         env:
