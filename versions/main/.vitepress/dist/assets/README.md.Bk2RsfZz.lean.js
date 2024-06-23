@@ -1,1 +1,0 @@
-import{_ as e,c as t,o,a5 as a}from"./chunks/framework.Cl2Ecfyq.js";const p=JSON.parse('{"title":"Paymenter Documentation","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),n={name:"README.md"},r=a("",16),i=[r];function c(s,u,l,d,h,m){return o(),t("div",null,i)}const b=e(n,[["render",c]]);export{p as __pageData,b as default};
