@@ -16,6 +16,10 @@ export default defineVersionedConfig(
 
     cleanUrls: true,
 
+    versioning: {
+      latestVersion: "0.9.4",
+    },
+
     themeConfig: {
       search: {
         provider: "local",
