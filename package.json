@@ -5,7 +5,8 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "version": "bash new-version.sh"
   },
   "dependencies": {
     "vitepress-plugin-back-to-top": "^1.0.1",

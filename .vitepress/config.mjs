@@ -3,10 +3,6 @@ import fs from 'fs';
 import path from 'path';
 
 function loadSidebar(version) {
-  const sidebarPath = path.resolve(__dirname, `sidebars/versioned/${version}.json`);
-  if (fs.existsSync(sidebarPath)) {
-    return JSON.parse(fs.readFileSync(sidebarPath, 'utf-8'));
-  }
   return JSON.parse(fs.readFileSync(path.resolve(__dirname, 'sidebars/versioned/default.json'), 'utf-8'));
 }
 
@@ -25,6 +21,8 @@ export default defineVersionedConfig(
         provider: "local",
       },
 
+      appearance: 'dark',
+
       versionSwitcher: {
         text: "Switch Version",
         includeLatestVersion: true,
@@ -35,8 +33,10 @@ export default defineVersionedConfig(
         { text: "Docs", link: "/docs/installation/install" },
         { text: "Blog", link: "/blog/V1-release.md" },
       ],
-      
+
       logo: "/assets/images/logo.png",
+
+      sidebar: loadSidebar('default'),
 
       markdown: {
         image: {
@@ -45,16 +45,8 @@ export default defineVersionedConfig(
       },
 
       footer: {
-        copyright: "© 2024 Paymenter. All Rights Reserved.",
+        copyright: "Copyright © 2024 Paymenter. All Rights Reserved.",
       },
-
-      sidebar: loadSidebar(process.env.VITEPRESS_VERSION || 'default'),
-
-      socialLinks: [
-        { icon: "github", link: "https://github.com/Paymenter" },
-        { icon: "discord", link: "https://discord.gg/kReEAQteFy" },
-      ],
-
     },
   },
   __dirname
