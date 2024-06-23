@@ -40,12 +40,12 @@ jobs:
           sed -i "s|/docs/|/${REF:10}/docs/|g" versions/${REF:10}/.vitepress/config.mjs
           find versions/${REF:10} -type f -exec sed -i "s|/assets/images/|/versions/${REF:10}/assets/images/|g" {} +
 
-      - name: Create a new sidebar
-        env:
-          REF: ${{ github.ref }}
-        run: |
-          cp .vitepress/sidebars/versioned/default.json .vitepress/sidebars/versioned/${REF:10}.json
-          sed -i "s|/docs/|/${REF:10}/docs/|g" .vitepress/sidebars/versioned/${REF:10}.json
+      #- name: Create a new sidebar
+        #env:
+          #REF: ${{ github.ref }}
+        #run: |
+          #cp .vitepress/sidebars/versioned/default.json .vitepress/sidebars/versioned/${REF:10}.json
+          #sed -i "s|/docs/|/${REF:10}/docs/|g" .vitepress/sidebars/versioned/${REF:10}.json
 
       - name: Create release branch and bump version
         env:
