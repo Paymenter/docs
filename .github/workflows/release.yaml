@@ -1,0 +1,74 @@
+name: New Version
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with VitePress
+        run: npm run docs:build
+
+      - name: Create a new version
+        env:
+          REF: ${{ github.ref }}
+        run: |
+          VERSION=${REF:10}
+          SIDEBAR_DIR=.vitepress/sidebars/versioned
+          mkdir -p $SIDEBAR_DIR
+          mkdir -p versions/$VERSION
+          mv docs versions/$VERSION/
+          mv index.md versions/$VERSION/
+          mv .vitepress versions/$VERSION/
+          sed -i "s|/docs/|/$VERSION/docs/|g" versions/$VERSION/index.md
+          sed -i "s|/docs/|/$VERSION/docs/|g" versions/$VERSION/.vitepress/config.mjs
+          find versions/$VERSION -type f -exec sed -i "s|/assets/images/|/versions/$VERSION/assets/images/|g" {} +
+
+      - name: Create a new sidebar
+        env:
+          REF: ${{ github.ref }}
+        run: |
+          SIDEBAR_DIR=.vitepress/sidebars/versioned
+          VERSION=${REF:10}
+          cp $SIDEBAR_DIR/default.json $SIDEBAR_DIR/$VERSION.json
+          sed -i "s|/docs/|/$VERSION/docs/|g" $SIDEBAR_DIR/$VERSION.json
+
+      - name: Create release branch and bump version
+        env:
+          REF: ${{ github.ref }}
+        run: |
+          VERSION=${REF:10}
+          BRANCH=release/$VERSION
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git checkout -b $BRANCH
+          git add .
+          git commit -m "ci(release): bump version to $VERSION"
+          git push -u origin $BRANCH
+
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          draft: true
