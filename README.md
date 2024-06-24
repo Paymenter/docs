@@ -32,7 +32,3 @@ Please make sure to follow our [contribution guidelines](CONTRIBUTING.md).
 ## Contact
 
 If you have any questions or need further assistance, feel free to reach out to our support team through our [contact page](https://paymenter.org/contact).
-
----
-
-Thank you for contributing to Paymenter! Together, we can make Paymenter even better.
