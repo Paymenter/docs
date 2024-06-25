@@ -38,7 +38,7 @@ export default defineVersionedConfig(
         { text: "Blog", link: "/blog/V1-release.md" },
       ],
 
-      logo: "/assets/images/logo.png",
+      logo: "/versions/0.9.4/assets/images/logo.png",
 
       sidebar: loadSidebar('default'),
 
