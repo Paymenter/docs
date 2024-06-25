@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "Paymenter"
+  name: "Paymenter 0.9.4"
   text: "Open-Source Gateway System Alternative for Hostings."
   tagline: Paymenter is an open source webshop solution for hosting companies. It's developed to provide an more easy way to manage your hosting company.
   actions:
