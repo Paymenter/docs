@@ -7,6 +7,7 @@ Welcome to the official documentation repository for Paymenter! This repository 
 - [Introduction](#introduction)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
+- [Versioning](#versioning)
 - [Contact](#contact)
 
 ## Introduction
@@ -28,6 +29,15 @@ We welcome contributions to improve our documentation. To contribute, follow the
 5. Open a pull request to discuss your changes.
 
 Please make sure to follow our [contribution guidelines](CONTRIBUTING.md).
+
+## Versioning
+
+If you want to update the documentation to the newest version of Paymenter then first make a version out of the last version by running.
+Just follow the instructions from this command to make a version out of the current documentation and then you can update the main files to work as the latest version of Paymenter
+
+```sh
+npm run version
+```
 
 ## Contact
 
