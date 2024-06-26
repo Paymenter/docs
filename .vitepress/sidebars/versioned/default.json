@@ -23,11 +23,11 @@
         ]
       },
       {
-        "text": "Customization",
+        "text": "Development",
         "items": [
-          { "text": "Create a Theme", "link": "/docs/customization/theme.md" },
-          { "text": "Create a Server Extension", "link": "/docs/customization/server-extension.md" },
-          { "text": "Create a Gateway Extension", "link": "/docs/customization/gateway-extension.md" }
+          { "text": "Create a Theme", "link": "/docs/development/theme.md" },
+          { "text": "Create a Server Extension", "link": "/docs/development/server-extension.md" },
+          { "text": "Create a Gateway Extension", "link": "/docs/development/gateway-extension.md" }
         ]
       },
       {
@@ -73,11 +73,11 @@
         ]
       },
       {
-        "text": "Customization",
+        "text": "Development",
         "items": [
-          { "text": "Create a Theme", "link": "/versions/0.9.4/docs/customization/theme.md" },
-          { "text": "Create a Server Extension", "link": "/versions/0.9.4/docs/customization/server-extension.md" },
-          { "text": "Create a Gateway Extension", "link": "/versions/0.9.4/docs/customization/gateway-extension.md" }
+          { "text": "Create a Theme", "link": "/versions/0.9.4/docs/development/theme.md" },
+          { "text": "Create a Server Extension", "link": "/versions/0.9.4/docs/development/server-extension.md" },
+          { "text": "Create a Gateway Extension", "link": "/versions/0.9.4/docs/development/gateway-extension.md" }
         ]
       },
       {
