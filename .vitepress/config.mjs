@@ -25,6 +25,8 @@ export default defineVersionedConfig(
         provider: "local",
       },
 
+      returnToTop: true, // Mobile only
+
       appearance: 'dark',
 
       versionSwitcher: {
