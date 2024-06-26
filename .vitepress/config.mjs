@@ -51,6 +51,11 @@ export default defineVersionedConfig(
       footer: {
         copyright: "Copyright © 2024 Paymenter. All Rights Reserved.",
       },
+      
+      socialLinks: [
+        { icon: "github", link: "https://github.com/Paymenter" },
+        { icon: "discord", link: "https://discord.gg/kReEAQteFy" },
+      ],
     },
   },
   __dirname
