@@ -27,7 +27,8 @@
         "items": [
           { "text": "Create a Theme", "link": "/docs/development/theme.md" },
           { "text": "Create a Server Extension", "link": "/docs/development/server-extension.md" },
-          { "text": "Create a Gateway Extension", "link": "/docs/development/gateway-extension.md" }
+          { "text": "Create a Gateway Extension", "link": "/docs/development/gateway-extension.md" },
+          { "text": "Event List", "link": "/docs/development/event-list.md" }
         ]
       },
       {
