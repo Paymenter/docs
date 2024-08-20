@@ -29,15 +29,21 @@ export default defineVersionedConfig(
 
       appearance: 'dark',
 
-      versionSwitcher: {
+      versionSwitcher: false,
+
+      /*versionSwitcher: {
         text: "Switch Version",
         includeLatestVersion: true,
-      },
+      },*/
 
       nav: [
         { text: "Home", link: "/" },
-        { text: "Docs", link: "/docs/installation/install" },
-        { text: "Blog", link: "/blog/V1-release.md" },
+        { text: "Docs", link: "./docs/installation/install" },
+        { text: "Blog", link: "./blog/V1-release.md" },
+        { text: 'Development', link: "./development/event-list.md"},
+        { 
+          component: 'VersionSwitcher', 
+        },
       ],
 
       logo: "/assets/images/logo.png",

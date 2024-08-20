@@ -16,6 +16,8 @@ export default defineVersionedConfig(
 
     cleanUrls: true,
 
+    versionSwitcher: false,
+
     versioning: {
       latestVersion: "1.0.0",
     },
@@ -33,9 +35,10 @@ export default defineVersionedConfig(
       },
 
       nav: [
-        { text: "Home", link: "/" },
-        { text: "Docs", link: "/docs/installation/install" },
-        { text: "Blog", link: "/blog/V1-release.md" },
+        { text: "Home", link: "./" },
+        { text: "Docs", link: "./docs/installation/install" },
+        { text: "Blog", link: "./blog/V1-release.md" },
+        { text: 'Development', link: "./development/event-list.md"}
       ],
 
       logo: "/versions/0.9.4/assets/images/logo.png",

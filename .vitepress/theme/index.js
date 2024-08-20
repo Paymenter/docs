@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import vitepressBackToTop from 'vitepress-plugin-back-to-top'
 import 'vitepress-plugin-back-to-top/dist/style.css'
+import VersionSwitcher from 'vitepress-versioning-plugin/src/components/VersionSwitcher.vue'
 import './custom.css'
 
 export default {
@@ -9,6 +10,7 @@ export default {
     vitepressBackToTop({
       threshold:280
     })
+    app.component('VersionSwitcher', VersionSwitcher) 
   },
 }
 

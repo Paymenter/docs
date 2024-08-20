@@ -23,15 +23,6 @@
         ]
       },
       {
-        "text": "Development",
-        "items": [
-          { "text": "Create a Theme", "link": "/docs/development/theme.md" },
-          { "text": "Create a Server Extension", "link": "/docs/development/server-extension.md" },
-          { "text": "Create a Gateway Extension", "link": "/docs/development/gateway-extension.md" },
-          { "text": "Event List", "link": "/docs/development/event-list.md" }
-        ]
-      },
-      {
         "text": "Guides",
         "items": [
           { "text": "OAuth", "link": "/docs/guides/OAuth.md" },
@@ -47,6 +38,27 @@
         "text": "Index",
         "items": [
           { "text": "Release of V1", "link": "/blog/V1-release.md" }
+        ]
+      }
+    ],
+    "/development/": [
+      {
+        "text": "Extensions & Themes",
+        "items": [
+          { "text": "Create a Theme", "link": "/development/theme.md" },
+          { "text": "Create a Server Extension", "link": "/development/server-extension.md" },
+          { "text": "Create a Gateway Extension", "link": "/development/gateway-extension.md" } 
+        ]
+      },
+      {
+        "text": "API",
+        "items": [
+        ]
+      },
+      {
+        "text": "Events",
+        "items": [
+          { "text": "Event list", "link": "/development/event-list.md" }
         ]
       }
     ],
@@ -97,6 +109,27 @@
         "text": "Index",
         "items": [
           { "text": "Release of V1", "link": "/blog/V1-release.md" }
+        ]
+      }
+    ],
+    "/0.9.4/development/": [
+      {
+        "text": "Extensions & Themes",
+        "items": [
+          { "text": "Create a Theme", "link": "/development/theme.md" },
+          { "text": "Create a Server Extension", "link": "/development/server-extension.md" },
+          { "text": "Create a Gateway Extension", "link": "/development/gateway-extension.md" } 
+        ]
+      },
+      {
+        "text": "API",
+        "items": [
+        ]
+      },
+      {
+        "text": "Events",
+        "items": [
+          { "text": "Event list", "link": "/development/event-list.md" }
         ]
       }
     ]
