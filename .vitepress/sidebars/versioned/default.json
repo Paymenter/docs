@@ -60,6 +60,12 @@
         "items": [
           { "text": "Event list", "link": "/development/event-list.md" }
         ]
+      },
+      {
+        "text": "OAuth",
+        "items": [
+          { "text": "OAuth", "link": "/development/OAuth.md" }
+        ]
       }
     ],
      "/0.9.4/docs/": [
