@@ -43,16 +43,17 @@
     ],
     "/development/": [
       {
-        "text": "Extensions & Themes",
+        "text": "Extensions",
         "items": [
-          { "text": "Create a Theme", "link": "/development/theme.md" },
-          { "text": "Create a Server Extension", "link": "/development/server-extension.md" },
-          { "text": "Create a Gateway Extension", "link": "/development/gateway-extension.md" } 
+          { "text": "Extensions", "link": "/development/extensions/index.md" },
+          { "text": "Create a Server Extension", "link": "/development/extensions/server.md" },
+          { "text": "Create a Gateway Extension", "link": "/development/extensions/gateway.md" } 
         ]
       },
       {
-        "text": "API",
+        "text": "Themes",
         "items": [
+          { "text": "Create a Theme", "link": "/development/theme.md" }
         ]
       },
       {

@@ -11,7 +11,7 @@ Add the first public function named `getConfig`. This function returns the possi
 ### Example
 
 ```php
-public function getConfig()
+public function getConfig($values = [])
     {
         return [
             [

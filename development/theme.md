@@ -9,21 +9,12 @@ Creating a theme is really easy. We will show you how to create a theme in this 
 
 ## Create a theme
 
-### Step 1: Create a new folder
-
-Create a new folder in the `themes` folder. The name of the folder will be the name of your theme.
-
-### Step 2: Edit the files you want to edit
-
-Check below for the folder structure of a theme.
+You can either copy the default folder or create one from scratch (if you want to use something else then tailwindcss).
 
 ## Folder structure
 
 You can find all the files you can edit in the `themes` folder. Checkout [this](https://github.com/Paymenter/Paymenter/tree/master/themes/default) folder for an example.
 
-## API endpoints
+You can also customize extensions views you can make a folder in your views folder with the name `vendor`.
 
-Paymenter has a lot of API endpoints. You can use them to create your own custom integrations.
-
-Checkout the API documentation for clients [here](https://paymenter.org/api/clients/).
-Checkout the API documentation for admins [here](https://paymenter.org/api/admin/).
+Normally extensions would use the format `<extension-type>.<extension-name>.<view-name>`. For example, the Stripe pay modal is `gateways.stripe::pay`. You can edit this view by creating a file in your views folder with the name `vendor/gateways/stripe/pay.blade.php`.

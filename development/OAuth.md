@@ -38,3 +38,5 @@ Then to get the user's information, you can make a GET request to the following 
 ```
 <your_paymenter_url>/api/oauth/me
 ```
+
+You need to pass the access token in the Authorization header.
