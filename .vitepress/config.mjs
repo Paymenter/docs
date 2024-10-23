@@ -40,7 +40,7 @@ export default defineVersionedConfig(
         { text: "Home", link: "/" },
         { text: "Docs", link: "/docs/installation/install" },
         { text: "Blog", link: "/blog/V1-release.md" },
-        { text: 'Development', link: "/development/event-list.md"},
+        { text: 'Development', link: "/development/extensions/index.md"},
         { 
           component: 'VersionSwitcher', 
         },
