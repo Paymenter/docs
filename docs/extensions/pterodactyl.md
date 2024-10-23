@@ -12,14 +12,10 @@ Create a api key in the Pterodactyl panel. With the following permissions:
 
 ## Configure Paymenter
 
-Insert your API key and your Pterodactyl URL in the Paymenter admin panel. Here is an example how that would look like
+Insert your API key and your Pterodactyl URL in the Paymenter admin panel. Like this:
+
 ![image](/assets/images/extensions/pterodactyl/apikey.png)
 
-#### Update the Pterodactyl URL in the Paymenter admin panel. Here is an example how that would look like
-
-- Example: <https://panel.paymenter.org>
-
-- Please note that you can NOT have a "/" at the end.
 
 ## Configuring the product
 
@@ -29,14 +25,17 @@ Insert your API key and your Pterodactyl URL in the Paymenter admin panel. Here 
 
 - Below you will see a fully functional example of Product
 
-![image](/assets/images/extensions/pterodactyl/productsettingsexample2.png)
+![image](/assets/images/extensions/pterodactyl/pterodactylsettings.png)
 
 - #### Configurable Options
 
-Pterodactyl supports some configurable options. You can use them to create different products with different settings. Here are the names of the configurable options:
+You can let your customers tailor their product to meet their needs by offering customizable options.  These options allow users to seleft specific settings for their product, making it easy to create unique products for different use cases. Below is a list of configurable options you can offer with the Pterodactyl extension:
+
 `nest_id`, `egg`, `location`, `node`, `allocation`(ports), `databases`, `backups`, `startup`, `cpu`, `io`, `disk`, `memory`, `swap`, `servername`.
 
-All environment from eggs are also supported. Example:`MC_VERSION`, `SERVER_JAR`
+All environment from eggs are also supported. Example: `MC_VERSION`, `SERVER_JAR`, `FIVEM_LICENSE`, etc...
+
+For mor information on how to utilize configurable options click [here](/docs/guides/config-options.md)
 
 ## Port Array
 

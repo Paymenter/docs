@@ -8,37 +8,28 @@ In this guide we'll create a configurable option for a Pterodactyl server. The c
 
 ## Step 1: Create the configurable option
 
-First we need to create the configurable option. Go to the admin panel and navigate to `Configurable Options` and click on `Create Configurable Option Group`.
+First we need to create a category for the configuration and select the products we want to offer the choices upon checkout. We do this by filling in the following form:
 
-Example
-![image](/assets/images/guides/config-options/configurable-group.png)
+![image](/assets/images/guides/config-options/configurable-options-overview.png)
 
-## Step 2: Create the options
+It is important to set the `Name` to what you want to be displayed towards your clients. In the example we have chosen for `Server Type`
 
-Now we need to create the options for the configurable option. Click on `Create new option` and fill in the name.
-
-It is important to set the name to `egg| <Your Display Name>` this is important for pterodactyl to know what variable to use.
-
+Now we need to provide an propperty that we want to change. In the example we have chosen for `egg`
 For a full list of names checkout the [Pterodactyl guide](../extensions/pterodactyl.md)
 
-Example
-![image](/assets/images/guides/config-options/configurable-option-create.png)
 
-## Step 3: Making inputs
+## Step 2: Making Inputs
 
-Now we need to create the inputs for the configurable option. Click on `Create new input`.
+Now we need to create the inputs for the configurable option. Click on `Options`.
+In the example we want an option for Paper. Click on `Add Option` and fill in the form.
+The `Name` variable is once again what is shown to your client upon reaching the configurable options window!
+The `Environment Variable` is used to overwrite server setting variables, in this case the egg id.
 
-We want a input for Forge and Paper. So we need to create 2 inputs.
+![image](/assets/images/guides/config-options/configurable-options-config.png)
 
-Example
-![image](/assets/images/guides/config-options/configurable-option.png)
+## Step 3: Updating Pricing
 
-## Step 4: Updating the names and prices
-
-Configurable inputs have a name and a price. The name follows the same rules as the name of the configurable option.
-
-So in my case paper has a id of 1 and forge has a id of 2.
-The name of the input should be `<ID> | <Your Display Name>`
-
-Example
-![image](/assets/images/guides/config-options/configurable-option-input.png)
+In case we want to add an aditional charge for the changed option you can click on `pricing` to extend the window.
+Here you can set a `Name` Which is shown to your client examples of this could be: `Free`, `Monthly`, `Yearly`
+In the same window you can pick between a number of options like: `Free`, `Recurring` and `One Time`.
+When selecting `Recurring` a number of variables pop up like: `Time Interval` pop up. This is the amount of `Days`, `Weeks`, `Months` or `Years` should go by before charging the user again which is chosen in the `Billing Period` box.

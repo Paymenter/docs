@@ -15,7 +15,7 @@ Go to the [Stripe dashboard](https://dashboard.stripe.com/apikeys) and reveal yo
 ## Configure stripe webhook
 
 Go to the [Developers tab –> Webhooks](https://dashboard.stripe.com/test/webhooks) and click "Add endpoint". \
-In the **Endpoint URL** field, type `ENTER YOUR PANEL URL HERE/extensions/stripe/webhook`
+In the **Endpoint URL** field, type `<your_paymenter_url>/extensions/stripe/webhook`
 
 It should look about like this:
 ![image](/assets/images/extensions/stripe/2.png)
