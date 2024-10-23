@@ -28,17 +28,17 @@ curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s
 
 apt update
 
-apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip,intl,redis} mariadb-server nginx tar unzip git redis-server
 ```
 
-```bash [Ubuntu 22.04]
+```bash [Ubuntu 22.04/24.04]
 apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 
 apt update
 
-apt -y install php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+apt -y install php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip,intl,redis} mariadb-server nginx tar unzip git redis-server
 ```
 
 ```bash [Debian]
@@ -52,7 +52,7 @@ curl -fsSL  https://packages.sury.org/php/apt.gpg | sudo gpg --dearmor -o /etc/a
 
 apt update -y
 
-apt install -y php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip}
+apt install -y php8.3 php8.3-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip,intl,redis}
 
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
 
@@ -159,20 +159,26 @@ Simple run this command and your database is ready to be used.
 php artisan migrate --force --seed
 ```
 
+Fill in the default URL and name using the following command:
+
+```bash
+php artisan app:init
+```
+
 Once this process is completed you can make a user for yourself by running.
 
 ```bash
-php artisan p:user:create
+php artisan app:user:create
 ```
 
 ## Creating cronjob and service
 
 ### Creating cronjob
 
-Now we are going to setup the cronjob to run every minute. You can do this manualy by running `crontab -e` and entering your cronjob or use this command to create it.
+Now we are going to setup the cronjob to run every minute. You can do this manualy by running `crontab -e` and entering your cronjob.
 
 ```bash
-(crontab -l ; echo "* * * * * php /var/www/paymenter/artisan schedule:run >> /dev/null 2>&1") | crontab -
+* * * * * php /var/www/paymenter/artisan schedule:run >> /dev/null 2>&1
 ```
 
 The next and final step is creating the service that will run the Queue Worker
@@ -204,6 +210,7 @@ Then just enable and start the service and you are done with installing Paymente
 
 ```bash
 sudo systemctl enable --now paymenter.service
+sudo systemctl enable --now redis-server
 ```
 
-Now we have to [Setup the webserver](./webserver.md)
+Now we have to [setup the webserver](./webserver.md)

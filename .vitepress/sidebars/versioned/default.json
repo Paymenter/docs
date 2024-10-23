@@ -22,7 +22,8 @@
         "items": [
           { "text": "Single Sign On", "link": "/docs/guides/OAuth.md" },
           { "text": "Configurable Options", "link": "/docs/guides/config-options.md" },
-          { "text": "Creating SSL Certificates", "link": "/docs/guides/SSL.md" }
+          { "text": "Creating SSL Certificates", "link": "/docs/guides/SSL.md" },
+          { "text": "FAQ", "link": "/docs/guides/FAQ.md" }
         ]
       }
     ],
