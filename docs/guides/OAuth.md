@@ -17,16 +17,11 @@ After that click on Reset Secret, The page should look like this.
 
 Now go to your Paymenter admin area and navigate to settings (... (Three dots) -> Settings --> Login)
 
-![discord_navigation](/assets/images/guides/OAuth/discord_navigation.png)
+![navigation_1](/assets/images/guides/OAuth/navigation.png)
 
 Enable Discord feature and fill in the Discord Client ID & Discord Client Secret with the one showed in your Discord's developer page.
-Should look like this.
-
-![discord_finalpage01](/assets/images/guides/OAuth/discord_adminarea.png)
-
 Hit submit to save all changes and Discord OAuth should be working and visible in login page.
 
-![discord_finalpage](/assets/images/guides/OAuth/discord_finalpage.png)
 
 ## Github
 
@@ -51,12 +46,11 @@ The github page should look simillar to this.
 
 Copy your Client ID & Client Secret and deploy it on Paymenter
 
-![github_5](/assets/images/guides/OAuth/github_5.png)
+![navigation_2](/assets/images/guides/OAuth/navigation.png)
 
 After that, click on submit to save changes and Github OAuth should be working,
 You can verify this by going to the login page and clicking on Sign in with GitHub.
 
-![github_6](/assets/images/guides/OAuth/github_6.png)
 
 ## Google
 
@@ -107,11 +101,8 @@ Click on create and you should be showed your Client ID and Client Secret
 
 ![google_11](/assets/images/guides/OAuth/google_11.png)
 
-Copy both of these and go to your Paymenter admin area, navigate to settings (... (three dots) -> Settings --> Login) Paste the Client ID and Client Secret and click submit to save changes.
-Should look something like this.
+Copy both of these and go to your Paymenter admin area, navigate to the social login page. (sidebar -> scroll down -> settings -> Social Login) Enable the checkmark after that paste the Client ID and Client Secret and click submit to save changes.
 
-![google_12](/assets/images/guides/OAuth/google_12.png)
+![navigation_3](/assets/images/guides/OAuth/navigation.png)
 
 Congratulations, Google's OAuth should be now available for your users.
-
-![google_13](/assets/images/guides/OAuth/google_13.png)
