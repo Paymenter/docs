@@ -6,7 +6,7 @@ export default {
 
   title: 'Paymenter',
 
-  description: 'This is the Documentation for Paymenter',
+  description: 'Paymenter is an open source payment gateway for your hosting.',
 
   cleanUrls: true,
 
@@ -119,6 +119,23 @@ export default {
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Paymenter' },
       { icon: 'discord', link: 'https://discord.gg/kReEAQteFy' }
+    ],
+  },
+  head: [
+    [
+      'meta',
+      {
+        property: 'og:image',
+        content: 'https://paymenter.org/image/textlogo.png'
+      }
+    ],
+    [
+      'link',
+      {
+        rel: 'alternate',
+        type: 'application/json+oembed',
+        href: 'https://paymenter.org/home.json'
+      }
     ]
-  }
+  ]
 }

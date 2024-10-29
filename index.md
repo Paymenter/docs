@@ -1,6 +1,6 @@
 ---
 title: Paymenter
-titleTemplate: Open-Source Gateway System Alternative for Hostings.
+titleTemplate: Open-Source billing system.
 
 layout: home
 aside: false
