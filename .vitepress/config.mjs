@@ -31,8 +31,8 @@ export default {
     ],
 
     logo: {
-      light: '/assets/images/logo-light.svg',
-      dark: '/assets/images/logo-dark.svg',
+      light: '/logo-light.svg',
+      dark: '/logo-dark.svg',
       alt: 'Paymenter Logo'
     },
 
