@@ -1,3 +1,9 @@
+.VPHome {
+  max-width: calc(var(--vp-layout-max-width) - 64px);
+  margin: 0 auto;
+}
+
+
 /**
  * Colors: Solid
  * -------------------------------------------------------------------------- */
@@ -260,9 +266,29 @@
    * Typography
    * -------------------------------------------------------------------------- */
   
+  @font-face {
+    font-family: 'Radio Canada Big';
+    src: url('/.vitepress/assets/fonts/RadioCanadaBig-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Radio Canada Big';
+    src: url('/.vitepress/assets/fonts/RadioCanadaBig-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium weight is often 500 */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Radio Canada Big';
+    src: url('/.vitepress/assets/fonts/RadioCanadaBig-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold weight is often 600 */
+    font-style: normal;
+  }
+
   :root {
-    --vp-font-family-base: 'Inter', ui-sans-serif, system-ui, sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --vp-font-family-base: 'Radio Canada Big', 'sans-serif';
     --vp-font-family-mono: ui-monospace, 'Menlo', 'Monaco', 'Consolas',
       'Liberation Mono', 'Courier New', monospace;
     font-optical-sizing: auto;
@@ -471,7 +497,7 @@
     --vp-nav-height: 64px;
     --vp-nav-bg-color: var(--vp-c-bg);
     --vp-nav-screen-bg-color: var(--vp-c-bg);
-    --vp-nav-logo-height: 24px;
+    --vp-nav-logo-height: 34px;
   }
   
   .hide-nav {
