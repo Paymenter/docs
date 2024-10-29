@@ -6,7 +6,7 @@ This is often related to a wrong app url in the database. You can fix this by ru
 ```bash
 php artisan app:settings:change app_url
 ```
-    
+
 :::
 
 ::: details I can't login

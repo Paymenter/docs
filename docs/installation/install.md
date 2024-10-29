@@ -1,6 +1,10 @@
 # Preparation
 
-### Supported operating systems
+::: warning
+This is an alpha release, DO NOT use this in production. This release is intended for testing purposes only.
+:::
+
+## Supported operating systems
 
 | Operating System | Version | Supported |
 | ---------------- | ------- | :-------: |
@@ -79,7 +83,7 @@ Downloading the latest release to the directory
 
 ```bash
 cd /var/www/paymenter
-curl -Lo paymenter.tar.gz https://github.com/paymenter/paymenter/releases/latest/download/paymenter.tar.gz
+curl -Lo paymenter.tar.gz https://api.paymenter.org/alpha
 ```
 
 Unzip the code

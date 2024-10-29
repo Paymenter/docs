@@ -17,7 +17,7 @@ hero:
       link: /docs/installation/install
     - theme: brand
       text: Blog
-      link: /blog/V1-release
+      link: /blog/v1-alpha-release
     - theme: alt
       text: Discord
       link: "<https://discord.gg/xB4UUT3XQg>"
