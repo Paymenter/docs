@@ -1,5 +1,11 @@
 ---
+title: Paymenter
+titleTemplate: Open-Source Gateway System Alternative for Hostings.
+
 layout: home
+aside: false
+editLink: false
+markdownStyles: false
 
 hero:
   name: "Paymenter"
@@ -49,3 +55,17 @@ features:
 - title: SEO Optimized
 
   details: Easily improve your search result with the advanced SEO options.
+---
+
+<script setup>
+import SupportBanner from '@theme/components/landing/SupportBanner.vue'
+</script>
+
+<div class="VPHome">
+    <SupportBanner />
+</div>
+
+
+
+
+
