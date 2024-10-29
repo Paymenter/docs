@@ -99,15 +99,6 @@ import { onMounted } from 'vue';
         color: var(--vp-c-text-1)!important;
     }
     
-    .btn-sponsor {
-        background-color: #ec4899;
-        color: white;
-    }
-    
-    .btn-sponsor:hover {
-        background-color: #db2777;
-    }
-    
     .btn-github {
         background-color: white;
         color: #1f2937;
