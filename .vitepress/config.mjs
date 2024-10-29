@@ -46,7 +46,13 @@ export default defineVersionedConfig(
         },
       ],
 
-      logo: "/assets/images/logo.png",
+      logo: {
+        light: '/assets/images/logo-light.svg',
+        dark: '/assets/images/logo-dark.svg',
+        alt: 'Paymenter Logo'
+      },
+
+      siteTitle: false,
 
       sidebar: loadSidebar('default'),
 
