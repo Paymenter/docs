@@ -73,7 +73,7 @@ export default {
               link: '/docs/guides/config-options.md'
             },
             { text: 'Creating SSL Certificates', link: '/docs/guides/SSL.md' },
-            { text: 'Migration to V1', link: '/docs/guides/v0-migration.md' },
+            { text: 'Migration from version 0.x to 1.0', link: '/docs/guides/v0-migration.md' },
             { text: 'FAQ', link: '/docs/guides/FAQ.md' }
           ]
         },
@@ -142,7 +142,7 @@ export default {
       'meta',
       {
         property: 'og:image',
-        content: 'https://paymenter.org/image/textlogo.png'
+        content: '/textlogo.png'
       }
     ],
     [
@@ -151,6 +151,20 @@ export default {
         rel: 'alternate',
         type: 'application/json+oembed',
         href: 'https://paymenter.org/home.json'
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:card',
+        content: 'summary_large_image'
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:image',
+        content: '/textlogo.png'
       }
     ]
   ]

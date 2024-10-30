@@ -1,4 +1,4 @@
-# V0 Migration Guide
+# Migration from version 0.x to 1.0
 
 This guide will help you migrate from Paymenter v0.x to v1.0-alpha.
 
@@ -22,7 +22,7 @@ Copy your .env APP_KEY somewhere safe, as you will need it later.
 
 ## Step 2: Follow the installation guide
 
-To install the alpha release, you can follow the instructions in the [installation guide](/docs/installation). 
+To install the alpha release, you can follow the instructions in the [installation guide](/docs/installation/install.md). 
 
 But instead the `Setting up database` section run:
 
@@ -34,7 +34,7 @@ php artisan app:init
 Update your `.env` file with the new APP_KEY you just copied.
 
 
-## Step 3: Create a temporary user for import
+## Step 3: Create a temporary database for import
 
 To import your data from v0.x to v1.0-alpha, you need to create a temporary database:
 
@@ -56,7 +56,7 @@ Now that you have your data in the temporary database, you can start changing th
 Make sure to replace the `yourPassword` with your database password.
 
 ```bash
-php artisan app:migrate 127.0.0.1 paymenter_temp paymenter yourPassword
+php artisan app:migrate-0.x 127.0.0.1 paymenter_temp paymenter yourPassword
 ```
 
 ## Step 5: Cleanup
