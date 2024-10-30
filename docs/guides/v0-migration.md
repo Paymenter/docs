@@ -2,6 +2,14 @@
 
 This guide will help you migrate from Paymenter v0.x to v1.0-alpha.
 
+::: warning
+This is an alpha release, DO NOT use this in production. This release is intended for testing purposes only.
+:::
+
+::: warning
+This migrator might not work as expected, please make sure to backup your data before starting the migration process.
+:::
+
 ## Step 1: Backup your data
 
 Before you start the migration process, make sure to backup your data. You can do this by running the following command:
@@ -9,6 +17,8 @@ Before you start the migration process, make sure to backup your data. You can d
 ```bash
 mysqldump -u root -p paymenter > paymenter.sql
 ```
+
+Copy your .env APP_KEY somewhere safe, as you will need it later.
 
 ## Step 2: Follow the installation guide
 
@@ -20,6 +30,9 @@ But instead the `Setting up database` section run:
 php artisan migrate:fresh --seed
 php artisan app:init
 ```
+
+Update your `.env` file with the new APP_KEY you just copied.
+
 
 ## Step 3: Create a temporary user for import
 
