@@ -21,7 +21,7 @@ To get started with the alpha release, you can follow the instructions in the [i
 
 ### Migration from 0.x
 
-If you're already using Paymenter 0.x, you can migrate to the alpha release by following the [migration guide](/docs/migration).
+If you're already using Paymenter 0.x, you can migrate to the alpha release by following the [migration guide](/docs/guides/v0-migration).
 
 Please remind that this is an alpha release, and might not work as expected. 
 
