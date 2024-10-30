@@ -23,7 +23,7 @@ php artisan down
 ### Download the latest version
 
 ```bash
-curl -L https://github.com/paymenter/paymenter/releases/latest/download/paymenter.tar.gz | tar -xz
+curl -L https://api.paymenter.org/alpha | tar -xz
 ```
 
 ### Update the dependencies
