@@ -9,9 +9,10 @@ markdownStyles: false
 ---
 
 <script setup>
-import SupportBanner from '@theme/components/landing/SupportBanner.vue'
 import Hero from '@theme/components/landing/Hero.vue'
 import Slider from '@theme/components/landing/Slider.vue'
+import Features from '@theme/components/landing/Features.vue'
+import SupportBanner from '@theme/components/landing/SupportBanner.vue'
 </script>
 
 
@@ -26,6 +27,7 @@ import Slider from '@theme/components/landing/Slider.vue'
 <div class="VPHome">
     <Hero />
     <Slider />
+    <Features />
     <SupportBanner />
 </div>
 
