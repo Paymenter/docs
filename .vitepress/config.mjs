@@ -68,6 +68,13 @@ export default {
             { text: 'Creating SSL Certificates', link: '/docs/guides/SSL.md' },
             { text: 'FAQ', link: '/docs/guides/FAQ.md' }
           ]
+        },
+        {
+          text: 'Contribute',
+          items: [
+            { text: 'Helping to build Paymenter', link: '/docs/contribute/how-to-help' },
+            { text: 'Docs and Translation', link: '/docs/contribute/docs-translations' }
+          ]
         }
       ],
       '/blog/': [
