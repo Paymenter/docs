@@ -73,6 +73,7 @@ export default {
               link: '/docs/guides/config-options.md'
             },
             { text: 'Creating SSL Certificates', link: '/docs/guides/SSL.md' },
+            { text: 'Migration to V1', link: '/docs/guides/v0-migration.md' },
             { text: 'FAQ', link: '/docs/guides/FAQ.md' }
           ]
         },

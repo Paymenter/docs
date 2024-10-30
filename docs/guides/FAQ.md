@@ -8,5 +8,3 @@ php artisan app:settings:change app_url
 ```
 
 :::
-
-::: details I can't login
