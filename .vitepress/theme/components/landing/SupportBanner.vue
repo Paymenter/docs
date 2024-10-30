@@ -30,7 +30,7 @@ import { onMounted } from 'vue';
                     Star us on GitHub
                 </a>
             </div>
-            <a href="https://paymenter.org/contributing" class="how-to-contribute">
+            <a href="/docs/contribute/how-to-help" class="how-to-contribute">
                 How to contribute?
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path></svg>
             </a>
