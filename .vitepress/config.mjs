@@ -113,6 +113,7 @@ export default {
     },
 
     footer: {
+      message: 'Released under the <a href="https://github.com/Paymenter/Paymenter/blob/master/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2024 Paymenter. All Rights Reserved.'
     },
 
