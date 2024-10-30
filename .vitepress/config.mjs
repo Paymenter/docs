@@ -154,6 +154,13 @@ export default {
       }
     ],
     [
+      'link', 
+      { 
+        rel: 'icon', 
+        href: '/favicon.ico' 
+      }
+    ],
+    [
       'meta',
       {
         property: 'twitter:card',
