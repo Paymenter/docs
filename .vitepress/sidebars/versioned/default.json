@@ -1,20 +1,27 @@
 {
     "/docs/": [
       {
-        "text": "Installation",
+        "text": "Getting Started",
         "items": [
-          { "text": "Getting Started", "link": "/docs/installation/install" },
-          { "text": "Webserver Setup", "link": "/docs/installation/webserver" },
-          { "text": "Updating", "link": "/docs/installation/updating" }
+          { "text": "Introduction", "link": "/docs/getting-started/introduction.md" },
+          { "text": "Reporting Bugs", "link": "/docs/getting-started/bugs.md" }
+        ]
+      },
+      {
+        "text": "Setting Up",
+        "items": [
+          { "text": "Getting Started", "link": "/docs/installation/install.md" },
+          { "text": "Webserver Setup", "link": "/docs/installation/webserver.md" },
+          { "text": "Updating", "link": "/docs/installation/updating.md" }
         ]
       },
       {
         "text": "Extension Guides",
         "collapsed": false,
         "items": [
-          { "text": "PayPal", "link": "/docs/extensions/paypal" },
-          { "text": "Pterodactyl", "link": "/docs/extensions/pterodactyl" },
-          { "text": "Stripe", "link": "/docs/extensions/stripe" }
+          { "text": "PayPal", "link": "/docs/extensions/paypal.md" },
+          { "text": "Pterodactyl", "link": "/docs/extensions/pterodactyl.md" },
+          { "text": "Stripe", "link": "/docs/extensions/stripe.md" }
         ]
       },
       {
@@ -29,7 +36,7 @@
       {
         "text": "Contribute",
         "items": [
-          { "text": "Helping to build Paymenter", "link": "/docs/contribute/how-to-help.md" },
+          { "text": "Help Build Paymenter", "link": "/docs/contribute/how-to-help.md" },
           { "text": "Docs and Translation", "link": "/docs/contribute/docs-translations.md" }
         ]
       }

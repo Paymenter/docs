@@ -41,9 +41,16 @@ export default {
     sidebar: {
       '/docs/': [
         {
-          text: 'Installation',
+          text: 'Getting Started',
           items: [
-            { text: 'Getting Started', link: '/docs/installation/install' },
+            { text: 'Introduction', link: '/docs/getting-started/introduction' },
+            { text: 'Reporting Bugs', link: '/docs/getting-started/bugs' }
+          ]
+        },
+        {
+          text: 'Setting Up',
+          items: [
+            { text: 'Installation', link: '/docs/installation/install' },
             { text: 'Webserver Setup', link: '/docs/installation/webserver' },
             { text: 'Updating', link: '/docs/installation/updating' }
           ]
@@ -72,7 +79,7 @@ export default {
         {
           text: 'Contribute',
           items: [
-            { text: 'Helping to build Paymenter', link: '/docs/contribute/how-to-help' },
+            { text: 'Help Build Paymenter', link: '/docs/contribute/how-to-help' },
             { text: 'Docs and Translation', link: '/docs/contribute/docs-translations' }
           ]
         }
