@@ -10,6 +10,7 @@ markdownStyles: false
 
 <script setup>
 import SupportBanner from '@theme/components/landing/SupportBanner.vue'
+import Hero from '@theme/components/landing/Hero.vue'
 </script>
 
 
@@ -22,6 +23,7 @@ import SupportBanner from '@theme/components/landing/SupportBanner.vue'
 </div>
 
 <div class="VPHome">
+    <Hero />
     <SupportBanner />
 </div>
 
