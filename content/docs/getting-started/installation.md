@@ -85,7 +85,7 @@ Clone our repo from Github to your server:
 ```
 mkdir /var/www/paymenter
 cd /var/www/paymenter
-curl -Lo paymenter.tar.gz https://github.com/paymenter/paymenter/releases/latest/download/paymenter.tar.gz
+curl -Lo paymenter.tar.gz https://github.com/Paymenter/Paymenter/releases/download/v0.9.5/paymenter.tar.gz
 tar -xzvf paymenter.tar.gz
 chmod -R 755 storage/* bootstrap/cache/
 ```
