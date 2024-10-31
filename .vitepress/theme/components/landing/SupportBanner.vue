@@ -114,7 +114,6 @@ import { onMounted } from 'vue';
             transform: translateY(-50%);
             width: 40%;
             height: 100%;
-            background-image: url('/placeholder.svg?height=300&width=400');
             background-size: cover;
             background-position: center;
         }
