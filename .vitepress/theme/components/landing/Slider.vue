@@ -1,10 +1,12 @@
 <script>
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import { useKeenSlider } from "keen-slider/vue.es";
+import KeenSliderModule from "keen-slider/vue.es";
 import "keen-slider/keen-slider.min.css";
 
 export default {
   setup() {
+    const { useKeenSlider } = KeenSliderModule;
+
     const lightModeImages = [
       "/landing/screenshots/light/1.png",
       "/landing/screenshots/light/2.png",
