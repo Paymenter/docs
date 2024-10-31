@@ -1,12 +1,10 @@
 <script>
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import KeenSliderModule from "keen-slider/vue.es";
+import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 
 export default {
   setup() {
-    const { useKeenSlider } = KeenSliderModule;
-
     const lightModeImages = [
       "/landing/screenshots/light/1.png",
       "/landing/screenshots/light/2.png",
@@ -32,24 +30,18 @@ export default {
       return isDarkMode.value ? darkModeImages : lightModeImages;
     });
 
-    const [container, instanceRef] = useKeenSlider({
-      animationEnded: (s) => {
-        const idx = s.track.details.rel;
-        loaded.value[idx] = true;
-      },
-      loop: true,
-      initial: 0,
-    });
-
-    function nextSlide() {
-      instanceRef.value.next();
-    }
-
-    function prevSlide() {
-      instanceRef.value.prev();
-    }
+    let sliderInstance = null;
 
     onMounted(() => {
+      sliderInstance = new KeenSlider(".keen-slider", {
+        loop: true,
+        initial: 0,
+        animationEnded: (s) => {
+          const idx = s.track.details.rel;
+          loaded.value[idx] = true;
+        },
+      });
+
       const observer = new MutationObserver(() => {
         isDarkMode.value = document.documentElement.classList.contains("dark");
       });
@@ -61,10 +53,25 @@ export default {
 
       onUnmounted(() => {
         observer.disconnect();
+        if (sliderInstance) {
+          sliderInstance.destroy();
+        }
       });
     });
 
-    return { container, currentImages, loaded, nextSlide, prevSlide, placeholder };
+    function nextSlide() {
+      if (sliderInstance) {
+        sliderInstance.next();
+      }
+    }
+
+    function prevSlide() {
+      if (sliderInstance) {
+        sliderInstance.prev();
+      }
+    }
+
+    return { currentImages, loaded, nextSlide, prevSlide, placeholder };
   },
 };
 </script>
