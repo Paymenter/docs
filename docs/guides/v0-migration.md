@@ -59,8 +59,8 @@ php artisan app:migrate-0.x paymenter_temp
 ```
 This command will require you to enter the password of the database user.
 
-It will automatically gets the Database Server info such as `host`, `port` and `username` from your `.env` file.
-However you if you want to manually provide these values, you can do so using `php artisan app:migrate-0.x paymenter_temp username 127.0.0.1 3306` format.
+It will automatically get the database server info, such as `host`, `port`, and `username`, from your `.env` file.
+However, if you want to manually provide these values, you can do so using the `php artisan app:migrate-0.x paymenter_temp username 127.0.0.1 3306` format.
 
 ## Step 5: Cleanup
 
