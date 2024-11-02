@@ -38,31 +38,31 @@ Example:
 
 ```php
 public function getConfig($values = [])
-    {
-        return [
-            [
-                'name' => 'host',
-                'label' => 'Pterodactyl URL',
-                'type' => 'text',
-                'default' => 'https://example.com/',
-                'description' => 'Pterodactyl URL',
-                'required' => true,
-                'validation' => 'url',
+{
+    return [
+        [
+            'name' => 'host',
+            'label' => 'Pterodactyl URL',
+            'type' => 'text',
+            'default' => 'https://example.com/',
+            'description' => 'Pterodactyl URL',
+            'required' => true,
+            'validation' => 'url',
+        ],
+        [
+            'name' => 'location',
+            'label' => 'Location',
+            'type' => 'select',
+            'default' => '1',
+            'description' => 'Location your node is in?',
+            'required' => true,
+            'options' => [
+                '1' => 'Location 1',
+                '2' => 'Location 2',
             ],
-            [
-                'name' => 'location',
-                'label' => 'Location',
-                'type' => 'select',
-                'default' => '1',
-                'description' => 'Location your node is in?',
-                'required' => true,
-                'options' => [
-                    '1' => 'Location 1',
-                    '2' => 'Location 2',
-                ],
-            ]
-        ];
-    }
+        ]
+    ];
+}
 ```
 
 The following values are supported

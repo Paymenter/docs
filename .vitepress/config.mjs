@@ -134,7 +134,7 @@ export default {
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Paymenter' },
-      { icon: 'discord', link: 'https://discord.gg/kReEAQteFy' }
+      { icon: 'discord', link: 'https://discord.gg/xB4UUT3XQg' }
     ],
   },
   head: [

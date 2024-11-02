@@ -1,179 +1,115 @@
-# How to create a server extension
+# Server extensions
 
-## Step 1: Create a new extension
+The server extensions have a few hooks that you can use to setup the server.
 
-Create a new extension using the CLI command `php artisan p:extension:create` and follow the instructions
+You can also use [routes](index.md#routes-views-etc) and [views](index.md#routes-views-etc) in the server extension.
 
-## Step 2: Add the extension's information
+## `getProductConfig`
 
-Add the first public function named `getConfig`. This function returns the possible settings for the extension when you enter them in the panel
-
-### Example
+Shown to the admin when configuring the product.
 
 ```php
-public function getConfig($values = [])
-    {
-        return [
-            [
-                'name' => 'host',
-                'friendlyName' => 'Pterodactyl panel url',
-                'type' => 'text',
-                'required' => true,
-            ],
-            [
-                'name' => 'apiKey',
-                'friendlyName' => 'API Key',
-                'type' => 'text',
-                'required' => true,
-            ],
-        ];
-    }
+public function getProductConfig($values = [])
+{
+    return [
+        [
+            'name' => 'ram',
+            'label' => 'Ram',
+            'type' => 'number',
+            'required' => true,
+            'default' => 1024,
+            'description' => 'The amount of ram in MB',
+        ],
+    ];
+}
 ```
 
-You can see what the settings mean [here](#configs-follow-the-following-structure).
+## `getCheckoutConfig`
 
-## Step 3: Add a product configuration function
-
-This can be done by adding a public function called `getProductConfig` to the file. This function should return an array with the product configuration.
-
-### Example
+Shown to the user when they are checking out.
 
 ```php
-public function getProductConfig($options)
-    {
-        return [
+public function getCheckoutConfig(Product $product)
+{
+    return [
+        'fields' => [
             [
                 'name' => 'location',
-                'friendlyName' => 'Pterodactyl Location',
-                'type' => 'dropdown',
-                'options' => [
-                    [
-                        'name' => 'Location 1',
-                        'value' => 1
-                    ]
-                ],
+                'label' => 'Location',
+                'type' => 'select',
                 'required' => true,
-            ],
-        ];
-    }
-```
-
-You can see what the settings mean [here](#configs-follow-the-following-structure).
-
-## Step 4: Add the create function
-
-This can be done by adding a public function called `createServer` to the file.
-
-$user = The user who created the server
-$parmas = The parameters of the server, this also includes the configuration if getUserConfig is used. ($parmas['config'])
-$order = The order of the server
-$product = The product of the server
-$configurableOptions = The configurable options of the server
-
-```php
-public function createServer($user, $parmas, $order, $product, $configurableOptions)
-{
-    // Do something with the information e.g. create a server
+                'options' => [
+                    '1' => 'Location 1',
+                    '2' => 'Location 2',
+                ],
+            ]
+        ]
+    ];
 }
 ```
 
-## Step 5: Add the suspend function
+## `createServer`, `suspendServer`, `unsuspendServer`, `terminateServer`
 
-This can be done by adding a public function called `suspendServer` to the file.
+These hooks are used to create, suspend, unsuspend and terminate the server.
 
-$user = The user who created the server
-$parmas = The parameters of the server, this also includes the configuration if getUserConfig is used. ($parmas['config'])
-$order = The order of the server
-$product = The product of the server
-$configurableOptions = The configurable options of the server
+Have 3 parameters:
+
+- `Service $service` - The service that is being created, suspended, unsuspended or terminated.
+- `$settings` - The settings that are provided on the product from `getProductConfig`.
+- `$properties` - Custom properties created by the admin and values coming from `getCheckoutConfig`.
 
 ```php
-public function suspendServer($user, $params, $order, $product, $configurableOptions)
+public function createServer(Service $service, $settings, $properties)
 {
-    // Do something with the information e.g. suspend a server
+    // Create the server
 }
 ```
 
-## Step 6: Add the unsuspend function
+## `getActions`
 
-This can be done by adding a public function called `unsuspendServer` to the file.
+This hook is used to add actions to the service show page.
 
-$user = The user who created the server
-$parmas = The parameters of the server, this also includes the configuration if getUserConfig is used. ($parmas['config'])
-$order = The order of the server
-$product = The product of the server
-$configurableOptions = The configurable options of the server
+It supports both views and buttons.
 
 ```php
-public function unsuspendServer($user, $params, $order, $product, $configurableOptions)
+public function getActions(Service $service)
 {
-    // Do something with the information e.g. unsuspend a server
+    return [
+        [
+            'name' => 'control_panel',
+            'label' => 'Go to control panel',
+            'url' => 'https://panel.paymenter.org',
+        ],
+        [
+            'name' => 'console',
+            'label' => 'Go to console',
+            'view' => view('server::console', ['service' => $service]),
+        ],
+    ];
 }
 ```
 
-## Step 7: Add the terminate function
-
-This can be done by adding a public function called `terminateServer` to the file.
-
-$user = The user who created the server
-$parmas = The parameters of the server, this also includes the configuration if getUserConfig is used. ($parmas['config'])
-$order = The order of the server
-$product = The product of the server
-$configurableOptions = The configurable options of the server
+Having a time sensistive url? Then you can use the function argument to generate the url.
 
 ```php
-public function terminateServer($user, $params, $order, $product, $configurableOptions)
+public function getActions(Service $service)
 {
-    // Do something with the information e.g. terminate a server
+    return [
+        [
+            'name' => 'control_panel',
+            'label' => 'Go to control panel',
+            'url' => 'getControlPanelUrl',
+        ],
+        [
+            'name' => 'console',
+            'label' => 'Go to console',
+            'view' => view('server::console', ['service' => $service]),
+        ],
+    ];
+}
+
+public function getControlPanelUrl(Service $service)
+{
+    return 'https://panel.paymenter.org/' . $service->id;
 }
 ```
-
-## Step 8: Add the getUserConfig function (optional)
-
-This can be done by adding a public function called `getUserConfig` to the file.
-
-You can see what the settings mean [here](#configs-follow-the-following-structure).
-
-## Step 9: Add the getLink function (optional)
-
-This is a function that returns a link to a service in a panel such as pterodactyl. If the function returns a link it will be displayed in the panel. This can be done by adding a public `getLink` function to the php file
-
-$product = The product of the server
-
-```php
-public function getLink($product)
-{
-    // Do something with the information e.g. return the link to the server
-}
-```
-
-## Configs follow the following structure
-
-This works for both gateways and payment methods.
-
-Functions: getConfig, getProductConfig, getUserConfig
-
-```php
-[
-    [
-        'name' => 'host',
-        'friendlyName' => 'Pterodactyl panel url',
-        'type' => 'text',
-        'required' => true,
-    ],
-    [
-        'name' => 'apiKey',
-        'friendlyName' => 'API Key',
-        'type' => 'text',
-        'required' => true,
-    ],
-];
-```
-
-- `name`: The name of the field. This will be used to get the value of the field.
-- `friendlyName`: The friendly name of the field. This will be used to display the name of the field.
-- `description`: The description of the field. This will be used to display the description of the field. This is optional.
-- `type`: The type of the field. This can be `text`, `boolean`, `dropdown`.
-- `required`: Whether the field is required or not. This can be `true` or `false`.
-
-- `options`: The options of the field. This is only required when the type is `dropdown`. This should be an array with the options. The key of the option should be the value of the option and the value of the option should be the name of the option.
