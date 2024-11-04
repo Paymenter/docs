@@ -98,7 +98,7 @@ public function getActions(Service $service)
         [
             'name' => 'control_panel',
             'label' => 'Go to control panel',
-            'url' => 'getControlPanelUrl',
+            'function' => 'getControlPanelUrl',
         ],
         [
             'name' => 'console',
