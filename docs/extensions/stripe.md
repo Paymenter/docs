@@ -6,26 +6,26 @@ Stripe is a payment gateway that allows you to accept many different payment met
 
 [Website](https://stripe.com)
 
-## Create a API key in Stripe
+## Create a Restricted Api key in Stripe
 
-Go to the [Stripe dashboard](https://dashboard.stripe.com/apikeys) and reveal your secret key. Copy the key and insert it in the Paymenter admin panel.
+We've made a app on Stripe to make the process easier for you.
 
-![image](/assets/images/extensions/stripe/stripe.png)
+1. Go to [Stripe](https://marketplace.stripe.com/apps/install/link/org.paymenter.stripe) to get started.
 
-## Configure stripe webhook
+![image](/assets/images/extensions/stripe/install1.png)
 
-Go to the [Developers tab –> Webhooks](https://dashboard.stripe.com/test/webhooks) and click "Add endpoint". \
-In the **Endpoint URL** field, type `<your_paymenter_url>/extensions/stripe/webhook`
+2. Select the account you want to connect to Paymenter and click on "Install App".
 
-It should look about like this:
-![image](/assets/images/extensions/stripe/2.png)
+![image](/assets/images/extensions/stripe/install2.png)
 
-Then click “Select events” and select all of them, after doing this you can click "Add endpoint"
+3. Press "Continue to app settings"
 
-After doing this you will see the webhook information page, under “Signing secret” there will be a "Reveal" button, click it and copy the webhook secret, then paste it into the Paymenter panel
+![image](/assets/images/extensions/stripe/install3.png)
 
-![image](/assets/images/extensions/stripe/3.png)
+4. Copy the keys and past them in the Paymenter admin panel.
 
-### That's all
+![image](/assets/images/extensions/stripe/install4.png)
 
-You can now use Stripe as a payment gateway for your products.
+You don't need to fill in the webhook secret, Paymenter will do this for you.
+
+![image](/assets/images/extensions/stripe/install5.png)
