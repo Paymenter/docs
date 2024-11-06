@@ -95,3 +95,83 @@ chown -R www-data:www-data /var/www/paymenter/*
 And that is it. Paymenter should now be fully installed. Should you run into any issues you can ask for support on our [Discord](https://discord.gg/xB4UUT3XQg). Please make sure to follow the forum post guidelines when doing this.
 
 ## Apache
+
+### Stap 1: Creëer een .conf bestand
+
+[!CAUTION] Als je een andere webserver gebruikt zoals Nginx, volg dan niet deze instructies
+
+Allereerst maken we een paymenter.conf bestand aan in /etc/apache2/sites-available/
+
+Plaats hierin het volgende:
+
+[!IMPORTANT]
+
+Zorg ervoor dat je example.com vervangt door je eigen domeinnaam.
+Als je SSL wilt gebruiken, volg dan de SSL Guide.
+::: code-group
+<VirtualHost *:80>
+    ServerName example.com
+    DocumentRoot /var/www/paymenter/public
+
+    <Directory /var/www/paymenter/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    <FilesMatch "\.php$">
+        SetHandler "proxy:unix:/var/run/php/php8.3-fpm.sock|fcgi://localhost/"
+    </FilesMatch>
+</VirtualHost>
+<VirtualHost *:80>
+    ServerName example.com
+    Redirect permanent / https://example.com/
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName example.com
+    DocumentRoot /var/www/paymenter/public
+
+    SSLEngine On
+    SSLCertificateFile /etc/letsencrypt/live/example.com/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+
+    <Directory /var/www/paymenter/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    <FilesMatch "\.php$">
+        SetHandler "proxy:unix:/var/run/php/php8.3-fpm.sock|fcgi://localhost/"
+    </FilesMatch>
+</VirtualHost>
+:::
+
+### Stap 2: Instellen van de juiste rechten
+
+Eerst activeren we de site door een symbolische link te maken naar de configuratie die we net hebben aangemaakt.
+
+```bash
+sudo a2ensite paymenter.conf
+```
+
+Daarna herstarten we Apache om de wijzigingen door te voeren.
+
+```bash
+sudo systemctl restart apache2
+```
+
+Als laatste stellen we de juiste rechten in voor Paymenter met het volgende commando:
+
+```bash
+chown -R www-data:www-data /var/www/paymenter/*
+```
+
+En dat is het! Paymenter zou nu volledig geïnstalleerd moeten zijn. Mocht je problemen tegenkomen, vraag dan om hulp op onze [Discord](https://discord.gg/eqzuVVHZhE).
