@@ -50,14 +50,17 @@ Then import your data:
 mysql -u root -p paymenter_temp < paymenter.sql
 ```
 
-## Step 4: Change old data to new data
+## Step 4: Migrate old data
 
-Now that you have your data in the temporary database, you can start changing the data to the new format:
-Make sure to replace the `yourPassword` with your database password.
+Now that you have your data in the temporary database, you can start changing the data to the new format, using:
 
 ```bash
-php artisan app:migrate-0.x 127.0.0.1 paymenter_temp paymenter yourPassword
+php artisan app:migrate-0.x paymenter_temp
 ```
+This command will require you to enter the password of the database user.
+
+It will automatically get the database server info, such as `host`, `port`, and `username`, from your `.env` file.
+However, if you want to manually provide these values, you can do so using the `php artisan app:migrate-0.x paymenter_temp username 127.0.0.1 3306` format.
 
 ## Step 5: Cleanup
 
