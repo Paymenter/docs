@@ -96,82 +96,76 @@ And that is it. Paymenter should now be fully installed. Should you run into any
 
 ## Apache
 
-### Stap 1: Creëer een .conf bestand
+### Stap 1: Create a .conf file
 
-[!CAUTION] Als je een andere webserver gebruikt zoals Nginx, volg dan niet deze instructies
+>[!CAUTION] 
+>If you’re using another web server like Nginx, please do not follow this guide.
 
-Allereerst maken we een paymenter.conf bestand aan in /etc/apache2/sites-available/
+First, create a paymenter.conf file in /etc/apache2/sites-available/.
 
-Plaats hierin het volgende:
+Place the following configuration inside:
 
-[!IMPORTANT]
+>[!IMPORTANT]
+>
+>Replace example.com with your own domain.
+>If you wish to use SSL, refer to the SSL Guide.
 
-Zorg ervoor dat je example.com vervangt door je eigen domeinnaam.
-Als je SSL wilt gebruiken, volg dan de SSL Guide.
 ::: code-group
+```bash [Apache without SSL]{2,3}
 <VirtualHost *:80>
     ServerName example.com
+    ServerAlias www.example.com
     DocumentRoot /var/www/paymenter/public
-
     <Directory /var/www/paymenter/public>
-        Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
     </Directory>
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-    <FilesMatch "\.php$">
-        SetHandler "proxy:unix:/var/run/php/php8.3-fpm.sock|fcgi://localhost/"
-    </FilesMatch>
 </VirtualHost>
+```
+```bash [Apache with SSL]{2,3,4,8,9,16,17}
 <VirtualHost *:80>
     ServerName example.com
+    ServerAlias www.example.com
     Redirect permanent / https://example.com/
 </VirtualHost>
 
 <VirtualHost *:443>
     ServerName example.com
+    ServerAlias www.example.com
     DocumentRoot /var/www/paymenter/public
-
-    SSLEngine On
-    SSLCertificateFile /etc/letsencrypt/live/example.com/fullchain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
-
     <Directory /var/www/paymenter/public>
-        Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
     </Directory>
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-    <FilesMatch "\.php$">
-        SetHandler "proxy:unix:/var/run/php/php8.3-fpm.sock|fcgi://localhost/"
-    </FilesMatch>
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/live/example.com/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
 </VirtualHost>
+```
 :::
 
-### Stap 2: Instellen van de juiste rechten
+### Stap 2: Setting the right permissions
 
-Eerst activeren we de site door een symbolische link te maken naar de configuratie die we net hebben aangemaakt.
+First, enable the site by creating a symbolic link to the configuration we just created:
 
 ```bash
-sudo a2ensite paymenter.conf
+sudo ln -s /etc/apache2/sites-available/paymenter.conf /etc/apache2/sites-enabled/paymenter.conf
 ```
 
-Daarna herstarten we Apache om de wijzigingen door te voeren.
+```bash
+sudo a2enmod rewrite
+```
+
+Then, restart Apache to apply the changes:
 
 ```bash
 sudo systemctl restart apache2
 ```
 
-Als laatste stellen we de juiste rechten in voor Paymenter met het volgende commando:
+Finally, set the correct permissions for Paymenter:
 
 ```bash
 chown -R www-data:www-data /var/www/paymenter/*
 ```
 
-En dat is het! Paymenter zou nu volledig geïnstalleerd moeten zijn. Mocht je problemen tegenkomen, vraag dan om hulp op onze [Discord](https://discord.gg/eqzuVVHZhE).
+And that's it! Paymenter should now be fully installed. If you encounter any issues, feel free to reach out on our [Discord](https://discord.gg/eqzuVVHZhE).
