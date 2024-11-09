@@ -61,7 +61,8 @@ export default {
           items: [
             { text: 'PayPal', link: '/docs/extensions/paypal' },
             { text: 'Pterodactyl', link: '/docs/extensions/pterodactyl' },
-            { text: 'Stripe', link: '/docs/extensions/stripe' }
+            { text: 'Stripe', link: '/docs/extensions/stripe' },
+            { text: 'VirtFusion', link: '/docs/extensions/virtfusion' }
           ]
         },
         {
