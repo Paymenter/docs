@@ -6,6 +6,14 @@ layout: home
 aside: false
 editLink: false
 markdownStyles: false
+
+supportbanner:
+  text: Support us to keep going
+  tagline: Your support helps us continue developing and enhancing Paymenter. Every contribution makes a difference!
+  sponsorButton: Sponsor
+  starButton: Star us on GitHub
+  howToContribute: How to contribute?
+
 ---
 
 <script setup>

@@ -1,20 +1,21 @@
 <script setup>
-import { onMounted } from 'vue';
-</script>
+import { useData } from 'vitepress';
 
+const { frontmatter } = useData();
+</script>
 
 <template>
 <section class="banner-support">
     <div class="banner-support-content">
         <div class="banner-support-left">
-            <div class="banner-support-title">Support us to keep going</div>
-            <p class="banner-support-subtitle">Your support helps us continue developing and enhancing Paymenter. Every contribution makes a difference!</p>
+            <div class="banner-support-title">{{ frontmatter.supportbanner.text }}</div>
+            <p class="banner-support-subtitle">{{ frontmatter.supportbanner.tagline }}</p>
             <div class="buttons">
                 <a href="https://github.com/sponsors/Paymenter" target="_blank" class="btn btn-secondary svg-right">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.1213 10.4816C13.7308 10.091 13.0976 10.091 12.7071 10.4816L12 11.1887C11.2189 11.9697 9.95259 11.9697 9.17154 11.1887C8.39049 10.4076 8.39049 9.14132 9.17154 8.36027L14.8022 2.72812C16.9061 2.25217 19.2008 2.83319 20.8388 4.47119C23.2582 6.89055 23.3716 10.7426 21.1792 13.2963L19.071 15.4313L14.1213 10.4816ZM3.16113 4.47119C5.33452 2.2978 8.66411 1.98527 11.17 3.5336L7.75732 6.94606C6.19523 8.50816 6.19523 11.0408 7.75732 12.6029C9.27209 14.1176 11.6995 14.1635 13.2695 12.7406L13.4142 12.6029L17.6568 16.8455L13.4142 21.0882C12.6331 21.8692 11.3668 21.8692 10.5858 21.0882L3.16113 13.6635C0.622722 11.1251 0.622722 7.00959 3.16113 4.47119Z" fill="#DB61A2"/>
                     </svg>
-                    Sponsor
+                    {{ frontmatter.supportbanner.sponsorButton }}
                 </a>
                 <a href="https://github.com/Paymenter/Paymenter" target="_blank" class="btn btn-secondary svg-right">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,11 +28,11 @@ import { onMounted } from 'vue';
                     </clipPath>
                     </defs>
                     </svg>
-                    Star us on GitHub
+                    {{ frontmatter.supportbanner.starButton }}
                 </a>
             </div>
             <a href="/docs/contribute/how-to-help" class="how-to-contribute">
-                How to contribute?
+                {{ frontmatter.supportbanner.howToContribute }}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path></svg>
             </a>
         </div>
