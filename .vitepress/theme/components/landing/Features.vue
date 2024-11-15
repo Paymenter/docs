@@ -1,21 +1,23 @@
 <script setup>
-import { onMounted } from 'vue';
+import { useData } from 'vitepress';
+
+const { frontmatter } = useData();
 </script>
 
 <template>
     <section id="features">
-        <div class="">
-            <div class="content">
+        <div class="content">
+            <div class="extensible">
                 <div class="left-column">
-                    <div class="subtitle">EXTENSIBLE</div>
+                    <div class="subtitle">{{ frontmatter.featuresLanding.extensible.text }}</div>
                     <div style="display: inline-flex;align-items: center;" class="svg-right">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M9.33333 4.66669C9.33333 2.7337 10.9003 1.16669 12.8333 1.16669C14.7664 1.16669 16.3333 2.7337 16.3333 4.66669C16.3333 5.07577 16.2631 5.46844 16.1342 5.83335H23.3333C23.9777 5.83335 24.5 6.35569 24.5 7.00002V10.647C24.5 11.0077 24.3332 11.3481 24.0481 11.5691C23.763 11.7901 23.3918 11.8668 23.0425 11.7769C22.7639 11.7052 22.4706 11.6667 22.1667 11.6667C20.2336 11.6667 18.6667 13.2336 18.6667 15.1667C18.6667 17.0997 20.2336 18.6667 22.1667 18.6667C22.4706 18.6667 22.7639 18.6282 23.0425 18.5564C23.3918 18.4666 23.763 18.5433 24.0481 18.7642C24.3332 18.9853 24.5 19.3256 24.5 19.6864V23.3334C24.5 23.9777 23.9777 24.5 23.3333 24.5H4.66667C4.02234 24.5 3.5 23.9777 3.5 23.3334V7.00002C3.5 6.35569 4.02234 5.83335 4.66667 5.83335H9.53249C9.40351 5.46844 9.33333 5.07577 9.33333 4.66669Z"/>
                         </svg>
-                        <h2 style="font-size:30px;font-weight: bold;">Extensions for your needs</h2>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.extensible.tagline }}</h2>
                     </div>
-                    <p>Create your own themes, modify and add what you need, create your custom experience for your customers.</p>
+                    <p>{{ frontmatter.featuresLanding.extensible.desc }}</p>
                     <a href="https://market.paymenter.org/" class="btn btn-primary svg-left" style="color:white;" data-v-b6c8f334=""> 
-                        Explore marketplace 
+                        {{ frontmatter.featuresLanding.extensible.marketplaceButton }}
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" data-v-b6c8f334=""><path d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3H4ZM16.0001 8V16.4142L12.5001 12.9142L8.70718 16.7071L7.29297 15.2929L11.0859 11.5L7.58586 8H16.0001Z" data-v-b6c8f334=""></path></svg>
                     </a>
                 </div>

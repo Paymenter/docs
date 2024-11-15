@@ -15,6 +15,13 @@ heroLanding:
   getStartedButton: Get Started
   installButton: Install
   demoButton: Demo
+
+featuresLanding:
+  extensible:
+    text: Extensible
+    tagline: Extensions for your needs
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+    marketplaceButton: Explore marketplace
 supportbanner:
   text: Support us to keep going
   tagline: Your support helps us continue developing and enhancing Paymenter. Every contribution makes a difference!
