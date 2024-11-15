@@ -22,6 +22,49 @@ featuresLanding:
     tagline: Extensions for your needs
     desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
     marketplaceButton: Explore marketplace
+  responsive:
+    text: Responsive
+    tagline: Mobile first
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+  performance:
+    text: Performance
+    tagline: Lightning Fast
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+  multiLanguage:
+    text: Multi-language
+    tagline: Internationalization
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+  multiCurrency:
+    text: Multi-currency
+    tagline: Multiple currencies with ease
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+  personalization:
+    text: Personalization
+    tagline: Fully Customizable
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+  openSource:
+    text: Open-Source
+    tagline: 100% Open Source
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+  community:
+    text: Community
+    tagline: Join the community
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+    discordButton: Discord
+  cloud:
+    text: cloud
+    tagline: Hassle-free cloud hosting
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+    paasButton: Start for $5/month
+  blog:
+    text: Blog
+    tagline: Create announcements or blog posts
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+  tickets:
+    text: Tickets
+    tagline: Built-in ticketing system
+    desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
+
 supportbanner:
   text: Support us to keep going
   tagline: Your support helps us continue developing and enhancing Paymenter. Every contribution makes a difference!

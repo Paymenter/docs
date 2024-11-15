@@ -189,6 +189,111 @@ const { frontmatter } = useData();
                         </svg>
                 </div>
             </div>
+
+            <div class="responsive-performance">
+                <div class="left-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.responsive.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M7 2.83337H21C21.6444 2.83337 22.1667 3.35571 22.1667 4.00004V25C22.1667 25.6444 21.6444 26.1667 21 26.1667H7C6.35568 26.1667 5.83334 25.6444 5.83334 25V4.00004C5.83334 3.35571 6.35568 2.83337 7 2.83337ZM14 20.3334C13.3557 20.3334 12.8333 20.8557 12.8333 21.5C12.8333 22.1444 13.3557 22.6667 14 22.6667C14.6444 22.6667 15.1667 22.1444 15.1667 21.5C15.1667 20.8557 14.6444 20.3334 14 20.3334Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.responsive.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.responsive.desc }}</p>
+                </div>
+                <div class="right-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.performance.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M15.1667 12.1666H23.3334L12.8334 27.3333V16.8333H4.66669L15.1667 1.66663V12.1666Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.performance.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.performance.desc }}</p>
+                </div>
+            </div>
+
+            <div class="language-currency">
+                <div class="left-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.multiLanguage.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M21.5833 12.1667L26.7166 25H24.2025L22.8013 21.5H18.0296L16.6308 25H14.1178L19.25 12.1667H21.5833ZM11.6666 2.83337V5.16671H18.6666V7.50004L16.3709 7.50074C15.4496 10.2606 13.9986 12.7567 12.1467 14.8512C12.9901 15.6034 13.9031 16.2706 14.8721 16.8426L13.9964 19.0331C12.7443 18.3245 11.5727 17.4778 10.4995 16.5124C8.41635 18.3874 5.96064 19.8146 3.26537 20.6523L2.63964 18.4016C4.9449 17.6737 7.05298 16.4527 8.85547 14.8525C7.53988 13.3662 6.42683 11.6765 5.56197 9.8337L8.17463 9.83381C8.83186 11.0454 9.61307 12.1706 10.4996 13.1899C11.933 11.5426 13.0906 9.61889 13.8944 7.50122L2.33331 7.50004V5.16671H9.33331V2.83337H11.6666ZM20.4166 15.5328L18.9618 19.1667H21.8691L20.4166 15.5328Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.multiLanguage.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.multiLanguage.desc }}</p>
+                </div>
+                <div class="right-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.multiCurrency.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M10.8907 13.9219L13.4224 13.9224C16.3219 13.9224 18.6724 16.2729 18.6724 19.1724H10.5045L10.5057 20.3391L19.8391 20.3382V19.1724C19.8391 17.9096 19.4678 16.7188 18.8053 15.6715L22.1724 15.6724C24.4967 15.6724 26.5035 17.0319 27.4412 18.9991C24.6822 22.6398 20.2146 25.0058 15.1724 25.0058C11.9509 25.0058 9.22186 24.3167 7.00532 23.1102L7.00691 12.2553C8.46005 12.4634 9.78976 13.0541 10.8907 13.9219ZM5.83903 22.6724C5.83903 23.3168 5.3167 23.8391 4.67236 23.8391H2.33903C1.6947 23.8391 1.17236 23.3168 1.17236 22.6724V12.1724C1.17236 11.5281 1.6947 11.0058 2.33903 11.0058H4.67236C5.3167 11.0058 5.83903 11.5281 5.83903 12.1724V22.6724ZM21.0057 6.33911C22.9387 6.33911 24.5057 7.90611 24.5057 9.83911C24.5057 11.7721 22.9387 13.3391 21.0057 13.3391C19.0727 13.3391 17.5057 11.7721 17.5057 9.83911C17.5057 7.90611 19.0727 6.33911 21.0057 6.33911ZM12.8391 2.83911C14.772 2.83911 16.3391 4.40611 16.3391 6.33911C16.3391 8.2721 14.772 9.83911 12.8391 9.83911C10.906 9.83911 9.33903 8.2721 9.33903 6.33911C9.33903 4.40611 10.906 2.83911 12.8391 2.83911Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.multiCurrency.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.multiCurrency.desc }}</p>
+                </div>
+            </div>
+
+            <div class="personalization-open-source">
+                <div class="left-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.personalization.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M15.5034 7.75105L21.2658 3.2692C21.7302 2.90798 22.3909 2.94911 22.807 3.36516L26.3002 6.85839C26.7163 7.27444 26.7574 7.93516 26.3962 8.3996L21.9155 14.1605C22.2575 15.5468 22.2642 17.0367 21.8685 18.5134C20.8207 22.4239 17.2833 25.0009 13.4186 25.0009C9.33335 25.0009 4.08335 23.2487 1.16669 21.4987C5.80976 17.9987 4.72178 15.8868 5.25002 13.9154C6.48486 9.30689 10.8993 6.61512 15.5034 7.75105ZM19.4851 9.94275C19.5619 10.0168 19.6372 10.0921 19.7111 10.1688L21.0347 11.4924L23.9221 7.78005L21.8854 5.74332L18.1731 8.63069L19.4851 9.94275Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.personalization.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.personalization.desc }}</p>
+                </div>
+                <div class="right-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.openSource.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M14.0005 14.5024C10.7789 14.5024 8.16719 11.8907 8.16719 8.66903C8.16719 5.44737 10.7789 2.83569 14.0005 2.83569C17.2222 2.83569 19.8338 5.44737 19.8338 8.66903C19.8338 11.8907 17.2222 14.5024 14.0005 14.5024ZM21.0005 20.3357V26.169H18.6671V20.3357C18.6671 15.1425 21.7518 10.6698 26.1888 8.6498L27.1545 10.7745C23.5243 12.4272 21.0005 16.0868 21.0005 20.3357ZM9.33386 20.3357V26.169H7.00053V20.3357C7.00053 16.0868 4.47677 12.4272 0.846519 10.7745L1.81229 8.6498C6.24926 10.6698 9.33386 15.1425 9.33386 20.3357Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.openSource.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.openSource.desc }}</p>
+                </div>
+            </div>
+
+            <div class="community-cloud">
+                <div class="left-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.community.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M14 12.169C16.5773 12.169 18.6666 10.0797 18.6666 7.50236C18.6666 4.92503 16.5773 2.83569 14 2.83569C11.4227 2.83569 9.33331 4.92503 9.33331 7.50236C9.33331 10.0797 11.4227 12.169 14 12.169ZM6.41665 15.669C8.02747 15.669 9.33331 14.3632 9.33331 12.7524C9.33331 11.1415 8.02747 9.83569 6.41665 9.83569C4.80582 9.83569 3.49998 11.1415 3.49998 12.7524C3.49998 14.3632 4.80582 15.669 6.41665 15.669ZM24.5 12.7524C24.5 14.3632 23.1941 15.669 21.5833 15.669C19.9725 15.669 18.6666 14.3632 18.6666 12.7524C18.6666 11.1415 19.9725 9.83569 21.5833 9.83569C23.1941 9.83569 24.5 11.1415 24.5 12.7524ZM14 13.3357C17.2216 13.3357 19.8333 15.9474 19.8333 19.169V26.169H8.16665V19.169C8.16665 15.9474 10.7783 13.3357 14 13.3357ZM5.83331 19.1689C5.83331 18.3605 5.95076 17.5796 6.16952 16.8422L5.97173 16.8595C3.92585 17.0812 2.33331 18.8141 2.33331 20.9189V26.1689H5.83331V19.1689ZM25.6666 26.1689V20.9189C25.6666 18.7465 23.9702 16.9702 21.8304 16.8422C22.0492 17.5796 22.1666 18.3605 22.1666 19.1689V26.1689H25.6666Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.community.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.community.desc }}</p>
+                </div>
+                <div class="right-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.cloud.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M19.8333 8.66903C15.8322 8.66903 12.419 11.1867 11.0919 14.7244L13.2772 15.5438C14.2726 12.8906 16.8324 11.0024 19.8333 11.0024C20.648 11.0024 21.4301 11.1415 22.1573 11.3974C24.8809 12.3557 26.8333 14.9511 26.8333 18.0024C26.8333 21.8683 23.6993 25.0024 19.8333 25.0024H8.16666C4.30067 25.0024 1.16666 21.8683 1.16666 18.0024C1.16666 14.9511 3.11903 12.3557 5.84271 11.3974C5.83648 11.2665 5.83333 11.1348 5.83333 11.0024C5.83333 6.49204 9.48968 2.83569 14 2.83569C17.7823 2.83569 20.9642 5.40702 21.8927 8.89698C21.2302 8.74778 20.5409 8.66903 19.8333 8.66903Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.cloud.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.cloud.desc }}</p>
+                </div>
+            </div>
+
+            <div class="blog-tickets">
+                <div class="left-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.tickets.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M24.5 9.83586C25.7887 9.83586 26.8334 10.8805 26.8334 12.1692V16.8359C26.8334 18.1246 25.7887 19.1692 24.5 19.1692H23.2611C22.687 23.7732 18.7596 27.3359 14 27.3359V25.0025C17.866 25.0025 21 21.8685 21 18.0025V11.0025C21 7.13653 17.866 4.00252 14 4.00252C10.134 4.00252 7.00002 7.13653 7.00002 11.0025V19.1692H3.50002C2.21136 19.1692 1.16669 18.1246 1.16669 16.8359V12.1692C1.16669 10.8805 2.21136 9.83586 3.50002 9.83586H4.73889C5.31301 5.23183 9.24046 1.66919 14 1.66919C18.7596 1.66919 22.687 5.23183 23.2611 9.83586H24.5ZM9.0527 18.9182L10.2895 16.9393C11.3652 17.6131 12.6371 18.0025 14 18.0025C15.3629 18.0025 16.6348 17.6131 17.7105 16.9393L18.9474 18.9182C17.5131 19.8166 15.8172 20.3359 14 20.3359C12.1828 20.3359 10.487 19.8166 9.0527 18.9182Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.tickets.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.tickets.desc }}</p>
+                </div>
+                <div class="right-column">
+                    <div class="subtitle">{{ frontmatter.featuresLanding.blog.text }}</div>
+                    <div style="display: inline-flex;align-items: center;" class="svg-right">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="#888b93" xmlns="http://www.w3.org/2000/svg"><path d="M24.5 12.2426V5.16911C24.5 4.52478 23.9777 4.00244 23.3333 4.00244H22.1667C19.8583 6.31085 15.5198 7.60427 12.8333 8.21739V20.7875C15.5198 21.4006 19.8583 22.6941 22.1667 25.0024H23.3333C23.9777 25.0024 24.5 24.4801 24.5 23.8358V16.7623C25.5064 16.5033 26.25 15.5897 26.25 14.5024C26.25 13.4152 25.5064 12.5016 24.5 12.2426ZM5.83333 8.66911C4.54467 8.66911 3.5 9.71378 3.5 11.0024V18.0024C3.5 19.2911 4.54467 20.3358 5.83333 20.3358H7L8.16667 26.1691H10.5V8.66911H5.83333Z"/>
+                        </svg>
+                        <h2 style="font-size:30px;font-weight: bold;">{{ frontmatter.featuresLanding.blog.tagline }}</h2>
+                    </div>
+                    <p>{{ frontmatter.featuresLanding.blog.desc }}</p>
+                </div>
+            </div>
         </div>
     </section>
 </template>
