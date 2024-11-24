@@ -27,16 +27,3 @@ This Step only requires you to type in the input into the shell like the example
 
 
 ![custom-theme](https://github.com/user-attachments/assets/8b6980e7-9e46-4032-8c62-76cc0b57733b)
-
-
-## Advanced
-
-If you want to make the most out of your installation we recommend you look a bit into the steps below.
-
-### Folder structure
-
-You can find all the files you can edit in the `themes` folder. Checkout [this](https://github.com/Paymenter/Paymenter/tree/master/themes/default) folder for an example.
-
-You can also customize extensions views you can make a folder in your views folder with the name `vendor`.
-
-Normally extensions would use the format `<extension-type>.<extension-name>.<view-name>`. For example, the Stripe pay modal is `gateways.stripe::pay`. You can edit this view by creating a file in your views folder with the name `vendor/gateways/stripe/pay.blade.php`.
