@@ -6,17 +6,25 @@ import "keen-slider/keen-slider.min.css";
 export default {
   setup() {
     const lightModeImages = [
+      "/landing/screenshots/client-dashboard-1.png",
+      "/landing/screenshots/client-dashboard-2.png",
       "/landing/screenshots/light/1.png",
       "/landing/screenshots/light/2.png",
       "/landing/screenshots/light/3.png",
       "/landing/screenshots/light/4.png",
+      "/landing/screenshots/light/5.png",
+      "/landing/screenshots/light/6.png",
     ];
 
     const darkModeImages = [
+      "/landing/screenshots/client-dashboard-1.png",
+      "/landing/screenshots/client-dashboard-2.png",
       "/landing/screenshots/dark/1.png",
       "/landing/screenshots/dark/2.png",
       "/landing/screenshots/dark/3.png",
       "/landing/screenshots/dark/4.png",
+      "/landing/screenshots/dark/5.png",
+      "/landing/screenshots/dark/6.png",
     ];
 
     const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="; // transparent bg
