@@ -95,12 +95,17 @@ You can register routes and views in the `boot` function of the extension.
 Here is a simple example:
 
 ```php
+use App\Helpers\ExtensionHelper;
+use Paymenter\Extensions\Others\Example\Middleware\ExampleMiddleware;
     public function boot()
     {
         // Register routes
         require __DIR__ . '/routes/web.php';
         // Register views
         View::addNamespace('extension', __DIR__ . '/resources/views');
+
+        // Register middleware (web is used for all routes)
+        ExtensionHelper::registerMiddleware('web', ExampleMiddleware::class);
     }
 ```
 
