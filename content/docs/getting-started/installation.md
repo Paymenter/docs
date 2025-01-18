@@ -29,7 +29,7 @@ apt -y install software-properties-common curl apt-transport-https ca-certificat
 
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
+curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
 
 apt update
 
@@ -64,7 +64,7 @@ apt update -y
 
 apt install -y php8.2 php8.2-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip}
 
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
+curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.11"
 
 apt install -y mariadb-server nginx tar unzip git redis-server
 ```
