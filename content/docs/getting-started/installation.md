@@ -28,7 +28,7 @@ apt -y install software-properties-common curl apt-transport-https ca-certificat
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 
 # If you are on Ubuntu 22.04, you can skip this step
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
+curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 
 apt update
 
