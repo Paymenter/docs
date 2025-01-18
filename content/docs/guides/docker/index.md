@@ -9,7 +9,7 @@ toc: true
 Getting Resources:
 ```
 mkdir /opt/paymenter && mkdir /opt/paymenter/docker && cd /opt/paymenter/docker
-curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/master/docker-compose.example.yml
+curl -Lo docker-compose.yml https://raw.githubusercontent.com/Paymenter/Paymenter/v0/docker-compose.example.yml
 ```
 
 Replace the following in `docker-compose.yml`:
