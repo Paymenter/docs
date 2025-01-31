@@ -85,35 +85,85 @@ export default {
 </script>
 
 <template>
-    <section id="slider">
-      <div class="slider" style="position: relative;">
-        <div ref="container" class="keen-slider" style="border:8px solid #5672cd94;border-radius:20px;">
-          <div
-            class="keen-slider__slide lazy__slide"
-            v-for="(src, idx) in currentImages"
-            :key="idx"
-          >
-            <div class="image-container">
-              <img :src="loaded[idx] ? src : placeholder" alt="Paymenter" />
-            </div>
-            <div v-if="!loaded[idx]" class="spinner">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--vp-c-text-1)" width="48px" height="48px">
-                <path d="M12 3C16.9706 3 21 7.02944 21 12H19C19 8.13401 15.866 5 12 5V3Z"></path>                
-                <animateTransform attributeName="transform" begin="0s" dur="0.5s"type="rotate"from="0"to="360"repeatCount="indefinite" />  
-              </svg>
-            </div>
-          </div>
+<section id="slider" style="position: relative;">
+  <div class="slider" style="position: relative;">
+    <div
+      ref="container"
+      class="keen-slider"
+      style="border: 8px solid #5672cd94; border-radius: 20px;"
+    >
+      <div
+        class="keen-slider__slide lazy__slide"
+        v-for="(src, idx) in currentImages"
+        :key="idx"
+      >
+        <div class="image-container">
+          <img :src="loaded[idx] ? src : placeholder" alt="Paymenter" />
         </div>
-        <button class="nav-button left" @click="prevSlide">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="#4667ff"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path>
-        </svg>
-        </button>
-        <button class="nav-button right" @click="nextSlide">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="#4667ff"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+        <div v-if="!loaded[idx]" class="spinner">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="var(--vp-c-text-1)"
+            width="48px"
+            height="48px"
+          >
+            <path
+              d="M12 3C16.9706 3 21 7.02944 21 12H19C19 8.13401 15.866 5 12 5V3Z"
+            ></path>
+            <animateTransform
+              attributeName="transform"
+              begin="0s"
+              dur="0.5s"
+              type="rotate"
+              from="0"
+              to="360"
+              repeatCount="indefinite"
+            />
           </svg>
-        </button>
+        </div>
       </div>
-    </section>
+    </div>
+    <button class="nav-button left" @click="prevSlide">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24px"
+        height="24px"
+        fill="#4667ff"
+      >
+        <path
+          d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"
+        ></path>
+      </svg>
+    </button>
+    <button class="nav-button right" @click="nextSlide">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24px"
+        height="24px"
+        fill="#4667ff"
+      >
+        <path
+          d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
+        ></path>
+      </svg>
+    </button>
+  </div>
+  
+  <div
+    style="
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to bottom, transparent 0%, var(--vp-c-bg));
+      width: 100%;
+      height: 400px;
+      pointer-events: none;
+    "
+  ></div>
+</section>
   </template>
   
   <style scoped>

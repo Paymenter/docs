@@ -7,7 +7,7 @@ const { frontmatter } = useData();
 <template>
     <section id="features">
         <div class="content-features">
-            <div class="feature-block">
+            <div class="feature-block align-center">
                 <div class="left-column">
                     <div class="feature-subtitle">
                         {{ frontmatter.featuresLanding.extensible.text }}
@@ -27,8 +27,8 @@ const { frontmatter } = useData();
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" data-v-b6c8f334=""><path d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3H4ZM16.0001 8V16.4142L12.5001 12.9142L8.70718 16.7071L7.29297 15.2929L11.0859 11.5L7.58586 8H16.0001Z" data-v-b6c8f334=""></path></svg>
                     </a>
                 </div>
-                <div class="right-column">
-                    <svg width="650" height="180" viewBox="0 0 650 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="right-column" style="position:relative;">
+                    <svg viewBox="0 0 650 180" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_477_139)">
                     <rect width="80" height="80" rx="10" fill="#635BFF"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M36.456 29.8901C36.456 27.7473 38.2143 26.9231 41.1264 26.9231C45.3022 26.9231 50.5769 28.1868 54.7527 30.4396V17.5275C50.1923 15.7143 45.6868 15 41.1264 15C29.9725 15 22.5549 20.8242 22.5549 30.5495C22.5549 45.7143 43.4341 43.2967 43.4341 49.8352C43.4341 52.3626 41.2362 53.1868 38.1593 53.1868C33.5989 53.1868 27.7747 51.3187 23.1593 48.7912V61.8681C28.2692 64.0659 33.4341 65 38.1593 65C49.5879 65 57.445 59.3407 57.445 49.5055C57.3901 33.1319 36.456 36.044 36.456 29.8901Z" fill="white"/>
@@ -199,6 +199,12 @@ const { frontmatter } = useData();
                     </clipPath>
                     </defs>
                     </svg>
+                    <div style="
+                        background: linear-gradient(to right, transparent, var(--vp-c-bg));
+                        width: 40%;
+                        height: 100%;
+                        position: absolute; bottom: 0px; right: 0px;
+                    "></div>
                 </div>
             </div>
 
@@ -218,7 +224,8 @@ const { frontmatter } = useData();
                         {{ frontmatter.featuresLanding.responsive.desc }}
                     </p>
                     <div class="image-container">
-                        <img src="/landing/screenshots/client-dashboard-1.png" alt="Paymenter" style="height: 600px;">
+                        <img src="/landing/screenshots/light/mobile.png" alt="Paymenter" 
+                        style="border: 8px solid #5672cd94; border-radius: 20px; height: 500px; width:100%; object-fit: cover; object-position: top;">
                     </div>
                 </div>
 
@@ -315,108 +322,18 @@ const { frontmatter } = useData();
                     <p class="feature-description">
                         {{ frontmatter.featuresLanding.multiLanguage.desc }}
                     </p>
-                    
-                    <svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="48" width="40" height="40" rx="6" fill="#009246"/>
-                    <path d="M13.334 48H34.0006C37.3143 48 40.0006 50.6863 40.0006 54V82C40.0006 85.3137 37.3143 88 34.0006 88H13.334V48Z" fill="white"/>
-                    <path d="M26.666 48H33.9993C37.313 48 39.9993 50.6863 39.9993 54V82C39.9993 85.3137 37.313 88 33.9993 88H26.666V48Z" fill="#CE2B37"/>
-                    <mask id="mask0_477_5" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="60" y="48" width="41" height="40">
-                    <rect x="60.0006" y="48" width="40" height="40" fill="white"/>
-                    </mask>
-                    <g mask="url(#mask0_477_5)">
-                    <path d="M60.0006 77.9998H100.001V81.9998C100.001 85.3135 97.3143 87.9998 94.0006 87.9998H66.0006C62.6869 87.9998 60.0006 85.3135 60.0006 81.9998V77.9998Z" fill="#C60B1E"/>
-                    <rect x="60.0006" y="57.9998" width="40" height="20" fill="#FFC400"/>
-                    <path d="M60.0006 54C60.0006 50.6863 62.6869 48 66.0006 48H94.0006C97.3143 48 100.001 50.6863 100.001 54V58H60.0006V54Z" fill="#C60B1E"/>
-                    </g>
-                    <rect x="120" y="48" width="40" height="40" rx="6" fill="black"/>
-                    <path d="M120 61.333H160V81.9997C160 85.3134 157.314 87.9997 154 87.9997H126C122.687 87.9997 120 85.3134 120 81.9997V61.333Z" fill="#DD0000"/>
-                    <path d="M120 74.667H160V82.0003C160 85.314 157.314 88.0003 154 88.0003H126C122.687 88.0003 120 85.314 120 82.0003V74.667Z" fill="#FFCE00"/>
-                    <rect x="180" y="48" width="40" height="40" rx="6" fill="#ED2939"/>
-                    <path d="M180 54C180 50.6863 182.687 48 186 48H206.667V88H186C182.687 88 180 85.3137 180 82V54Z" fill="white"/>
-                    <path d="M180 54C180 50.6863 182.687 48 186 48H193.334V88H186C182.687 88 180 85.3137 180 82V54Z" fill="#002395"/>
-                    <rect x="240" y="48" width="40" height="40" rx="6" fill="#509E2F"/>
-                    <path d="M240 54C240 50.6863 242.687 48 246 48H274C277.314 48 280 50.6863 280 54V74.6667H240V54Z" fill="#EF3340"/>
-                    <path d="M240 54C240 50.6863 242.687 48 246 48H274C277.314 48 280 50.6863 280 54V61.3333H240V54Z" fill="#00B5E2"/>
-                    <ellipse cx="260" cy="68" rx="6" ry="6" fill="white"/>
-                    <circle cx="261.334" cy="68" r="5" fill="#EF3340"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M266.668 64.667L267.306 66.4605L269.025 65.6433L268.208 67.3625L270.001 68.0003L268.208 68.6381L269.025 70.3573L267.306 69.5401L266.668 71.3337L266.03 69.5401L264.311 70.3573L265.128 68.6381L263.334 68.0003L265.128 67.3625L264.311 65.6433L266.03 66.4605L266.668 64.667Z" fill="white"/>
-                    <rect x="300" y="48" width="40" height="40" rx="6" fill="#DC2F27"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M318.494 50.6868L319.242 51.9328L318.288 53.0292L319.704 52.7032L320.452 53.9492L320.58 52.5016L321.996 52.1756L320.658 51.6072L320.786 50.1592L319.832 51.2556L318.494 50.6868V50.6868Z" fill="#FEDC00"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M310 52L308.654 56.146H304.293L307.821 58.7088L306.474 62.854L310.001 60.2924L313.528 62.8536L312.181 58.7092L315.707 56.1452L311.347 56.1464L310 52V52Z" fill="#FEDC00"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M323.123 54.2048L323.329 55.6428L322.024 56.2828L323.456 56.532L323.661 57.97L324.341 56.6856L325.772 56.9344L324.76 55.892L325.439 54.6072L324.134 55.2476L323.123 54.2048V54.2048Z" fill="#FEDC00"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M320.707 64.1289L319.8 65.2637L318.44 64.7509L319.238 65.9649L318.331 67.0993L319.732 66.7153L320.53 67.9285L320.597 66.4777L321.999 66.0929L320.64 65.5805L320.707 64.1289V64.1289Z" fill="#FEDC00"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M323.93 60.0012L323.531 61.3984L322.079 61.4504L323.284 62.262L322.885 63.6588L324.029 62.7632L325.235 63.574L324.736 62.2096L325.88 61.3132L324.428 61.3656L323.93 60.0012V60.0012Z" fill="#FEDC00"/>
-                    <rect x="360" y="48" width="40" height="40" rx="6" fill="#A51931"/>
-                    <rect x="360" y="54.6665" width="40" height="26.6667" fill="#F4F5F8"/>
-                    <rect x="360" y="61.3335" width="40" height="13.3333" fill="#2D2A4A"/>
-                    <g filter="url(#filter0_d_477_5)">
-                    <rect x="420" y="48" width="40" height="40" rx="6" fill="white"/>
-                    <circle cx="440" cy="68.1665" r="8" fill="#BC002D"/>
-                    </g>
-                    <g filter="url(#filter1_d_477_5)">
-                    <rect x="480" y="48" width="40" height="20" rx="6" fill="white"/>
-                    <rect x="480" y="68" width="40" height="20" rx="6" fill="#D52B1E"/>
-                    <rect x="480" y="61.3335" width="40" height="13.3333" fill="#0039A6"/>
-                    </g>
-                    <rect x="540" y="48" width="40" height="40.0025" rx="6" fill="#002B7F"/>
-                    <path d="M553.334 48H574.001C577.315 48 580.001 50.6863 580.001 54V82.0025C580.001 85.3162 577.315 88.0025 574.001 88.0025H553.334V48Z" fill="#FCD116"/>
-                    <path d="M566.667 48H574C577.314 48 580 50.6863 580 54V82.0025C580 85.3162 577.314 88.0025 574 88.0025H566.667V48Z" fill="#CE1126"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 114.002C0 110.689 2.68629 108.002 6 108.002H34C37.3137 108.002 40 110.689 40 114.002V142.002C40 145.316 37.3137 148.002 34 148.002H6C2.68629 148.002 0 145.316 0 142.002V114.002Z" fill="#006AA7"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 124.002H12.5V108.002H17.5V124.002H40V132.002H17.5V148.002H12.5V132.002H0V124.002Z" fill="#FECC00"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 114.002C60 110.689 62.6863 108.002 66 108.002H94C97.3137 108.002 100 110.689 100 114.002V142.002C100 145.316 97.3137 148.002 94 148.002H66C62.6863 148.002 60 145.316 60 142.002V114.002Z" fill="#C1272D"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 114.002C60 110.689 62.6863 108.002 66 108.002H94C97.3137 108.002 100 110.689 100 114.002V128.669C100 131.983 97.3137 134.669 94 134.669H66C62.6863 134.669 60 131.983 60 128.669V114.002Z" fill="#006A44"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 115.669H100V134.669H60V115.669Z" fill="#006A44"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 114.002C60 110.689 62.6863 108.002 66 108.002H94C97.3137 108.002 100 110.689 100 114.002V115.336C100 118.649 97.3137 121.336 94 121.336H66C62.6863 121.336 60 118.649 60 115.336V114.002Z" fill="#FDB913"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 114.336H100V121.336H60V114.336Z" fill="#FDB913"/>
-                    <rect x="120" y="108.002" width="40" height="40" rx="6" fill="#EE1C25"/>
-                    <path d="M120 114.002C120 110.689 122.686 108.002 126 108.002H154C157.314 108.002 160 110.689 160 114.002V134.669H120V114.002Z" fill="#0B4EA2"/>
-                    <path d="M120 114.002C120 110.689 122.686 108.002 126 108.002H154C157.314 108.002 160 110.689 160 114.002V121.336H120V114.002Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M143.021 119.402H142.583H136.333H130.084H129.645L129.6 119.839C129.59 119.933 129.355 122.219 129.355 127.237C129.355 129.595 130.153 131.675 131.725 133.42C132.826 134.643 134.264 135.672 136.122 136.566L136.333 136.668L136.545 136.566C138.402 135.672 139.841 134.643 140.942 133.42C142.514 131.675 143.312 129.595 143.312 127.237C143.312 122.219 143.077 119.933 143.067 119.839L143.021 119.402V119.402V119.402Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M136.333 136.128C133.662 134.841 129.842 132.288 129.842 127.237C129.842 122.186 130.083 119.889 130.083 119.889H136.333H142.582C142.582 119.889 142.824 122.186 142.824 127.237C142.824 132.288 139.003 134.841 136.333 136.128V136.128V136.128Z" fill="#EE1C25"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M136.906 125.913C137.629 125.925 139.04 125.953 140.296 125.533C140.296 125.533 140.263 125.982 140.263 126.506C140.263 127.03 140.296 127.479 140.296 127.479C139.144 127.093 137.72 127.085 136.906 127.096V129.885H135.763V127.096C134.948 127.085 133.525 127.093 132.373 127.479C132.373 127.479 132.406 127.03 132.406 126.506C132.406 125.982 132.373 125.533 132.373 125.533C133.629 125.953 135.04 125.925 135.763 125.913V124.161C135.104 124.155 134.154 124.186 133.081 124.546C133.081 124.546 133.114 124.096 133.114 123.573C133.114 123.049 133.081 122.599 133.081 122.599C134.153 122.958 135.101 122.99 135.76 122.984C135.726 121.875 135.403 120.477 135.403 120.477C135.403 120.477 136.068 120.528 136.334 120.528C136.601 120.528 137.266 120.477 137.266 120.477C137.266 120.477 136.942 121.875 136.909 122.984C137.567 122.99 138.516 122.958 139.588 122.599C139.588 122.599 139.555 123.049 139.555 123.572C139.555 124.096 139.588 124.546 139.588 124.546C138.514 124.186 137.565 124.155 136.906 124.161V125.913V125.913V125.913Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M136.333 129.583C134.988 129.583 134.268 131.449 134.268 131.449C134.268 131.449 133.868 130.564 132.77 130.564C132.028 130.564 131.481 131.225 131.133 131.836C132.484 133.985 134.639 135.312 136.333 136.128C138.028 135.312 140.185 133.986 141.536 131.836C141.188 131.225 140.64 130.564 139.898 130.564C138.8 130.564 138.399 131.449 138.399 131.449C138.399 131.449 137.679 129.583 136.333 129.583V129.583V129.583Z" fill="#0B4EA2"/>
-                    <g filter="url(#filter2_d_477_5)">
-                    <rect x="180" y="108.002" width="40" height="40" rx="6" fill="white"/>
-                    <rect x="180" y="123.548" width="40" height="9" fill="#003580"/>
-                    <rect x="191.111" y="108.002" width="8.5" height="40" fill="#003580"/>
-                    </g>
-                    <rect x="240" y="108.002" width="40" height="40" rx="6" fill="#21468B"/>
-                    <path d="M240 114.002C240 110.689 242.686 108.002 246 108.002H274C277.314 108.002 280 110.689 280 114.002V134.669H240V114.002Z" fill="white"/>
-                    <path d="M240 114.002C240 110.689 242.686 108.002 246 108.002H274C277.314 108.002 280 110.689 280 114.002V121.336H240V114.002Z" fill="#AE1C28"/>
-                    <path d="M300 114.002C300 110.689 302.686 108.002 306 108.002H334C337.314 108.002 340 110.689 340 114.002V142.002C340 145.316 337.314 148.002 334 148.002H306C302.686 148.002 300 145.316 300 142.002V114.002Z" fill="#477050"/>
-                    <path d="M300 114.002C300 110.689 302.686 108.002 306 108.002H334C337.314 108.002 340 110.689 340 114.002V134.669H300V114.002Z" fill="white"/>
-                    <path d="M300 114.002C300 110.689 302.686 108.002 306 108.002H334C337.314 108.002 340 110.689 340 114.002V121.336H300V114.002Z" fill="#CE2939"/>
-                    <defs>
-                    <filter id="filter0_d_477_5" x="370" y="0" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="2"/>
-                    <feGaussianBlur stdDeviation="25"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.392157 0 0 0 0 0.392157 0 0 0 0 0.392157 0 0 0 0.498039 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_477_5"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_477_5" result="shape"/>
-                    </filter>
-                    <filter id="filter1_d_477_5" x="430" y="0" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="2"/>
-                    <feGaussianBlur stdDeviation="25"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.392157 0 0 0 0 0.392157 0 0 0 0 0.392157 0 0 0 0.498039 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_477_5"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_477_5" result="shape"/>
-                    </filter>
-                    <filter id="filter2_d_477_5" x="130" y="60.0024" width="140" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="2"/>
-                    <feGaussianBlur stdDeviation="25"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.392157 0 0 0 0 0.392157 0 0 0 0 0.392157 0 0 0 0.498039 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_477_5"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_477_5" result="shape"/>
-                    </filter>
-                    </defs>
-                    </svg>
-                 
+                    <div class="buttons">
+                        <a href="https://discord.gg/xB4UUT3XQg" target="_blank" class="btn btn-secondary svg-right">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7765 17.1616C15.1959 17.1616 14.6774 16.9876 14.2489 16.647C13.7375 16.246 13.3296 15.6482 13.3158 14.9445C13.3089 14.5888 13.696 14.5888 13.696 14.5888C13.696 14.5888 14.325 14.5813 14.6291 14.5813C14.9332 14.5888 15.023 15.0126 15.0369 15.1185C15.1543 16.072 15.6935 16.4881 16.1082 16.6773C16.3571 16.7908 16.2948 17.1465 15.7765 17.1616Z" fill="#263238"/><path d="M10.558 12.3167C10.0467 12.2565 9.28662 12.2039 8.79601 12.0836C8.00137 11.8881 8.0221 11.1738 8.05664 10.9408C8.15339 10.2415 8.40906 9.59491 8.80292 8.99341C9.29352 8.25657 9.99839 7.60995 10.9035 7.08364C12.6034 6.09868 14.9804 5.5498 17.5924 5.5498C19.5065 5.5498 21.5034 5.79792 21.5241 5.79792C21.7038 5.82048 21.8351 5.99342 21.8282 6.1889C21.8213 6.38439 21.6831 6.53476 21.5034 6.5498C21.2132 6.54228 20.9299 6.54228 20.6604 6.54228C18.0001 6.54228 16.1068 6.90318 14.6971 7.68514C13.3082 8.45205 12.3408 9.62498 11.6844 11.3619C11.6153 11.5122 11.3872 12.4069 10.558 12.3167Z" fill="#263238"/><path d="M12.8796 19.4856C11.5598 19.4856 10.3156 18.9157 9.37384 17.8748C8.57647 16.9935 8.09529 16.1045 8.00593 14.9648C7.95094 14.2202 8.2809 13.9619 8.7277 14.0075C9.03702 14.0379 9.99939 14.0835 10.5493 14.1975C10.9617 14.281 11.2367 14.509 11.3055 14.98C11.6697 17.4873 13.2507 18.4751 14.1924 18.6878C14.3574 18.7258 14.4606 18.8322 14.4537 19.0221C14.4468 19.2045 14.3231 19.3564 14.1581 19.3868C13.7387 19.4552 13.2988 19.4856 12.8796 19.4856Z" fill="#263238"/><path d="M9.11846 21.711C8.18196 21.711 7.26612 21.562 7.00445 21.515C5.90267 21.3189 4.97995 20.9818 4.18806 20.4799C2.2944 19.2802 1.15131 17.163 1.01359 14.6538C0.979161 14.0579 0.903416 12.9209 2.32194 13.0071C2.90725 13.0384 3.83686 13.3207 4.49104 13.509C5.30359 13.7364 5.6961 14.3637 5.6961 14.9831C5.6961 18.5195 8.89811 20.8562 10.296 20.8562C10.8951 20.8562 10.6747 21.4993 10.4131 21.5699C9.95165 21.6953 9.35947 21.711 9.11846 21.711Z" fill="#263238"/><path d="M4.23388 11.3199C3.67993 11.2206 3.13984 10.9915 2.61359 10.8618C0.986384 10.4571 1.26335 8.81533 1.41568 8.36481C2.89749 4.00471 7.59908 2.54626 11.3936 2.15683C14.9665 1.7903 18.7057 2.07283 22.1886 3.04259C22.4725 3.11895 23.3519 3.33275 22.8464 3.85963C22.5279 4.18797 21.2884 3.84436 20.9561 3.82145C18.9134 3.66873 16.8915 3.64582 14.8557 3.9589C12.7023 4.28724 10.4866 4.96684 8.70697 6.40239C7.84836 7.09726 7.09361 7.98302 6.58814 9.02913C6.45658 9.30403 6.35272 9.57892 6.2627 9.85386C6.17268 10.144 5.83339 11.6025 4.23388 11.3199Z" fill="#263238"/><path d="M13.3444 12.1609C13.6493 10.7963 15.0042 8.63407 19.1978 8.7832C20.1598 8.81303 19.7195 9.46918 19.2452 9.45426C16.874 9.37225 15.7494 10.9008 15.1601 12.4517C14.9704 12.9512 14.5367 13.0258 13.9948 12.9363C13.6154 12.8693 13.2021 12.8245 13.3444 12.1609Z" fill="#263238"/>
+                            </svg>
+                            Crowdin
+                        </a>
+                        <a href="/docs/contribute/docs-translations" target="_blank" class="btn svg-left">
+                            How to translate?
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -436,7 +353,7 @@ const { frontmatter } = useData();
                         {{ frontmatter.featuresLanding.multiCurrency.desc }}
                     </p>
 
-                    <svg width="680" height="385" viewBox="0 0 680 385" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 680 385" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="146" height="44" rx="4" transform="matrix(0.866025 0.5 -0.866025 0.5 254.047 0.00244141)" fill="#6071C6" fill-opacity="0.2"/>
                     <g clip-path="url(#clip0_143_846)">
                     <path d="M262.274 16.7524C261.837 16.5003 261.144 16.4754 260.656 16.6943L248.965 21.9443C248.925 21.9623 248.887 21.9817 248.851 22.0024L243.654 25.0024C243.176 25.2786 243.176 25.7263 243.654 26.0024L257.511 34.0024C257.989 34.2786 258.765 34.2786 259.243 34.0024L264.439 31.0024C264.475 30.9817 264.509 30.9597 264.54 30.9366L273.633 24.1866C274.012 23.9051 273.969 23.5046 273.532 23.2524L262.274 16.7524ZM249.717 23.5024L261.841 30.5024L258.377 32.5024L246.253 25.5024L249.717 23.5024ZM257.511 29.0024L259.243 30.0024L257.511 31.0024L255.779 30.0024L257.511 29.0024ZM255.779 28.0024L254.047 27.0024L252.315 28.0024L254.047 29.0024L255.779 28.0024Z" fill="white"/>
@@ -550,6 +467,18 @@ const { frontmatter } = useData();
                     <p class="feature-description">
                         {{ frontmatter.featuresLanding.community.desc }}
                     </p>
+                    <div class="buttons">
+                        <a href="https://discord.gg/xB4UUT3XQg" target="_blank" class="btn btn-secondary svg-right">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.3034 5.3396C17.9344 4.71347 16.4805 4.25714 14.9629 4.00244C14.7719 4.33143 14.5596 4.77715 14.411 5.12736C12.7969 4.89388 11.1944 4.89388 9.60255 5.12736C9.45397 4.77715 9.2311 4.33143 9.05068 4.00244C7.52251 4.25714 6.06861 4.71347 4.70915 5.3396C1.96053 9.39355 1.21766 13.3519 1.5891 17.2573C3.41443 18.5839 5.17612 19.3904 6.90701 19.9211C7.33151 19.348 7.71356 18.7324 8.04255 18.0851C7.41641 17.8516 6.82211 17.5651 6.24904 17.2255C6.39762 17.1194 6.5462 17.0027 6.68416 16.8859C10.1438 18.4672 13.8911 18.4672 17.3082 16.8859C17.4568 17.0027 17.5948 17.1194 17.7434 17.2255C17.1703 17.5651 16.576 17.8516 15.9499 18.0851C16.2789 18.7324 16.6609 19.348 17.0854 19.9211C18.8152 19.3904 20.5875 18.5839 22.4033 17.2573C22.8596 12.7365 21.6806 8.80991 19.3034 5.3396ZM8.5201 14.8483C7.48007 14.8483 6.63107 13.9038 6.63107 12.7471C6.63107 11.5903 7.45884 10.6458 8.5201 10.6458C9.57071 10.6458 10.4303 11.5903 10.4091 12.7471C10.4091 13.9038 9.57071 14.8483 8.5201 14.8483ZM15.4936 14.8483C14.4535 14.8483 13.6034 13.9038 13.6034 12.7471C13.6034 11.5903 14.4323 10.6458 15.4936 10.6458C16.5442 10.6458 17.4038 11.5903 17.3825 12.7471C17.3825 13.9038 16.5548 14.8483 15.4936 14.8483Z" fill="#5865F2"/>
+                            </svg>
+                            Discord
+                        </a>
+                        <a href="https://github.com/Paymenter/Paymenter" target="_blank" class="btn svg-left">
+                            {{ frontmatter.supportbanner.howToContribute }}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -568,6 +497,10 @@ const { frontmatter } = useData();
                     <p class="feature-description">
                         {{ frontmatter.featuresLanding.cloud.desc }}
                     </p>
+                    <a href="https://market.paymenter.org/" class="btn btn-primary svg-left" style="color:white;" data-v-b6c8f334=""> 
+                        {{ frontmatter.featuresLanding.cloud.paasButton }}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" data-v-b6c8f334=""><path d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3H4ZM16.0001 8V16.4142L12.5001 12.9142L8.70718 16.7071L7.29297 15.2929L11.0859 11.5L7.58586 8H16.0001Z" data-v-b6c8f334=""></path></svg>
+                    </a>
 
                     <div class="feature-subtitle">
                         {{ frontmatter.featuresLanding.blog.text }}
@@ -610,6 +543,7 @@ const { frontmatter } = useData();
 <style scoped>
 
 #features {
+    margin-top: 60px;
     padding: 2rem;
 }
 
@@ -623,6 +557,7 @@ const { frontmatter } = useData();
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #9ca3af;
+    margin-top: 36px;
     margin-bottom: 16px;
 }
 
@@ -647,6 +582,10 @@ const { frontmatter } = useData();
     align-items: start;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .left-column, .right-column {
     padding: 1rem;
 }
@@ -654,7 +593,7 @@ const { frontmatter } = useData();
 p {
     font-size: 18px;
     line-height: 1.5;
-    color: #d1d5db;
+    color: var(--vp-c-text-1);
     margin-bottom: 32px;
 }
 
