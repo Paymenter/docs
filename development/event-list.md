@@ -3,7 +3,8 @@
 ## `navigation`
 
 - `navigation`
-- `navigation.auth`
+- `navigation.dashboard` (only for authenticated users)
+- `navigation.account-dropdown` (only for authenticated users)
 
 Both hooks accept a array of navigation items like this:
 
