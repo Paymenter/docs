@@ -20,6 +20,18 @@ mysqldump -u root -p paymenter > paymenter.sql
 
 Copy your .env APP_KEY somewhere safe, as you will need it later.
 
+Backup the V0 installation folder, so you can revert back if needed.
+
+```bash
+cp -r /var/www/paymenter /var/www/paymenter-v0
+```
+
+Remove the old installation folder, so you can install the new version.
+
+```bash
+rm -rf /var/www/paymenter
+```
+
 ## Step 2: Follow the installation guide
 
 To install the alpha release, you can follow the instructions in the [installation guide](/docs/installation/install.md). 
@@ -69,6 +81,12 @@ Now that you have migrated your data, you can remove the temporary database:
 ```bash
 mysql -u root -p
 DROP DATABASE paymenter_temp;
+```
+
+Once you have removed the temporary database, you can remove the old installation folder:
+
+```bash
+rm -rf /var/www/paymenter-v0
 ```
 
 ## Step 6: Done

@@ -27,7 +27,7 @@ Insert your API key and your Pterodactyl URL in the Paymenter admin panel. Like 
 
 ![image](/assets/images/extensions/pterodactyl/pterodactylsettings.png)
 
-- #### Configurable Options
+- ### Configurable Options
 
 You can let your customers tailor their product to meet their needs by offering customizable options.  These options allow users to select specific settings for their product, making it easy to create unique products for different use cases. Below is a list of configurable options you can offer with the Pterodactyl extension:
 
