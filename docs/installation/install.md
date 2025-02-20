@@ -8,13 +8,13 @@ This is an alpha release, DO NOT use this in production. This release is intende
 
 | Operating System | Version | Supported |
 | ---------------- | ------- | :-------: |
-| **Ubuntu**       | 20.04   |    ✅     |
+| **Ubuntu**       | 24.04   |    ✅     |
 |                  | 22.04   |    ✅     |
-|                  | 24.04   |    ✅     |
-| **CentOS**       | 7       |    ✅     |
-|                  | 8       |    ✅     |
-| **Debian**       | 10      |    ✅     |
-|                  | 11      |    ✅     |
+|                  | 20.04   |    ✅     |
+| **CentOS**       | 8       |    ✅     |
+|                  | 7       |    ✅     |
+| **Debian**       | 11      |    ✅     |
+|                  | 10      |    ✅     |
 | **Windows**      | Any     |    ❌     |
 
 ## Required Dependencies

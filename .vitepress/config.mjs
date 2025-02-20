@@ -59,6 +59,7 @@ export default {
           text: 'Extension Guides',
           collapsed: false,
           items: [
+            { text: 'Convoy', link: '/docs/extensions/convoy' },
             { text: 'PayPal', link: '/docs/extensions/paypal' },
             { text: 'Pterodactyl', link: '/docs/extensions/pterodactyl' },
             { text: 'Stripe', link: '/docs/extensions/stripe' },
