@@ -19,3 +19,9 @@ php artisan app:settings:change theme
 ```
 
 :::
+
+::: details How to configure a proxy (Cloudflare etc)
+
+Navigate to the Paymenter admin panel and go to the settings page. On the Security tab you can fill in the ips of your proxy server.
+
+:::
