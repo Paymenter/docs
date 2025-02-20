@@ -36,7 +36,7 @@ You can send the IP and Password to the customer via email. Fill in the email te
 
 Here is a eaxmple of a email template:
 
-```
+```blade
 @isset($server['limits']['addresses']['ipv4'][0]['address'])
 - IP Address: {{ $server['limits']['addresses']['ipv4'][0]['address'] }}
 @endisset
