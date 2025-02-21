@@ -1,9 +1,9 @@
 # Migration from version 0.x to 1.0
 
-This guide will help you migrate from Paymenter v0.x to v1.0-alpha.
+This guide will help you migrate from Paymenter v0.x to v1.0-beta.
 
 ::: warning
-This is an alpha release, DO NOT use this in production. This release is intended for testing purposes only.
+This is an beta release, BUGS are expected. Please make sure to backup your data before starting the migration process.
 :::
 
 ::: warning
@@ -34,7 +34,7 @@ rm -rf /var/www/paymenter
 
 ## Step 2: Follow the installation guide
 
-To install the alpha release, you can follow the instructions in the [installation guide](/docs/installation/install.md). 
+To install the beta release, you can follow the instructions in the [installation guide](/docs/installation/install.md). 
 
 But instead the `Setting up database` section run:
 
@@ -48,7 +48,7 @@ Update your `.env` file with the new APP_KEY you just copied.
 
 ## Step 3: Create a temporary database for import
 
-To import your data from v0.x to v1.0-alpha, you need to create a temporary database:
+To import your data from v0.x to v1.0-beta, you need to create a temporary database:
 
 ```bash
 mysql -u root -p
@@ -91,4 +91,4 @@ rm -rf /var/www/paymenter-v0
 
 ## Step 6: Done
 
-You have now successfully migrated from v0.x to v1.0-alpha. If you have any issues, please let us know by creating an issue on our [GitHub repository](https://github.com/Paymenter/Paymenter/issues).
+You have now successfully migrated from v0.x to v1.0-beta. If you have any issues, please let us know by creating an issue on our [GitHub repository](https://github.com/Paymenter/Paymenter/issues).

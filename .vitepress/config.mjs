@@ -26,7 +26,7 @@ export default {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/docs/installation/install' },
-      { text: 'Blog', link: '/blog/v1-alpha-release.md' },
+      { text: 'Blog', link: '/blog/v1-beta-release.md' },
       { text: 'Development', link: '/development/extensions/index.md' }
     ],
 
@@ -90,7 +90,10 @@ export default {
       '/blog/': [
         {
           text: 'Index',
-          items: [{ text: 'Release of V1', link: '/blog/v1-alpha-release.md' }]
+          items: [
+            { text: 'Release of V1-Beta', link: '/blog/v1-beta-release.md' },
+            { text: 'Release of V1-Alpha', link: '/blog/v1-alpha-release.md' },
+          ]
         }
       ],
       '/development/': [

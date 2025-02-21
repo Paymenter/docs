@@ -1,7 +1,7 @@
 # Preparation
 
 ::: warning
-This is an alpha release, DO NOT use this in production. This release is intended for testing purposes only.
+This is an beta release, BUGS are expected.
 :::
 
 ## Supported operating systems
@@ -79,7 +79,7 @@ Downloading the latest release to the directory
 
 ```bash
 cd /var/www/paymenter
-curl -Lo paymenter.tar.gz https://api.paymenter.org/alpha
+curl -Lo paymenter.tar.gz https://api.paymenter.org/beta
 ```
 
 Unzip the code

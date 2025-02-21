@@ -9,7 +9,7 @@ markdownStyles: false
 
 heroLanding:
   notice: New
-  noticeLink: V1 Alpha Release
+  noticeLink: V1 Beta Release
   text: Effortless Hosting Management with Open-Source Freedom.
   tagline: Paymenter is an open source webshop solution for hosting companies. It's developed to provide an more easy way to manage your hosting company.
   getStartedButton: Get Started
