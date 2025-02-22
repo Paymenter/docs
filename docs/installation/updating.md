@@ -7,7 +7,7 @@ Run the following command in your terminal:
 
 ```bash
 cd /var/www/paymenter
-php artisan p:upgrade
+php artisan app:upgrade --url=https://api.paymenter.org/betea
 ```
 
 ## Manual update
