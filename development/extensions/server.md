@@ -103,7 +103,6 @@ public function getActions(Service $service)
         [
             'name' => 'console',
             'label' => 'Go to console',
-            'view' => view('server::console', ['service' => $service]),
         ],
     ];
 }
@@ -111,5 +110,10 @@ public function getActions(Service $service)
 public function getControlPanelUrl(Service $service)
 {
     return 'https://panel.paymenter.org/' . $service->id;
+}
+
+public function getView(Service $service, $settings, $properties, $view)
+{
+    return view('extension::' . $view, ['service' => $service]);
 }
 ```
