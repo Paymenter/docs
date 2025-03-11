@@ -11,6 +11,12 @@ Creating a theme is really easy. We will show you how to create a theme in this 
 
 You can either copy the default folder or create one from scratch (if you want to use something else then tailwindcss).
 
+There is also a command available which sets the correct folder structure for you (copies the default theme and updates namespaces).
+
+```bash
+php artisan app:theme:create
+```
+
 ## Folder structure
 
 You can find all the files you can edit in the `themes` folder. Checkout [this](https://github.com/Paymenter/Paymenter/tree/master/themes/default) folder for an example.
