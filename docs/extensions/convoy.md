@@ -34,7 +34,7 @@ Press `Test Connection` to see if the connection is working.
 
 You can send the IP and Password to the customer via email. Fill in the email template in the product settings.
 
-Here is a eaxmple of a email template:
+Here is a example of a email template:
 
 ```blade
 @isset($server['limits']['addresses']['ipv4'][0]['address'])
