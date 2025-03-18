@@ -60,6 +60,7 @@ export default {
           collapsed: false,
           items: [
             { text: 'Convoy', link: '/docs/extensions/convoy' },
+            { text: 'Mollie', link: '/docs/extensions/mollie' },
             { text: 'PayPal', link: '/docs/extensions/paypal' },
             { text: 'Pterodactyl', link: '/docs/extensions/pterodactyl' },
             { text: 'Stripe', link: '/docs/extensions/stripe' },
