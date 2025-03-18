@@ -6,8 +6,8 @@ import "keen-slider/keen-slider.min.css";
 export default {
   setup() {
     const lightModeImages = [
-      "/landing/screenshots/client-dashboard-1.png",
-      "/landing/screenshots/client-dashboard-2.png",
+      "/landing/screenshots/light/dashboard.png",
+      "/landing/screenshots/light/products.png",
       "/landing/screenshots/light/1.png",
       "/landing/screenshots/light/2.png",
       "/landing/screenshots/light/3.png",
@@ -17,8 +17,8 @@ export default {
     ];
 
     const darkModeImages = [
-      "/landing/screenshots/client-dashboard-1.png",
-      "/landing/screenshots/client-dashboard-2.png",
+      "/landing/screenshots/dark/dashboard.png",
+      "/landing/screenshots/dark/products.png",
       "/landing/screenshots/dark/1.png",
       "/landing/screenshots/dark/2.png",
       "/landing/screenshots/dark/3.png",
