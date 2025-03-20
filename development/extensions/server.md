@@ -79,11 +79,12 @@ public function getActions(Service $service)
             'name' => 'control_panel',
             'label' => 'Go to control panel',
             'url' => 'https://panel.paymenter.org',
+            'type' => 'button',
         ],
         [
             'name' => 'console',
             'label' => 'Go to console',
-            'view' => view('server::console', ['service' => $service]),
+            'type' => 'view',
         ],
     ];
 }
@@ -99,10 +100,12 @@ public function getActions(Service $service)
             'name' => 'control_panel',
             'label' => 'Go to control panel',
             'function' => 'getControlPanelUrl',
+            'type' => 'button',
         ],
         [
             'name' => 'console',
             'label' => 'Go to console',
+            'type' => 'view',
         ],
     ];
 }
