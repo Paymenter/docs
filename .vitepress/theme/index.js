@@ -1,15 +1,10 @@
 import DefaultTheme from 'vitepress/theme'
-import vitepressBackToTop from 'vitepress-plugin-back-to-top'
-import 'vitepress-plugin-back-to-top/dist/style.css'
 import './custom.css'
+import { registerIcons } from './components/icons'
 
 export default {
-  ...DefaultTheme,
+  extends: DefaultTheme,
   enhanceApp({ app }) {
-    vitepressBackToTop({
-      threshold:280
-    })
+    registerIcons(app)
   },
 }
-
-// TODO Add an icon to the back to top plugin. Because right now it is just a white sphere

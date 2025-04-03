@@ -1,8 +1,19 @@
 import fs from 'fs'
 import path from 'path'
+import tailwindcss from '@tailwindcss/vite'
 
 export default {
   ignoreDeadLinks: true,
+  vite: {
+    plugins: [
+      tailwindcss()
+    ],
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, './theme/components'),
+      }
+    }
+  },
 
   title: 'Paymenter',
 
@@ -25,14 +36,15 @@ export default {
 
     nav: [
       { text: 'Home', link: '/' },
+      // { text: 'Marketplace', link: '/marketplace/' },
       { text: 'Docs', link: '/docs/installation/install' },
       { text: 'Blog', link: '/blog/v1-beta-release.md' },
       { text: 'Development', link: '/development/extensions/index.md' }
     ],
 
     logo: {
-      light: '/logo-light.svg',
-      dark: '/logo-dark.svg',
+      light: 'logo-test-1.svg',
+      dark: 'logo-test-2.svg',
       alt: 'Paymenter Logo'
     },
 
@@ -136,12 +148,11 @@ export default {
 
     footer: {
       message: 'Released under the <a href="https://github.com/Paymenter/Paymenter/blob/master/LICENSE">MIT License</a>.',
-      copyright: 'Copyright © 2024 Paymenter. All Rights Reserved.'
+      copyright: 'Copyright © 2025 Paymenter. All Rights Reserved.'
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Paymenter' },
-      { icon: 'discord', link: 'https://discord.gg/xB4UUT3XQg' }
+      { icon: 'github', link: 'https://github.com/Paymenter' }
     ],
   },
   head: [

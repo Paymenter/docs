@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "vitepress": "^1.2.3"
+    "@tailwindcss/vite": "^4.1.1",
+    "tailwindcss": "^4.1.1",
+    "vitepress": "^1.6.3"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
@@ -9,8 +11,7 @@
     "version": "bash version.sh"
   },
   "dependencies": {
-    "keen-slider": "^6.8.6",
-    "vitepress-plugin-back-to-top": "^1.0.1"
+    "keen-slider": "^6.8.6"
   },
   "packageManager": "pnpm@9.4.0+sha1.9217c800d4ab947a7aee520242a7b70d64fc7638"
 }
