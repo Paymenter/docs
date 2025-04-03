@@ -6,8 +6,8 @@ import "keen-slider/keen-slider.min.css";
 export default {
   setup() {
     const lightModeImages = [
-      "/landing/screenshots/light/dashboard.png",
-      "/landing/screenshots/light/products.png",
+      "/landing/screenshots/light/admin.png",
+      "/landing/screenshots/client-dashboard-2.png",
       "/landing/screenshots/light/1.png",
       "/landing/screenshots/light/2.png",
       "/landing/screenshots/light/3.png",
@@ -17,8 +17,8 @@ export default {
     ];
 
     const darkModeImages = [
-      "/landing/screenshots/dark/dashboard.png",
-      "/landing/screenshots/dark/products.png",
+      "/landing/screenshots/dark/admin.png",
+      "/landing/screenshots/client-dashboard-2.png",
       "/landing/screenshots/dark/1.png",
       "/landing/screenshots/dark/2.png",
       "/landing/screenshots/dark/3.png",
@@ -85,12 +85,13 @@ export default {
 </script>
 
 <template>
+
 <section id="slider" style="position: relative;">
   <div class="slider" style="position: relative;">
     <div
       ref="container"
       class="keen-slider"
-      style="border: 8px solid #5672cd94; border-radius: 20px;"
+      style=""
     >
       <div
         class="keen-slider__slide lazy__slide"
@@ -130,7 +131,7 @@ export default {
         viewBox="0 0 24 24"
         width="24px"
         height="24px"
-        fill="#4667ff"
+        fill="currentColor"
       >
         <path
           d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"
@@ -143,7 +144,7 @@ export default {
         viewBox="0 0 24 24"
         width="24px"
         height="24px"
-        fill="#4667ff"
+        fill="currentColor"
       >
         <path
           d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
@@ -184,7 +185,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   
   .spinner {
@@ -198,9 +199,10 @@ export default {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(70, 103, 255, 0.1);
+    background-color: var(--vp-c-bg);
     border-radius: 8px;
-    border: none;
+    border: 1px solid var(--vp-c-divider);
+    fill: var(--vp-c-text-1);
     padding: 10px;
     cursor: pointer;
     z-index: 10;
