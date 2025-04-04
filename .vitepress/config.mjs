@@ -38,7 +38,7 @@ export default {
       { text: 'Home', link: '/' },
       // { text: 'Marketplace', link: '/marketplace/' },
       { text: 'Docs', link: '/docs/installation/install' },
-      { text: 'Blog', link: '/blog/v1-beta-release.md' },
+      { text: 'Blog', link: '/blog/v1-release.md' },
       { text: 'Development', link: '/development/extensions/index.md' }
     ],
 
@@ -105,8 +105,7 @@ export default {
         {
           text: 'Index',
           items: [
-            { text: 'Release of V1-Beta', link: '/blog/v1-beta-release.md' },
-            { text: 'Release of V1-Alpha', link: '/blog/v1-alpha-release.md' },
+            { text: 'Release of V1', link: '/blog/v1-release.md' },
           ]
         }
       ],

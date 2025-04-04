@@ -9,7 +9,7 @@ markdownStyles: false
 
 heroLanding:
   notice: New
-  noticeLink: V1 Beta Release
+  noticeLink: V1 Release
   text: Open-Source Billing, Built for Hosting
   tagline: Automate subscriptions, eliminate billing chaos, and grow your hosting business – without vendor lock-ins or hidden costs.
   getStartedButton: Get Started
