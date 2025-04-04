@@ -8,7 +8,7 @@ const { frontmatter } = useData();
     <section class="flex flex-col items-center text-center p-4 md:p-0">
         <div class="mt-14">
             <div class="flex justify-center mt-8">
-                <a href="/blog/v1-beta-release">
+                <a href="/blog/v1-release">
                     <div
                         class="flex items-center gap-2 rounded-full py-2 px-4 text-[var(--vp-c-text-1)] bg-[var(--vp-c-bg-alt)] border border-[var(--vp-c-border)] text-sm mb-8">
                         <sparkling-fill class="size-5" />
