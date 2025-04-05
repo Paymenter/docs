@@ -72,7 +72,6 @@ const { frontmatter } = useData();
         " data-v-46ce5301=""></div>
             </div>
 
-
             <div class="flex flex-col p-6 items-center">
                 <div class="flex flex-col gap-6 lg:max-w-2xl items-center text-center">
                     <div class="flex items-center gap-3 text-[#9ca3af]">
@@ -89,7 +88,7 @@ const { frontmatter } = useData();
                         to service integrations, build the perfect solution for your business.
                     </span>
                     <div class="flex gap-4 justify-center mt-4">
-                        <a href="https://market.paymenter.org/" class="btn btn-primary svg-left" style="color:white;">
+                        <a href="https://builtbybit.com/resources/categories/paymenter.76/" class="btn btn-primary svg-left" style="color:white;">
                             {{ frontmatter.featuresLanding.extensible.marketplaceButton }}
                             <arrow-right-up-box-fill class="size-5" />
                         </a>
@@ -234,13 +233,39 @@ const { frontmatter } = useData();
             </div>
         </section>
 
-        <section class="py-12 relative">
 
-
-
+        <section class="py-12 relative ">
 
             <div
-                class="absolute inset-0 z-0 flex items-center justify-center transform-3d rotate-x-55 rotate-y-0 -rotate-z-45 opacity-40 lg:opacity-100">
+                class="mask-b-from-50% mask-radial-[50%_90%] mask-radial-from-80% absolute inset-0 z-0 flex items-center justify-center transform-3d rotate-x-55 rotate-y-0 -rotate-z-45 ">
+                <div
+                    class="![animation-duration:4s] ![animation-iteration-count:infinite] animate-rotate-border transition-all duration-500 ease-out transform-3d rounded-3xl bg-conic/[from_var(--border-angle)] from-[var(--vp-c-border)] via-[var(--vp-c-brand-1)] to-[var(--vp-c-border)] from-80% via-90% to-100% p-px shadow-2xl shadow-[#4060ff]/20">
+                    <div class="bg-[var(--vp-c-bg)] p-20 rounded-3xl">
+
+                        <div
+                            class="![animation-duration:3s] ![animation-iteration-count:infinite] animate-rotate-border transition-all duration-500 ease-out transform-3d rounded-3xl bg-conic/[from_var(--border-angle)] from-[var(--vp-c-border)] via-[var(--vp-c-brand-1)] to-[var(--vp-c-border)] from-80% via-90% to-100% p-px">
+
+                            <div class="bg-[var(--vp-c-bg)] p-20 rounded-3xl">
+
+                                <div
+                                    class="![animation-duration:2s] ![animation-iteration-count:infinite] animate-rotate-border transition-all duration-500 ease-out transform-3d rounded-3xl bg-conic/[from_var(--border-angle)] from-[var(--vp-c-border)] via-[var(--vp-c-brand-1)] to-[var(--vp-c-border)] from-80% via-90% to-100% p-px">
+
+                                    <div class="bg-[var(--vp-c-bg)] p-20 rounded-3xl">
+                                        <div
+                                            class="p-10 rounded-3xl bg-[#4060ff]/20 border border-[#4060ff] shadow-2xl shadow-[#4060ff]/20 text-[var(--vp-c-text-1)]/50">
+                                            <cloud-fill class="size-24" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div
+                class="mask-b-from-50% mask-radial-[50%_90%] mask-radial-from-80% absolute inset-0 z-0 flex items-center justify-center transform-3d rotate-x-55 rotate-y-0 -rotate-z-45 opacity-40 lg:opacity-100">
                 <div
                     class="border border-[var(--vp-c-brand-1)] border-dashed p-24 rounded-3xl shadow-xl shadow-[#4060ff]/20">
                     <div class="border border-[var(--vp-c-text-2)] border-dashed p-20 rounded-3xl ">
@@ -256,6 +281,9 @@ const { frontmatter } = useData();
                     </div>
                 </div>
             </div>
+
+            -->
+            <!--
             <div style="
           position: absolute;
           top: 0;
@@ -265,9 +293,9 @@ const { frontmatter } = useData();
           height: 200px;
           pointer-events: none;">
             </div>
+        -->
 
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 p-6 mb-12 lg:mt-60 mt-20 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 p-6 mb-12 lg:mt-44 mt-20 relative z-10">
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-3 text-[var(--vp-c-text-2)]">
                         <cloud-fill class="size-5" />
@@ -298,11 +326,24 @@ const { frontmatter } = useData();
                     </div>
                 </div>
             </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 p-6">
+                <FeatureItem icon="translate-2" title="Multi-language"
+                    description="Support multiple languages seamlessly with built-in translation." />
+                <FeatureItem icon="currency-fill" title="Multi-currency"
+                    description="Accept payments with automatic currency conversion and rates." />
+                <FeatureItem icon="customer-service-fill" title="Support System"
+                    description="Manage customer issues with an integrated ticketing solution." />
+                <FeatureItem icon="megaphone-fill" title="Announcements"
+                    description="Keep your customers informed with a built-in blog system." />
+                <FeatureItem icon="hand-coin-fill" title="Affiliates"
+                    description="Grow your business with a powerful affiliate tracking and reward system." />
+            </div>
         </section>
 
-
+        <!--
         <section class="py-12">
-            <!--
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 p-6 mb-12">
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-3">
@@ -326,22 +367,9 @@ const { frontmatter } = useData();
                     </span>
                 </div>
             </div>
-            -->
-
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 p-6">
-                <FeatureItem icon="translate-2" title="Multi-language"
-                    description="Support multiple languages seamlessly with built-in translation." />
-                <FeatureItem icon="currency-fill" title="Multi-currency"
-                    description="Accept payments with automatic currency conversion and rates." />
-                <FeatureItem icon="customer-service-fill" title="Support System"
-                    description="Manage customer issues with an integrated ticketing solution." />
-                <FeatureItem icon="megaphone-fill" title="Announcements"
-                    description="Keep your customers informed with a built-in blog system." />
-                <FeatureItem icon="hand-coin-fill" title="Affiliates"
-                    description="Grow your business with a powerful affiliate tracking and reward system." />
-            </div>
+            
         </section>
-
+-->
         <section class="py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 p-6 mb-12">
                 <div class="flex flex-col gap-4">
@@ -352,7 +380,7 @@ const { frontmatter } = useData();
                         </span>
                     </div>
                     <div class="text-3xl font-semibold ">
-                        Join the growing community
+                        Connect With Our Community
                     </div>
                     <span class="flex justify-center font-normal text-[var(--vp-c-text-2)]">
                         Connect with thousands of hosting providers and developers. Share insights, get support, and
