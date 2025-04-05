@@ -395,7 +395,7 @@ const { frontmatter } = useData();
                 </div>
                 <div class="flex flex-col justify-center lg:items-center items-start">
                     <div class="flex gap-4 justify-center">
-                        <a href="https://market.paymenter.org/" class="btn btn-secondary svg-right">
+                        <a href="https://discord.gg/xB4UUT3XQg" class="btn btn-secondary svg-right">
                             <discord-fill class="size-5 fill-[#5865F2]" />
                             Discord
                         </a>
