@@ -36,8 +36,8 @@ export default {
 
     nav: [
       { text: 'Home', link: '/' },
-      // { text: 'Marketplace', link: '/marketplace/' },
       { text: 'Docs', link: '/docs/installation/install' },
+      { text: 'Marketplace', link: 'https://builtbybit.com/resources/categories/paymenter.76/' },
       { text: 'Blog', link: '/blog/v1-release.md' },
       { text: 'Development', link: '/development/extensions/index.md' }
     ],
