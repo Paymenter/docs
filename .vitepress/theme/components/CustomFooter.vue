@@ -135,7 +135,7 @@
             </li>
 
             <li class="transition text-[var(--vp-c-text-2)] hover:text-[var(--vp-c-text-1)]">
-              <a href="#" rel="noreferrer" target="_blank">
+              <a href="https://github.com/Paymenter/Paymenter" rel="noreferrer" target="_blank">
                 <span class="sr-only">Github</span>
                 <github-fill class="size-6" />
               </a>
