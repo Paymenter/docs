@@ -58,7 +58,7 @@ const { frontmatter } = useData();
     <section class="flex flex-col items-center text-center p-4 md:p-0 relative z-10">
         <div class="mt-14">
             <div class="flex justify-center mt-8">
-                <a href="/blog/v1-release.md">
+                <a href="/blog/v1-release">
                     <div
                         class="flex items-center gap-2 rounded-full py-2 px-4 text-[var(--vp-c-text-1)] bg-[var(--vp-c-bg-alt)]/50 border border-[var(--vp-c-border)] text-sm mb-8">
                         <sparkling-fill class="size-5" />
@@ -67,7 +67,7 @@ const { frontmatter } = useData();
                     </div>
                 </a>
                 <!--
-                <a href="/blog/v1-release.md" class="mb-8">
+                <a href="/blog/v1-release" class="mb-8">
                     <div
                         class="![animation-duration:4s] ![animation-iteration-count:infinite] animate-rotate-border transition-all duration-500 ease-out transform-3d rounded-3xl bg-conic/[from_var(--border-angle)] from-[var(--vp-c-border)]/20 via-[#37ad9d] to-[#37ad9d] from-80% via-90% to-100% p-px">
                         <div

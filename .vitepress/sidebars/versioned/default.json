@@ -45,7 +45,7 @@
       {
         "text": "Index",
         "items": [
-          { "text": "Release of V1", "link": "/blog/v1-release.md" }
+          { "text": "V1 Release", "link": "/blog/v1-release" }
         ]
       }
     ],
