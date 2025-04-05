@@ -66,11 +66,11 @@ featuresLanding:
     desc: Create your own themes, modify and add what you need, create your custom experience for your customers.
 
 supportbanner:
-  text: Support us to keep going
-  tagline: Your support helps us continue developing and enhancing Paymenter. Every contribution makes a difference!
+  text: Support Us to Keep Going
+  tagline: Your support enables us to keep developing and improving Paymenter for everyone. Each GitHub star and sponsorship helps us build the future of open-source billing.
   sponsorButton: Sponsor
   starButton: Star us on GitHub
-  howToContribute: How to contribute?
+  howToContribute: How to Contribute?
 ---
 
 <script setup>
@@ -81,9 +81,12 @@ supportbanner:
   import CustomFooter from '@theme/components/CustomFooter.vue'
 </script>
 
+<div class="w-full">
+  <Hero />
+  <Slider />
+</div>
+
 <div class="container mx-auto max-w-(--vp-layout-max-width)">
-    <Hero />
-    <Slider />
     <Features />
     <SupportBanner />
 </div>
