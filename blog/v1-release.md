@@ -19,7 +19,7 @@ We've also moved our marketplace to [BuiltByBit](https://builtbybit.com/resource
 
 ## How to get started?
 
-To install this brand new version, you can follow the instructions in the [installation guide](/docs/installation).
+To install this brand new version, you can follow the instructions in the [installation guide](/docs/installation/install).
 
 This new version requires at least PHP 8.3 and MySQL 10.11.
 
