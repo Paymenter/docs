@@ -81,7 +81,7 @@ supportbanner:
   import CustomFooter from '@theme/components/CustomFooter.vue'
 </script>
 
-<div class="w-full">
+<div class="w-full overflow-hidden h-full">
   <Hero />
   <Slider />
 </div>
