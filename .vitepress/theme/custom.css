@@ -9,6 +9,23 @@
 @source '../../blog/**/*.md';
 @source '../docs/**/*.md';
 
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@theme{
+
+  --animate-rotate-border: border-rotate 3s linear infinite;
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+}
+
 /* /////////////////// */
 /* VitePress Overrides */
 /* /////////////////// */
@@ -217,8 +234,8 @@ header .divider {
    * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg: #f1f2ff;
+  --vp-c-bg-alt: #f1f2ff;
   --vp-c-bg-elv: #ffffff;
   --vp-c-bg-soft: #f6f6f7;
 }
@@ -266,15 +283,15 @@ header .divider {
    * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-text-1: rgba(60, 60, 67);
+  --vp-c-text-1: rgba(15, 12, 22, 0.9);
   --vp-c-text-2: rgba(60, 60, 67, 0.78);
   --vp-c-text-3: rgba(60, 60, 67, 0.56);
 }
 
 .dark {
-  --vp-c-text-1: rgba(237, 237, 237, 1);
-  --vp-c-text-2: rgba(156, 163, 175, 1);
-  --vp-c-text-3: rgba(156, 163, 175, 0.8);
+  --vp-c-text-1: rgb(255, 255, 255);
+  --vp-c-text-2: rgb(186, 190, 196);
+  --vp-c-text-3: rgba(156, 163, 175, 0.9);
 }
 
 /**
