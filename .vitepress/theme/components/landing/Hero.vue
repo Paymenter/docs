@@ -7,7 +7,7 @@ const { frontmatter } = useData();
 <template>
 
 
-    <div class="w-full relative z-0 bg-black">
+    <div class="w-full relative z-0 bg-black overflow-hidden">
 
         <div
             class="mask-x-from-70% mask-x-to-90% mask-y-from-70% mask-y-to-90% -rotate-45 bg-[var(--vp-c-brand-1)]/10 h-64 w-[1200px] absolute top-28 blur-3xl">
