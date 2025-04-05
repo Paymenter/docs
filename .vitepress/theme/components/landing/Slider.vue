@@ -6,25 +6,17 @@ import "keen-slider/keen-slider.min.css";
 export default {
   setup() {
     const lightModeImages = [
-      "/landing/screenshots/light/admin.png",
-      "/landing/screenshots/client-dashboard-2.png",
-      "/landing/screenshots/light/1.png",
-      "/landing/screenshots/light/2.png",
-      "/landing/screenshots/light/3.png",
-      "/landing/screenshots/light/4.png",
-      "/landing/screenshots/light/5.png",
-      "/landing/screenshots/light/6.png",
+      "/landing/screenshots/light/dashboard.webp",
+      "/landing/screenshots/light/admin-1.webp",
+      "/landing/screenshots/light/admin-2.webp",
+      "/landing/screenshots/light/admin-3.webp",
     ];
 
     const darkModeImages = [
-      "/landing/screenshots/dark/admin.png",
-      "/landing/screenshots/client-dashboard-2.png",
-      "/landing/screenshots/dark/1.png",
-      "/landing/screenshots/dark/2.png",
-      "/landing/screenshots/dark/3.png",
-      "/landing/screenshots/dark/4.png",
-      "/landing/screenshots/dark/5.png",
-      "/landing/screenshots/dark/6.png",
+      "/landing/screenshots/dark/dashboard.webp",
+      "/landing/screenshots/dark/admin-1.webp",
+      "/landing/screenshots/dark/admin-2.webp",
+      "/landing/screenshots/dark/admin-3.webp",
     ];
 
     const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="; // transparent bg
@@ -86,8 +78,8 @@ export default {
 
 <template>
 
-<section id="slider" style="position: relative;">
-  <div class="slider" style="position: relative;">
+<section id="slider" class="relative -mt-24">
+  <div class="slider relative">
     <div
       ref="container"
       class="keen-slider"
@@ -98,7 +90,7 @@ export default {
         v-for="(src, idx) in currentImages"
         :key="idx"
       >
-        <div class="image-container">
+        <div class="image-container mx-auto max-w-(--vp-layout-max-width)">
           <img :src="loaded[idx] ? src : placeholder" alt="Paymenter" />
         </div>
         <div v-if="!loaded[idx]" class="spinner">
