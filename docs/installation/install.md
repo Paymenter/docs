@@ -75,7 +75,7 @@ Downloading the latest release to the directory
 
 ```bash
 cd /var/www/paymenter
-curl -Lo paymenter.tar.gz https://api.paymenter.org/beta
+curl -Lo paymenter.tar.gz https://github.com/paymenter/paymenter/releases/latest/download/paymenter.tar.gz
 ```
 
 Unzip the code

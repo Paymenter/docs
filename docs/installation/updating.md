@@ -7,7 +7,7 @@ Run the following command in your terminal:
 
 ```bash
 cd /var/www/paymenter
-php artisan app:upgrade --url=https://api.paymenter.org/beta
+php artisan app:upgrade
 ```
 
 ## Manual update
@@ -23,7 +23,7 @@ php artisan down
 ### Download the latest version
 
 ```bash
-curl -L https://api.paymenter.org/beta | tar -xz
+curl -L https://github.com/paymenter/paymenter/releases/latest/download/paymenter.tar.gz | tar -xz
 ```
 
 ### Update the dependencies
