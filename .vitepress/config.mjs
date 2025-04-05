@@ -43,8 +43,8 @@ export default {
     ],
 
     logo: {
-      light: 'logo-test-1.svg',
-      dark: 'logo-test-2.svg',
+      light: '/logo-test-1.svg',
+      dark: '/logo-test-2.svg',
       alt: 'Paymenter Logo'
     },
 
