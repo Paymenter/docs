@@ -1,4 +1,4 @@
-baseURL = 'https://paymenter.org/'
+baseURL = 'https://v0.paymenter.org/'
 languageCode = 'en-us'
 title = 'Paymenter'
 
