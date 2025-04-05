@@ -225,7 +225,7 @@ const { frontmatter } = useData();
             grayscale
             hover:grayscale-0
             hover:opacity-100
-            " href="/docs/contribute/docs-translations" target="_blank">
+            " href="https://github.com/sponsors/Paymenter" target="_blank">
                     Become a sponsor
                     <arrow-right-fill class="size-5" />
                 </a>
