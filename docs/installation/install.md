@@ -90,6 +90,14 @@ Granting the right permissions to the folder:
 chmod -R 755 storage/* bootstrap/cache/
 ```
 
+## Downloading packages
+
+Run this command to install the composer packages
+
+```bash
+composer install --no-dev --optimize-autoloader
+```
+
 ## Creating database
 
 > [!IMPORTANT]
@@ -106,14 +114,6 @@ GRANT ALL PRIVILEGES ON paymenter.* TO 'paymenter'@'127.0.0.1' WITH GRANT OPTION
 
 quit
 
-```
-
-## Downloading packages
-
-Run this command to install the composer packages
-
-```bash
-composer install --no-dev --optimize-autoloader
 ```
 
 ## Setting up .env
