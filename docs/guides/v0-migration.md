@@ -3,10 +3,6 @@
 This guide will help you migrate from Paymenter v0.x to v1.0-beta.
 
 ::: warning
-This is an beta release, BUGS are expected. Please make sure to backup your data before starting the migration process.
-:::
-
-::: warning
 This migrator might not work as expected, please make sure to backup your data before starting the migration process.
 :::
 

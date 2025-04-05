@@ -1,9 +1,5 @@
 # Preparation
 
-::: warning
-This is an beta release, BUGS are expected.
-:::
-
 ## Supported operating systems
 
 | Operating System | Version | Supported |
