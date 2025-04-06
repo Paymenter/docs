@@ -34,17 +34,15 @@ use App\Models\Product;
 public function getCheckoutConfig(Product $product)
 {
     return [
-        'fields' => [
-            [
-                'name' => 'location',
-                'label' => 'Location',
-                'type' => 'select',
-                'required' => true,
-                'options' => [
-                    '1' => 'Location 1',
-                    '2' => 'Location 2',
-                ],
-            ]
+        [
+            'name' => 'location',
+            'label' => 'Location',
+            'type' => 'select',
+            'required' => true,
+            'options' => [
+                '1' => 'Location 1',
+                '2' => 'Location 2',
+            ],
         ]
     ];
 }
