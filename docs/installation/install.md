@@ -88,6 +88,8 @@ Granting the right permissions to the folder:
 
 ```bash
 chmod -R 755 storage/* bootstrap/cache/
+chown -R www-data:www-data /var/www/paymenter
+
 ```
 
 ## Downloading packages
