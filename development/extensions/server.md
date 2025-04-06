@@ -29,6 +29,8 @@ public function getProductConfig($values = [])
 Shown to the user when they are checking out.
 
 ```php
+use App\Models\Product;
+
 public function getCheckoutConfig(Product $product)
 {
     return [
