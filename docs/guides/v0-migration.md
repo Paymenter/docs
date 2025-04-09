@@ -30,6 +30,10 @@ rm -rf /var/www/paymenter
 
 ## Step 2: Follow the installation guide
 
+::: warning
+Because Paymenter uses a newer PHP version make sure to remove the old PHP version using `apt remove php8.2*`.
+:::
+
 To install the release, you can follow the instructions in the [installation guide](/docs/installation/install.md). 
 
 But instead the `Setting up database` section run:
