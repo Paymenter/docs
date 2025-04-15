@@ -1,6 +1,11 @@
 
 # How to update
 
+::: warning
+If your current version is below 1.0.0, please follow the [migration guide](/docs/guides/v0-migration.md) first.
+:::
+
+
 ## Automatic update
 
 Run the following command in your terminal:
