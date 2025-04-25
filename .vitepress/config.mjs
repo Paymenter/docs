@@ -37,9 +37,9 @@ export default {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/docs/installation/install' },
-      { text: 'Marketplace', link: 'https://builtbybit.com/resources/categories/paymenter.76/' },
       { text: 'Blog', link: '/blog/v1-release' },
-      { text: 'Development', link: '/development/extensions/index.md' }
+      { text: 'Development', link: '/development/extensions/index.md' },
+      { text: 'Marketplace', link: 'https://builtbybit.com/resources/categories/paymenter.76/' }
     ],
 
     logo: {
@@ -72,6 +72,7 @@ export default {
           collapsed: false,
           items: [
             { text: 'Convoy', link: '/docs/extensions/convoy' },
+            { text: 'CPanel', link: '/docs/extensions/cpanel' },
             { text: 'Enhance', link: '/docs/extensions/enhance' },
             { text: 'Mollie', link: '/docs/extensions/mollie' },
             { text: 'PayPal', link: '/docs/extensions/paypal' },

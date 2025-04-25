@@ -4,7 +4,7 @@
 
 ## Create a API key in Convoy
 
-Create a api key in the Convoy panel. Give it a name like "Paymenter" and press the `Create` button.
+Create an API key in the Convoy panel. Give it a name like "Paymenter" and press the `Create` button.
 
 ![image](/assets/images/extensions/convoy/api_key_creation.png)
 
