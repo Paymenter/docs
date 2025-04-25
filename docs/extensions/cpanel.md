@@ -6,7 +6,6 @@ Create an API key in the cPanel panel. Give it a name like "Paymenter" and fill 
 
 - List Packages | list-pkgs
 - List Accounts | list-accts
-- View Account Bandwidth Usage | show-bandwidth
 - Create Accounts | create-acct
 - Terminate Accounts | kill-acct
 - Suspend/Unsuspend Accounts | suspend-acct
