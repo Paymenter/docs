@@ -24,7 +24,7 @@ Copy the key and save it somewhere safe, you will need it later.
 
 Create a new server in the Paymenter admin panel and select cPanel as the server type. Fill in the following fields:
 - Hostname: The hostname of your WHM server (e.g. `whm.example.com:2087`)
-- Username: The username of the WHM account you created the API key with (e.g. `admin`)
+- Username: The username of the WHM account you created the API key with (e.g. `root`)
 - API Key: The API key you created in the previous step
 
 ![image](/assets/images/extensions/cpanel/server_settings.png)
