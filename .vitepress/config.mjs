@@ -77,6 +77,7 @@ export default {
             { text: 'Mollie', link: '/docs/extensions/mollie' },
             { text: 'PayPal', link: '/docs/extensions/paypal' },
             { text: 'Pterodactyl', link: '/docs/extensions/pterodactyl' },
+            { text: 'Proxmox', link: '/docs/extensions/proxmox' },
             { text: 'Stripe', link: '/docs/extensions/stripe' },
             { text: 'VirtFusion', link: '/docs/extensions/virtfusion' },
             { text: 'Virtualizor', link: '/docs/extensions/virtualizor' }
