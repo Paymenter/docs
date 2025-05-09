@@ -128,7 +128,10 @@ export default {
         },
         {
           text: 'Themes',
-          items: [{ text: 'Create a Theme', link: '/development/theme.md' }]
+          items: [
+            { text: 'Create a Theme', link: '/development/theme/index.md' },
+            { text: 'Building assets', link: '/development/theme/assets.md' },
+          ]
         },
         {
           text: 'Events',
