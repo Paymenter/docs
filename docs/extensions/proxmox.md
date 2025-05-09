@@ -3,6 +3,7 @@
 
 :::warning
 This extension is in beta and may not work as expected. Please report any issues you encounter.
+This extension only supports QEMU/KVM virtualization at the moment.
 :::
 
 :::info
