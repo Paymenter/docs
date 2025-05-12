@@ -37,7 +37,7 @@ export default {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/docs/installation/install' },
-      { text: 'Blog', link: '/blog/v1-release' },
+      { text: 'Blog', link: '/blog/v1.1-release' },
       { text: 'Development', link: '/development/extensions/index.md' },
       { text: 'Marketplace', link: 'https://builtbybit.com/resources/categories/paymenter.76/' }
     ],
@@ -86,6 +86,7 @@ export default {
         {
           text: 'Guides',
           items: [
+            { text: 'Docker', link: '/docs/guides/docker.md' },
             { text: 'Single Sign On', link: '/docs/guides/OAuth.md' },
             {
               text: 'Configurable Options',
@@ -108,6 +109,7 @@ export default {
         {
           text: 'Index',
           items: [
+            { text: 'V1.1 Release', link: '/blog/v1.1-release' },
             { text: 'V1 Release', link: '/blog/v1-release' },
           ]
         }
