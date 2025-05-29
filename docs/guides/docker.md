@@ -24,6 +24,10 @@ docker compose up -d --force-recreate
 
 ## Configuring Paymenter
 
+:::info
+**Note:** If you're running the application behind a proxy and the trusted proxies are not properly configured, file uploads will fail. You need to add your proxy to the list of trusted proxies. This setting can be found under **Admin → Settings → Security**. You can either specify a single IP address (`172.23.0.10`) or a subnet (`172.23.0.0/16`).
+:::
+
 Once the docker containers are up and running, you should configure the URL and the initial admin user.
 
 You can do this by running the following command:
