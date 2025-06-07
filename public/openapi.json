@@ -2205,27 +2205,6 @@
                     }
                 }
             }
-        },
-        "/oauth/token": {
-            "post": {
-                "operationId": "token",
-                "summary": "Authorize a client to access the user's account",
-                "tags": [
-                    "AccessToken"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
     },
     "components": {
