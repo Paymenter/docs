@@ -388,8 +388,8 @@ const { frontmatter } = useData();
                         journey.
                     </span>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-                        <FeatureItem icon="download-fill" title="+18,000" description="Total Software Downloads" />
-                        <FeatureItem icon="github-fill" title="+810" description="GitHub Stars and Growing" />
+                        <FeatureItem icon="download-fill" title="+20,000" description="Total Software Downloads" />
+                        <FeatureItem icon="github-fill" title="+850" description="GitHub Stars and Growing" />
                         <FeatureItem icon="user-community-fill" title="+2,300" description="Active Community Members" />
                     </div>
                 </div>

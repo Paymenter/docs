@@ -31,7 +31,7 @@ Shown to the user when they are checking out.
 ```php
 use App\Models\Product;
 
-public function getCheckoutConfig(Product $product)
+public function getCheckoutConfig(Product $product, $values = [])
 {
     return [
         [
@@ -48,9 +48,9 @@ public function getCheckoutConfig(Product $product)
 }
 ```
 
-## `createServer`, `suspendServer`, `unsuspendServer`, `terminateServer`
+## `createServer`, `suspendServer`, `unsuspendServer`, `terminateServer`, `upgradeServer`
 
-These hooks are used to create, suspend, unsuspend and terminate the server.
+These hooks are used to create, suspend, unsuspend, terminate and upgrade the server.
 
 Have 3 parameters:
 
@@ -106,6 +106,7 @@ public function getActions(Service $service)
             'name' => 'console',
             'label' => 'Go to console',
             'type' => 'view',
+            'function' => 'getView', // If this function is not provided, we will use the function `getView` to render the view.
         ],
     ];
 }
