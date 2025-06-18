@@ -71,13 +71,14 @@ export default {
           text: 'Extension Guides',
           collapsed: false,
           items: [
-            { text: 'Convoy', link: '/docs/extensions/convoy' },
             { text: 'CPanel', link: '/docs/extensions/cpanel' },
+            { text: 'Convoy', link: '/docs/extensions/convoy' },
             { text: 'Enhance', link: '/docs/extensions/enhance' },
             { text: 'Mollie', link: '/docs/extensions/mollie' },
             { text: 'PayPal', link: '/docs/extensions/paypal' },
-            { text: 'Pterodactyl', link: '/docs/extensions/pterodactyl' },
+            { text: 'Plesk', link: '/docs/extensions/plesk' },
             { text: 'Proxmox', link: '/docs/extensions/proxmox' },
+            { text: 'Pterodactyl', link: '/docs/extensions/pterodactyl' },
             { text: 'Stripe', link: '/docs/extensions/stripe' },
             { text: 'VirtFusion', link: '/docs/extensions/virtfusion' },
             { text: 'Virtualizor', link: '/docs/extensions/virtualizor' }
