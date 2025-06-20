@@ -14,10 +14,10 @@
             "name": "Users"
         },
         {
-            "name": "Services"
+            "name": "Orders"
         },
         {
-            "name": "Orders"
+            "name": "Services"
         },
         {
             "name": "Invoices"
