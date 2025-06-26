@@ -37,7 +37,7 @@ export default {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/docs/installation/install' },
-      { text: 'Blog', link: '/blog/v1.1-release' },
+      { text: 'API', link: '/api/' },
       { text: 'Development', link: '/development/extensions/index.md' },
       { text: 'Marketplace', link: 'https://builtbybit.com/resources/categories/paymenter.76/' }
     ],
@@ -113,6 +113,12 @@ export default {
             { text: 'V1.1 Release', link: '/blog/v1.1-release' },
             { text: 'V1 Release', link: '/blog/v1-release' },
           ]
+        }
+      ],
+      '/api/': [
+        {
+          text: 'API Reference',
+          link: '/api/'
         }
       ],
       '/development/': [
