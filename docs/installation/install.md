@@ -1,4 +1,4 @@
-# Preparation
+# Installation
 
 ## Supported operating systems
 
