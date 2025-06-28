@@ -1,7 +1,5 @@
 # Installation
 
-Can't be bothered to set this up yourself? Skip the hassle and try our fully managed, cloud-hosted version at https://paas.paymenter.org
-
 ## Supported operating systems
 
 | Operating System | Version | Supported |
@@ -14,6 +12,10 @@ Can't be bothered to set this up yourself? Skip the hassle and try our fully man
 | **Debian**       | 11      |    ✅     |
 |                  | 10      |    ✅     |
 | **Windows**      | Any     |    ❌     |
+
+
+>[!TIP]
+> Can't be bothered to set this up yourself? Skip the hassle and try our fully managed, cloud-hosted version at https://paas.paymenter.org
 
 ## Required Dependencies
 
