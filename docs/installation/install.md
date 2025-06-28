@@ -13,6 +13,10 @@
 |                  | 10      |    ✅     |
 | **Windows**      | Any     |    ❌     |
 
+
+>[!TIP]
+> Can't be bothered to set this up yourself? Skip the hassle and try our fully managed, cloud-hosted version at https://paas.paymenter.org
+
 ## Required Dependencies
 
 First of all check if you have all of the dependencies. If not install them with the following commands:
