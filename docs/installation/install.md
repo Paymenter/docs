@@ -1,5 +1,7 @@
 # Installation
 
+Can't be bothered to set this up yourself? Skip the hassle and try our fully managed, cloud-hosted version at https://paas.paymenter.org
+
 ## Supported operating systems
 
 | Operating System | Version | Supported |
