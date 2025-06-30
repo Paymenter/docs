@@ -55,3 +55,9 @@ Or if you also want to include the newly created user and password:
 - Password: {{ $vps['password'] }}
 @endisset
 ```
+
+### Config Options
+
+Following values can be used as `Environment Variables` in the config options:
+
+`planname`, `virt`, `os`, `hostname`, `ips6`, `ips6_subnet`, `ips`, `ram`, `swap`, `bandwidth`, `network_speed`, `cpu`, `cores`, `cpu_percent`, `vnc`, `osreinstall_limit`, `space`
