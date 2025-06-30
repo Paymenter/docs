@@ -38,7 +38,7 @@
     "paths": {
         "/v1/admin/users": {
             "get": {
-                "operationId": "v1.adminusers.index",
+                "operationId": "v1.admin.users.index",
                 "summary": "List Users",
                 "tags": [
                     "Users"
@@ -230,7 +230,7 @@
                 }
             },
             "post": {
-                "operationId": "v1.adminusers.store",
+                "operationId": "v1.admin.users.store",
                 "summary": "Create a new user",
                 "tags": [
                     "Users"
@@ -275,7 +275,7 @@
         },
         "/v1/admin/users/{user}": {
             "get": {
-                "operationId": "v1.adminusers.show",
+                "operationId": "v1.admin.users.show",
                 "summary": "Show a specific user",
                 "tags": [
                     "Users"
@@ -330,7 +330,7 @@
                 }
             },
             "put": {
-                "operationId": "v1.adminusers.update",
+                "operationId": "v1.admin.users.update",
                 "summary": "Update a specific user",
                 "tags": [
                     "Users"
@@ -387,7 +387,7 @@
                 }
             },
             "delete": {
-                "operationId": "v1.adminusers.destroy",
+                "operationId": "v1.admin.users.destroy",
                 "summary": "Delete a specific user",
                 "tags": [
                     "Users"
@@ -421,7 +421,7 @@
         },
         "/v1/admin/orders": {
             "get": {
-                "operationId": "v1.adminorders.index",
+                "operationId": "v1.admin.orders.index",
                 "summary": "List Orders",
                 "tags": [
                     "Orders"
@@ -584,7 +584,7 @@
                 }
             },
             "post": {
-                "operationId": "v1.adminorders.store",
+                "operationId": "v1.admin.orders.store",
                 "summary": "Create a new order",
                 "tags": [
                     "Orders"
@@ -629,7 +629,7 @@
         },
         "/v1/admin/orders/{order}": {
             "get": {
-                "operationId": "v1.adminorders.show",
+                "operationId": "v1.admin.orders.show",
                 "summary": "Show a specific order",
                 "tags": [
                     "Orders"
@@ -684,7 +684,7 @@
                 }
             },
             "put": {
-                "operationId": "v1.adminorders.update",
+                "operationId": "v1.admin.orders.update",
                 "summary": "Update a specific order",
                 "tags": [
                     "Orders"
@@ -741,7 +741,7 @@
                 }
             },
             "delete": {
-                "operationId": "v1.adminorders.destroy",
+                "operationId": "v1.admin.orders.destroy",
                 "summary": "Delete a specific order",
                 "tags": [
                     "Orders"
@@ -775,7 +775,7 @@
         },
         "/v1/admin/services": {
             "get": {
-                "operationId": "v1.adminservices.index",
+                "operationId": "v1.admin.services.index",
                 "summary": "List Services",
                 "tags": [
                     "Services"
@@ -978,7 +978,7 @@
                 }
             },
             "post": {
-                "operationId": "v1.adminservices.store",
+                "operationId": "v1.admin.services.store",
                 "summary": "Create a new service",
                 "tags": [
                     "Services"
@@ -1023,7 +1023,7 @@
         },
         "/v1/admin/services/{service}": {
             "get": {
-                "operationId": "v1.adminservices.show",
+                "operationId": "v1.admin.services.show",
                 "summary": "Show a specific service",
                 "tags": [
                     "Services"
@@ -1078,7 +1078,7 @@
                 }
             },
             "put": {
-                "operationId": "v1.adminservices.update",
+                "operationId": "v1.admin.services.update",
                 "summary": "Update a specific service",
                 "tags": [
                     "Services"
@@ -1135,7 +1135,7 @@
                 }
             },
             "delete": {
-                "operationId": "v1.adminservices.destroy",
+                "operationId": "v1.admin.services.destroy",
                 "summary": "Delete a specific service",
                 "tags": [
                     "Services"
@@ -1169,7 +1169,7 @@
         },
         "/v1/admin/invoices": {
             "get": {
-                "operationId": "v1.admininvoices.index",
+                "operationId": "v1.admin.invoices.index",
                 "summary": "List Invoices",
                 "tags": [
                     "Invoices"
@@ -1353,7 +1353,7 @@
                 }
             },
             "post": {
-                "operationId": "v1.admininvoices.store",
+                "operationId": "v1.admin.invoices.store",
                 "summary": "Create a new invoice",
                 "tags": [
                     "Invoices"
@@ -1398,7 +1398,7 @@
         },
         "/v1/admin/invoices/{invoice}": {
             "get": {
-                "operationId": "v1.admininvoices.show",
+                "operationId": "v1.admin.invoices.show",
                 "summary": "Show a specific invoice",
                 "tags": [
                     "Invoices"
@@ -1453,7 +1453,7 @@
                 }
             },
             "put": {
-                "operationId": "v1.admininvoices.update",
+                "operationId": "v1.admin.invoices.update",
                 "summary": "Update a specific invoice",
                 "tags": [
                     "Invoices"
@@ -1510,7 +1510,7 @@
                 }
             },
             "delete": {
-                "operationId": "v1.admininvoices.destroy",
+                "operationId": "v1.admin.invoices.destroy",
                 "summary": "Delete a specific invoice",
                 "tags": [
                     "Invoices"
@@ -1544,7 +1544,7 @@
         },
         "/v1/admin/tickets": {
             "get": {
-                "operationId": "v1.admintickets.index",
+                "operationId": "v1.admin.tickets.index",
                 "summary": "List Tickets",
                 "tags": [
                     "Tickets"
@@ -1714,7 +1714,7 @@
                 }
             },
             "post": {
-                "operationId": "v1.admintickets.store",
+                "operationId": "v1.admin.tickets.store",
                 "summary": "Create a new ticket",
                 "tags": [
                     "Tickets"
@@ -1759,7 +1759,7 @@
         },
         "/v1/admin/tickets/{ticket}": {
             "get": {
-                "operationId": "v1.admintickets.show",
+                "operationId": "v1.admin.tickets.show",
                 "summary": "Show a specific ticket",
                 "tags": [
                     "Tickets"
@@ -1814,7 +1814,7 @@
                 }
             },
             "put": {
-                "operationId": "v1.admintickets.update",
+                "operationId": "v1.admin.tickets.update",
                 "summary": "Update a specific ticket",
                 "tags": [
                     "Tickets"
@@ -1871,7 +1871,7 @@
                 }
             },
             "delete": {
-                "operationId": "v1.admintickets.destroy",
+                "operationId": "v1.admin.tickets.destroy",
                 "summary": "Delete a specific ticket",
                 "tags": [
                     "Tickets"
@@ -1905,7 +1905,7 @@
         },
         "/v1/admin/ticket-messages": {
             "get": {
-                "operationId": "v1.adminticket-messages.index",
+                "operationId": "v1.admin.ticket-messages.index",
                 "summary": "List TicketMessages",
                 "tags": [
                     "Ticket Messages"
@@ -2075,7 +2075,7 @@
                 }
             },
             "post": {
-                "operationId": "v1.adminticket-messages.store",
+                "operationId": "v1.admin.ticket-messages.store",
                 "summary": "Create a new ticketMessage",
                 "tags": [
                     "Ticket Messages"
@@ -2120,7 +2120,7 @@
         },
         "/v1/admin/ticket-messages/{ticketMessage}": {
             "get": {
-                "operationId": "v1.adminticket-messages.show",
+                "operationId": "v1.admin.ticket-messages.show",
                 "summary": "Show a specific ticketMessage",
                 "tags": [
                     "Ticket Messages"
@@ -2175,7 +2175,7 @@
                 }
             },
             "delete": {
-                "operationId": "v1.adminticket-messages.destroy",
+                "operationId": "v1.admin.ticket-messages.destroy",
                 "summary": "Delete a specific ticketMessage",
                 "tags": [
                     "Ticket Messages"
