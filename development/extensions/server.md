@@ -31,7 +31,14 @@ Shown to the user when they are checking out.
 ```php
 use App\Models\Product;
 
-public function getCheckoutConfig(Product $product, $values = [])
+/**
+ * Get the checkout configuration for the product.
+ * 
+ * @param Product $product The product that is being checked out.
+ * @param array $values The values that are provided by the user.
+ * @param array $settings The settings that are provided on the product from `getProductConfig`.
+ */
+public function getCheckoutConfig(Product $product, $values = [], $settings = [])
 {
     return [
         [
@@ -59,6 +66,15 @@ Have 3 parameters:
 - `$properties` - Custom properties created by the admin and values coming from `getCheckoutConfig`.
 
 ```php
+use App\Models\Service;
+
+/**
+ * Create a server for the service.
+ * 
+ * @param Service $service The service that is being created.
+ * @param array $settings The settings that are provided on the product from `getProductConfig`.
+ * @param array $properties Custom properties created by the admin and values coming from `getCheckoutConfig`.
+ */
 public function createServer(Service $service, $settings, $properties)
 {
     // Create the server
