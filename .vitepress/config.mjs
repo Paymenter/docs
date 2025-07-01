@@ -74,6 +74,7 @@ export default {
           items: [
             { text: 'CPanel', link: '/docs/extensions/cpanel' },
             { text: 'Convoy', link: '/docs/extensions/convoy' },
+            { text: 'DirectAdmin', link: '/docs/extensions/directadmin' },
             { text: 'Enhance', link: '/docs/extensions/enhance' },
             { text: 'Mollie', link: '/docs/extensions/mollie' },
             { text: 'PayPal', link: '/docs/extensions/paypal' },
