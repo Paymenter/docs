@@ -112,6 +112,7 @@ export default {
         {
           text: 'Index',
           items: [
+            // { text: 'V1.2 Release', link: '/blog/v1.2-release' },
             { text: 'V1.1 Release', link: '/blog/v1.1-release' },
             { text: 'V1 Release', link: '/blog/v1-release' },
           ]
