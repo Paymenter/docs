@@ -5507,6 +5507,12 @@
                                     "null"
                                 ],
                                 "format": "date-time"
+                            },
+                            "label": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
                             }
                         },
                         "required": [
@@ -5518,7 +5524,8 @@
                             "expires_at",
                             "suspend_hold_until",
                             "updated_at",
-                            "created_at"
+                            "created_at",
+                            "label"
                         ]
                     },
                     "relationships": {
